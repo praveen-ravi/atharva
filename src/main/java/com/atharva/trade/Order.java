@@ -1,5 +1,7 @@
 package com.atharva.trade;
 
+import com.atharva.ui.OrderType;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -8,24 +10,100 @@ import java.math.BigInteger;
  */
 public class Order {
     private String scrip;
-    private BigDecimal Capital;
+    private BigDecimal capital;
     private TradeType tradeType;
     private Long orderQty;
     private String validity;
     private BigInteger disclosedQty;
-    private String orderType;
-    private BigInteger accountNo;
+    private OrderType orderType;
     private Double openPrice;
     private Double closedPrice;
-    private BigDecimal profitLoss;
     private AssetClass assetClass;
+    private Double stoplossTrigger;
+    private Double limitPrice;
+    private User user;
+
+    public Order clone(){
+        Order cloneOrder = new Order();
+        cloneOrder.scrip=this.scrip;
+        cloneOrder.capital=this.capital;
+        cloneOrder.tradeType=this.tradeType;
+        cloneOrder.orderQty=this.orderQty;
+        cloneOrder.validity=this.validity;
+        cloneOrder.disclosedQty=this.disclosedQty;
+        cloneOrder.orderQty=this.orderQty;
+        cloneOrder.openPrice=this.openPrice;
+        cloneOrder.closedPrice=this.closedPrice;
+        cloneOrder.assetClass=this.assetClass;
+        cloneOrder.stoplossTrigger=this.stoplossTrigger;
+        cloneOrder.limitPrice=this.limitPrice;
+        cloneOrder.user=this.user;
+
+        return (cloneOrder);
+    }
+
+    public Order getStoplossOrder(){
+        Order stoplossOrder = this.clone();
+        stoplossOrder.setTradeType(this.getTradeType().getOppositeDirection());
+        stoplossOrder.setOpenPrice(0.0);
+        //TODO:Make it configurable
+        stoplossOrder.setValidity("GFD");
+        stoplossOrder.setDisclosedQty(BigInteger.ZERO);
+        stoplossOrder.setOrderType(OrderType.MARKET_ORDER);
+        stoplossOrder.setOpenPrice(0.0);
+        stoplossOrder.setClosedPrice(0.0);
+        stoplossOrder.setStoplossTrigger(0.0);
+        stoplossOrder.setLimitPrice(0.0);
+        return (stoplossOrder);
+    }
+
+    public Order getReversalOrder(){
+        Order reversalOrder = this.clone();
+        reversalOrder.setTradeType(this.getTradeType().getOppositeDirection());
+        reversalOrder.setOpenPrice(0.0);
+        //TODO:Make it configurable
+        reversalOrder.setValidity("GFD");
+        reversalOrder.setDisclosedQty(BigInteger.ZERO);
+        reversalOrder.setOrderType(OrderType.MARKET_ORDER);
+        reversalOrder.setOpenPrice(0.0);
+        reversalOrder.setClosedPrice(0.0);
+        reversalOrder.setStoplossTrigger(0.0);
+        reversalOrder.setLimitPrice(0.0);
+        reversalOrder.setOrderQty(this.orderQty*2);
+        return (reversalOrder);
+    }
+
+    public Double getLimitPrice() {
+        return limitPrice;
+    }
+
+    public void setLimitPrice(Double triggerPrice) {
+        this.limitPrice = triggerPrice;
+    }
+
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Double getStoplossTrigger() {
+        return stoplossTrigger;
+    }
+
+    public void setStoplossTrigger(Double stoplossTrigger) {
+        this.stoplossTrigger = stoplossTrigger;
+    }
 
     public BigDecimal getCapital() {
-        return Capital;
+        return capital;
     }
 
     public void setCapital(BigDecimal capital) {
-        Capital = capital;
+        this.capital = capital;
     }
     public void setClosedPrice(Double closedPrice) {
         this.closedPrice = closedPrice;
@@ -37,14 +115,6 @@ public class Order {
 
     public void setAssetClass(AssetClass assetClass) {
         this.assetClass = assetClass;
-    }
-
-    public BigDecimal getProfitLoss() {
-        return profitLoss;
-    }
-
-    public void setProfitLoss(BigDecimal profitLoss) {
-        this.profitLoss = profitLoss;
     }
 
     public String getScrip() {
@@ -87,22 +157,14 @@ public class Order {
         this.disclosedQty = disclosedQty;
     }
 
-    public String getOrderType() {
+    public OrderType getOrderType() {
         return orderType;
     }
 
-    public void setOrderType(String orderType) {
+    public void setOrderType(OrderType orderType) {
         this.orderType = orderType;
     }
 
-
-    public BigInteger getAccountNo() {
-        return accountNo;
-    }
-
-    public void setAccountNo(BigInteger accountNo) {
-        this.accountNo = accountNo;
-    }
 
     public Double getOpenPrice() {
         return openPrice;

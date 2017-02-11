@@ -10,9 +10,8 @@
         <module name="webTrading" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="atharva" target="1.7" />
-      <module name="webTrading" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

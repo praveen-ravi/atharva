@@ -7,6 +7,9 @@
     <groupId>com.trading.web</groupId>
     <artifactId>Atharva</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <dropwizard.version>1.0.6</dropwizard.version>
+    </properties>
     <build>
         <plugins>
             <plugin>
@@ -51,6 +54,12 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-nop</artifactId>
             <version>1.7.22</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.dropwizard/dropwizard-core -->
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-core</artifactId>
+            <version>1.0.6</version>
         </dependency>
 
 

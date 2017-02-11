@@ -15,7 +15,15 @@ public class TradeSettings {
     private Double reEntryCriteria;
     private long timeInterval=15000;
     private Double riskOnCapital=0.05;
+    private TradeMode postStoplossMode = TradeMode.MARKETWATCH;
 
+    public TradeMode getPostStoplossMode() {
+        return postStoplossMode;
+    }
+
+    public void setPostStoplossMode(TradeMode postStoplossMode) {
+        this.postStoplossMode = postStoplossMode;
+    }
 
     public Double getStoploss() {
         return stoploss;

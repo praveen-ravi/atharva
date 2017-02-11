@@ -10,7 +10,7 @@ import java.util.Properties;
 public class SystemPropertiesConfig {
     public static void loadConfig() throws IOException {
         Properties props=new Properties();
-        InputStream inputStream =SystemPropertiesConfig.class.getResourceAsStream("systemConfig.properties" );
+        InputStream inputStream =SystemPropertiesConfig.class.getResourceAsStream("system.properties" );
         if(inputStream!=null){
             props.load(inputStream);
             System.setProperties(props);

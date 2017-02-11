@@ -1,8 +1,8 @@
 package com.atharva.trade;
 
-import com.atharva.Atharva;
-import com.atharva.SystemPropertiesConfig;
 import com.atharva.exceptions.NetworkCallFailedException;
+import com.atharva.exceptions.UIOperationFailureException;
+import com.atharva.ui.Sharekhan;
 import com.jayway.jsonpath.JsonPath;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -10,11 +10,11 @@ import com.sun.jersey.api.client.WebResource;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.xpath.operations.Or;
 
+import javax.ws.rs.Path;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -25,7 +25,8 @@ import java.util.Locale;
 /**
  * Created by 16733 on 28/01/17.
  */
-public class TradeHandler extends Thread{
+@Path("TemplateService")
+public class TradeHandler{
     static final Level REPORT=Level.forName("REPORT",50);
     Logger log= LogManager.getLogger(TradeHandler.class);
 
@@ -49,22 +50,17 @@ public class TradeHandler extends Thread{
     private Double currentMarketPrice=0.0;
     private Double lastSeenMarketPrice=0.0;
     private ArrayList<Double> cummulativePriceDiffList=new ArrayList<Double>();
-    Client client =Client.create();
+    private Client client =Client.create();
+    private Sharekhan sharekhan= Sharekhan.getInstance();
+
+    public TradeHandler() throws IOException {
+    }
 
     public void setOrder(Order order){
         this.activeOrder=order;
     }
     public void setTradeSettings(TradeSettings tradeSettings){
         this.tradeSettings=tradeSettings;
-    }
-
-    @Override
-    public void run(){
-        try {
-            startTrade(activeOrder,tradeSettings);
-        } catch (Exception e) {
-            log.error("Failed to execute trade "+e);
-        }
     }
 
     public void startTrade(Order order,TradeSettings tradeSettings) throws Exception {
@@ -91,14 +87,8 @@ public class TradeHandler extends Thread{
                 }
                 processStartTime = System.currentTimeMillis();
                 updateCurrentPrice();
-                activeTradePriceDiff = activeTradePriceDiff + cummulativePriceDiff;
-                activeTradeProfitorLoss = BigDecimal.valueOf(activeTradePriceDiff * activeOrder.getOrderQty().doubleValue());
-                if (tradeMode.equals(TradeMode.ACTIVE)) {
-                    //Update the profit
-                    totalPriceDiff = totalPriceDiff + cummulativePriceDiff;
-                    totalProfitorLoss = BigDecimal.valueOf(totalPriceDiff * activeOrder.getOrderQty().doubleValue());
-                }
-                updateStopLossAndTrendReversalTrail();
+
+                updateProfitLossCounters();
                 //Check if StoplossCondition has reached
                 if (isStopLossContitionReached()) {
                     stopLoss();
@@ -110,7 +100,7 @@ public class TradeHandler extends Thread{
 
                     //Check of the trade is active in case of profit
                 if (activeTradePriceDiff > tradeSettings.getReEntry()) {
-                    if (tradeMode.equals(TradeMode.STOPLOSS)) {
+                    if (tradeMode.equals(TradeMode.INACTIVE)) {
                         //Check if the proftiablity has reached the re-entry criteria
 
                             Calendar cal = Calendar.getInstance();
@@ -164,7 +154,8 @@ public class TradeHandler extends Thread{
         String trade="\t"+this.onGoingTradeType+"\t"+this.activeOrder.getScrip()+"\t"+this.currentMarketPrice+"\t"+this.cummulativePriceDiff+"\t"+this.activeTradePriceDiff+"\t"+this.activeTradeProfitorLoss+"\t"+this.trailingTrendReversalOnPrice+"\t"+this.trailingStoplossOnPrice+"\t"+this.tradeMode+"\t"+totalPriceDiff+"\t"+totalProfitorLoss;
         return(trade);
     }
-    private void enterTrade(Order order){
+
+    public void enterTrade(Order order){
         log.info("Entered trade");
         tradeMode=TradeMode.ACTIVE;
         this.activeTradeProfitorLoss=BigDecimal.ZERO;
@@ -173,12 +164,21 @@ public class TradeHandler extends Thread{
         activeOrder.setOpenPrice(currentMarketPrice);
     }
 
-    private void endTrade(){
+    public void endTrade(){
         log.info("Ended traded");
         endTrade=true;
     }
 
-    private void updateStopLossAndTrendReversalTrail(){
+    private void updateProfitLossCounters(){
+        //Update the profit loss
+        activeTradePriceDiff = activeTradePriceDiff + cummulativePriceDiff;
+        activeTradeProfitorLoss = BigDecimal.valueOf(activeTradePriceDiff * activeOrder.getOrderQty().doubleValue());
+        if (tradeMode.equals(TradeMode.ACTIVE)) {
+            //Update the profit
+            totalPriceDiff = totalPriceDiff + cummulativePriceDiff;
+            totalProfitorLoss = BigDecimal.valueOf(totalPriceDiff * activeOrder.getOrderQty().doubleValue());
+        }
+        //Update the trailers
         trailingStoplossOnPrice=trailingStoplossOnPrice+this.cummulativePriceDiff;
         trailingTrendReversalOnPrice=trailingTrendReversalOnPrice+this.cummulativePriceDiff;
         if(trailingStoplossOnPrice.doubleValue()>0){
@@ -195,25 +195,28 @@ public class TradeHandler extends Thread{
 
     }
 
-    private void stopLoss(){
-        log.info("Hit stoploss");
-        tradeMode=TradeMode.STOPLOSS;
+    private void stopLoss() throws UIOperationFailureException {
+        log.info("Stoploss has reached");
+        tradeMode=tradeSettings.getPostStoplossMode();
         this.trailingStopLoss=BigDecimal.ZERO;
         this.trailingStoplossOnPrice=0.0;
         this.activeTradePriceDiff=0.0;
         this.activeTradeProfitorLoss=BigDecimal.ZERO;
-        if(tradeMode.equals(TradeMode.ACTIVE)){
-
-        }
-        reverseTrade();
-    }
-
-    private void reverseTrade(){
-        log.info("Trade reverse");
         this.trailingTrendReversalOnPrice=0.0;
         this.trailingTrendReversal=BigDecimal.ZERO;
         if(tradeMode.equals(TradeMode.ACTIVE)){
 
+            sharekhan.placeOrder(this.activeOrder.getStoplossOrder());
+        }
+
+    }
+
+    private void reverseTrade() throws UIOperationFailureException {
+        log.info("Trade reverse");
+        this.trailingTrendReversalOnPrice=0.0;
+        this.trailingTrendReversal=BigDecimal.ZERO;
+        if(tradeMode.equals(TradeMode.ACTIVE)){
+            sharekhan.placeOrder(this.activeOrder.getReversalOrder());
         }
         onGoingTradeType=onGoingTradeType.getOppositeDirection();
     }
@@ -227,9 +230,6 @@ public class TradeHandler extends Thread{
     }
     int index=0;
     private Double getMarketPrice() throws Exception {
-//        if(true){
-//            return(Atharva.sample1.get(index++));
-//        }
         try {
 
             WebResource resource=client.resource(new URI("http://finance.google.com/finance/info?client=ig&q="+activeOrder.getAssetClass().getExchange()+":"+activeOrder.getScrip()));
