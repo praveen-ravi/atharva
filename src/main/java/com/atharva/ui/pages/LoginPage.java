@@ -31,23 +31,23 @@ public class LoginPage extends Actions implements WebPage {
 
         this.driver=driver;
         this.objectProperties=objectProperties;
-        loginIdTextBox = By.id(objectProperties.getProperty("loginPage.loginIDTextBox.cssPath"));
-        memberShipPasswordTextbox=By.id(objectProperties.getProperty("loginPage.memberShipPasswordTextBox.cssPath"));
-        tradingPasswordTextbox=By.id(objectProperties.getProperty("loginPage.tradingPasswordTextBox.cssPath"));
-        loginButton=By.cssSelector(objectProperties.getProperty("loginPage.loginButton.cssPath"));
-        loginLink=By.xpath("loginPage.loginLink.xpath");
-        logoutButton=By.xpath("loginPage.logoutButton.xpath");
-        accountId=By.xpath("loginPage.accountId.xpath");
+        loginIdTextBox = By.id(objectProperties.getProperty("loginPage.loginIDTextBox.id"));
+        memberShipPasswordTextbox=By.id(objectProperties.getProperty("loginPage.memberShipPasswordTextBox.id"));
+        tradingPasswordTextbox=By.id(objectProperties.getProperty("loginPage.tradingPasswordTextBox.id"));
+        loginButton=By.xpath(objectProperties.getProperty("loginPage.loginButton.xpath"));
+        loginLink=By.xpath(objectProperties.getProperty("loginPage.loginLink.xpath"));
+        logoutButton=By.xpath(objectProperties.getProperty("loginPage.logoutButton.xpath"));
+        accountId=By.xpath(objectProperties.getProperty("loginPage.accountId.xpath"));
 
     }
 
     public WebPage login(String loginId,String memberShipPassword,String tradingPassword) throws UIOperationFailureException {
-        if(click(loginLink)){
-            logger.info("Clicked login link (for login fields)");
-        }else {
-            logger.error("Failed to click on login link (for login fields)", new UIOperationFailureException("Failed to click on login link (for login fields)"));
-            throw new UIOperationFailureException("Failed to click on login link (for login fields)");
-        }
+//        if(click(loginLink)){
+//            logger.info("Clicked login link (for login fields)");
+//        }else {
+//            logger.error("Failed to click on login link (for login fields)", new UIOperationFailureException("Failed to click on login link (for login fields)"));
+//            throw new UIOperationFailureException("Failed to click on login link (for login fields)");
+//        }
 
         if (sendKeys(loginIdTextBox,loginId)){
             logger.info("Entered login id");
@@ -102,15 +102,18 @@ public class LoginPage extends Actions implements WebPage {
     public WebPage verifiyAndLogin(User user) throws UIOperationFailureException {
 
         driver.get(System.getProperty("sharekhansite"));
+        if(handleAlert(true)){
+            driver.get(System.getProperty("sharekhansite"));
+        }
         if(isLoggedIn()){
-            if(getAccountId().equals(user.getAccountNo())){
+            if(getAccountId().equals(user.getSkAccountNo())){
                 return (this.myTradePage);
             }else{
                 click(logoutButton);
             }
         }
 
-        return (this.login(user.getLoginId(),user.getTradingPassword(),user.getTradingPassword()));
+        return (this.login(user.getSkLoginId(),user.getCkMembershipPassword(),user.getSkTradingPassword()));
 
     }
 

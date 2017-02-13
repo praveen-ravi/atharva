@@ -2,6 +2,7 @@ package com.atharva.trade;
 
 import com.atharva.ui.OrderType;
 
+import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
@@ -9,8 +10,13 @@ import java.math.BigInteger;
  * Created by 16733 on 26/01/17.
  */
 public class Order {
+    @NotNull
     private String scrip;
+    @NotNull
     private BigDecimal capital;
+    @NotNull
+    private Double flagAverage;
+    @NotNull
     private TradeType tradeType;
     private Long orderQty;
     private String validity;
@@ -18,9 +24,11 @@ public class Order {
     private OrderType orderType;
     private Double openPrice;
     private Double closedPrice;
+    @NotNull
     private AssetClass assetClass;
     private Double stoplossTrigger;
     private Double limitPrice;
+    @NotNull
     private User user;
 
     public Order clone(){
@@ -71,6 +79,14 @@ public class Order {
         reversalOrder.setLimitPrice(0.0);
         reversalOrder.setOrderQty(this.orderQty*2);
         return (reversalOrder);
+    }
+
+    public Double getFlagAverage() {
+        return flagAverage;
+    }
+
+    public void setFlagAverage(Double flagAverage) {
+        this.flagAverage = flagAverage;
     }
 
     public Double getLimitPrice() {
@@ -181,5 +197,7 @@ public class Order {
     public void setClosedtPrice(Double currentPrice) {
         this.closedPrice = currentPrice;
     }
+
+
 
 }

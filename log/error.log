@@ -20183,3 +20183,1043 @@
 17:08:57.044 - 	BUY	IDEA	109.8	0.0	-0.10000000000000853	-89.2000000000076	-0.20000000000000284	-0.20000000000000284	STOPLOSS	-2.350000000000051	-2096.2000000000457
 17:08:57.046 - Current price: 22350.0
 17:08:57.046 - 	SELL	BOSCHLTD	22350.0	-0.0	29.0	116.0	-20.400000000001455	-20.400000000001455	STOPLOSS	-170.5500000000029	-682.2000000000116
+21:28:33.679 - HV000001: Hibernate Validator 5.2.4.Final
+21:29:57.890 - HV000001: Hibernate Validator 5.2.4.Final
+21:33:20.416 - HV000001: Hibernate Validator 5.2.4.Final
+21:34:29.698 - HV000001: Hibernate Validator 5.2.4.Final
+21:34:47.625 - HV000001: Hibernate Validator 5.2.4.Final
+21:35:50.695 - HV000001: Hibernate Validator 5.2.4.Final
+22:26:40.165 - HV000001: Hibernate Validator 5.2.4.Final
+22:27:17.635 - HV000001: Hibernate Validator 5.2.4.Final
+22:31:58.642 - HV000001: Hibernate Validator 5.2.4.Final
+22:32:22.687 - HV000001: Hibernate Validator 5.2.4.Final
+22:33:52.758 - HV000001: Hibernate Validator 5.2.4.Final
+22:34:51.809 - HV000001: Hibernate Validator 5.2.4.Final
+22:38:30.947 - HV000001: Hibernate Validator 5.2.4.Final
+22:39:18.190 - HV000001: Hibernate Validator 5.2.4.Final
+22:39:43.678 - HV000001: Hibernate Validator 5.2.4.Final
+22:40:13.048 - HV000001: Hibernate Validator 5.2.4.Final
+22:44:04.815 - HV000001: Hibernate Validator 5.2.4.Final
+22:45:08.200 - HV000001: Hibernate Validator 5.2.4.Final
+22:45:53.443 - HV000001: Hibernate Validator 5.2.4.Final
+22:47:35.500 - HV000001: Hibernate Validator 5.2.4.Final
+22:49:23.373 - HV000001: Hibernate Validator 5.2.4.Final
+22:51:58.712 - HV000001: Hibernate Validator 5.2.4.Final
+22:53:54.833 - HV000001: Hibernate Validator 5.2.4.Final
+22:53:57.765 - HV000001: Hibernate Validator 5.2.4.Final
+22:56:26.831 - HV000001: Hibernate Validator 5.2.4.Final
+23:28:33.561 - HV000001: Hibernate Validator 5.2.4.Final
+23:28:51.269 - HV000001: Hibernate Validator 5.2.4.Final
+23:32:02.744 - HV000001: Hibernate Validator 5.2.4.Final
+23:32:37.358 - HV000001: Hibernate Validator 5.2.4.Final
+00:49:19.549 - HV000001: Hibernate Validator 5.2.4.Final
+01:00:18.047 - HV000001: Hibernate Validator 5.2.4.Final
+01:07:26.847 - HV000001: Hibernate Validator 5.2.4.Final
+01:09:03.647 - HV000001: Hibernate Validator 5.2.4.Final
+01:12:24.362 - HV000001: Hibernate Validator 5.2.4.Final
+09:06:55.289 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"loginPage.loginLink.xpath"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 55 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.b3LyPp}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 6bcf88cb95cd69642438473d35e99d1a
+*** Element info: {Using=xpath, value=loginPage.loginLink.xpath}
+09:06:55.341 - Failed to click on login link (for login fields)
+com.atharva.exceptions.UIOperationFailureException: Failed to click on login link (for login fields)
+	at com.atharva.ui.pages.LoginPage.login(LoginPage.java:48) [classes/:?]
+	at com.atharva.ui.pages.LoginPage.verifiyAndLogin(LoginPage.java:113) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:56) [classes/:?]
+	at com.test.TestUiCode.main(TestUiCode.java:55) [test-classes/:?]
+09:19:26.530 - Clicked login link (for login fields)
+09:19:26.568 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"input[name='loginid']"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 22 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.felbMO}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 4cff4b67f6831ae2d7f7d0ce6cb9b2d4
+*** Element info: {Using=id, value=input[name='loginid']}
+09:19:26.569 - Failed to enter login id
+com.atharva.exceptions.UIOperationFailureException: Failed to enter login id
+	at com.atharva.ui.pages.LoginPage.login(LoginPage.java:55) [classes/:?]
+	at com.atharva.ui.pages.LoginPage.verifiyAndLogin(LoginPage.java:113) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:56) [classes/:?]
+	at com.test.TestUiCode.main(TestUiCode.java:55) [test-classes/:?]
+09:23:24.542 - Clicked login link (for login fields)
+09:23:24.642 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='loginid']"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 40 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.Y6ytuJ}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 9af4631d6aedccf421d3e77ba65b317c
+*** Element info: {Using=css selector, value=input[name='loginid']}
+09:23:24.650 - Failed to enter login id
+com.atharva.exceptions.UIOperationFailureException: Failed to enter login id
+	at com.atharva.ui.pages.LoginPage.login(LoginPage.java:55) [classes/:?]
+	at com.atharva.ui.pages.LoginPage.verifiyAndLogin(LoginPage.java:113) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:56) [classes/:?]
+	at com.test.TestUiCode.main(TestUiCode.java:55) [test-classes/:?]
+09:26:34.015 - Clicked login link (for login fields)
+09:26:34.104 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[name='loginid']"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 39 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.8zXwpF}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 693a9a231a6f83582acc44b5e5929f54
+*** Element info: {Using=xpath, value=//input[name='loginid']}
+09:26:34.112 - Failed to enter login id
+com.atharva.exceptions.UIOperationFailureException: Failed to enter login id
+	at com.atharva.ui.pages.LoginPage.login(LoginPage.java:55) [classes/:?]
+	at com.atharva.ui.pages.LoginPage.verifiyAndLogin(LoginPage.java:113) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:56) [classes/:?]
+	at com.test.TestUiCode.main(TestUiCode.java:55) [test-classes/:?]
+09:28:50.573 - Clicked login link (for login fields)
+09:28:50.665 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='loginid']"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 45 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.akoxG8}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: d0a9a5bdf8298fe5cdc3ff5eb1b6132c
+*** Element info: {Using=xpath, value=//input[@name='loginid']}
+09:28:50.673 - Failed to enter login id
+com.atharva.exceptions.UIOperationFailureException: Failed to enter login id
+	at com.atharva.ui.pages.LoginPage.login(LoginPage.java:55) [classes/:?]
+	at com.atharva.ui.pages.LoginPage.verifiyAndLogin(LoginPage.java:113) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:56) [classes/:?]
+	at com.test.TestUiCode.main(TestUiCode.java:55) [test-classes/:?]
+09:31:49.499 - Clicked login link (for login fields)
+09:31:49.592 - Error encountered org.openqa.selenium.NoSuchElementException: Unable to locate element: //input[@name='loginid']
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, firefoxOptions={args=[], prefs={}}, appBuildId=20161019084923, version=, platform=MAC, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=8991, browserVersion=49.0.2, platformVersion=15.6.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=darwin, device=desktop}]
+Session ID: d53339b1-0509-cc46-9e9d-31ee9cb6af37
+*** Element info: {Using=xpath, value=//input[@name='loginid']}
+09:31:49.598 - Failed to enter login id
+com.atharva.exceptions.UIOperationFailureException: Failed to enter login id
+	at com.atharva.ui.pages.LoginPage.login(LoginPage.java:55) [classes/:?]
+	at com.atharva.ui.pages.LoginPage.verifiyAndLogin(LoginPage.java:113) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:56) [classes/:?]
+	at com.test.TestUiCode.main(TestUiCode.java:55) [test-classes/:?]
+09:54:01.980 - Entered login id
+09:54:02.139 - Entered membership password
+09:54:02.243 - Entered trading password
+09:54:02.522 - Clicked on login button
+09:54:02.563 - Login Successful
+09:54:54.938 - Failed to place order due to Element not found in page
+09:56:23.539 - Entered login id
+09:56:27.715 - Entered membership password
+09:56:31.988 - Entered trading password
+09:58:15.530 - Clicked on login button
+09:58:15.576 - Login Successful
+09:58:35.061 - Entered login id
+09:58:46.428 - Entered membership password
+09:58:48.226 - Entered trading password
+09:58:57.726 - Clicked on login button
+09:59:03.318 - Login Successful
+10:02:19.118 - Entered login id
+10:02:19.205 - Entered membership password
+10:02:19.320 - Entered trading password
+10:02:20.100 - Clicked on login button
+10:02:20.122 - Login Successful
+10:02:37.114 - Clicked on tradeNow Link
+10:02:44.460 - Selected the Exchange: NSE
+10:02:47.324 - Entered the scrip : BOSCHLTD
+10:02:52.188 - Selected buy/sell: Buy
+10:03:22.098 - Entered the quantity: 1
+10:03:57.438 - Entered the limit price: 0.0
+10:20:28.759 - Entered login id
+10:20:28.902 - Entered membership password
+10:20:29.015 - Entered trading password
+10:20:29.836 - Clicked on login button
+10:20:29.873 - Login Successful
+10:21:15.699 - Clicked on tradeNow Link
+10:21:17.732 - Selected the Exchange: NSE
+10:21:19.381 - Entered the scrip : BOSCHLTD
+10:21:20.615 - Selected buy/sell: Buy
+10:21:23.028 - Entered the quantity: 1
+10:21:39.284 - Entered the limit price: 0.0
+10:21:43.499 - Selected the  DP Account: 1832188
+10:21:49.739 - Clicked on place order button
+10:21:59.235 - Clicked on order confirm button
+10:22:06.667 - Order confirmation page is displayed
+10:32:55.502 - Execution of trade interrupted due to exception java.lang.ArithmeticException: Non-terminating decimal expansion; no exact representable decimal result.
+10:38:01.974 - Entered trade
+10:38:04.951 - Execution of trade interrupted due to exception com.atharva.exceptions.NetworkCallFailedException: Failed to probe the market price due to error com.jayway.jsonpath.PathNotFoundException: Path 'l' is being applied to an array. Arrays can not have attributes.
+10:39:26.631 - Entered trade
+10:41:17.756 - Entered trade
+10:41:59.797 - Current price: 492.35
+10:43:12.604 - Current price: 491.9
+10:43:12.607 - 1832188.AXISBANK.1486962676117	BUY	AXISBANK	491.9	-0.4500000000000455	-0.4500000000000455	-32.400000000003274	-0.4500000000000455	-0.4500000000000455	ACTIVE	-0.4500000000000455	-32.400000000003274
+10:44:29.955 - Entered trade
+10:44:31.804 - Entered login id
+10:44:31.904 - Entered membership password
+10:44:32.014 - Entered trading password
+10:44:33.797 - Clicked on login button
+10:44:33.827 - Login Successful
+10:44:34.298 - Clicked on tradeNow Link
+10:44:34.443 - Selected the Exchange: NSE
+10:44:34.622 - Entered the scrip : AXISBANK
+10:44:34.792 - Selected buy/sell: Buy
+10:44:34.933 - Entered the quantity: 72
+10:44:35.397 - Entered the limit price: 0.0
+10:44:35.492 - Selected the  DP Account: 1832188
+10:44:35.626 - Error encountered org.openqa.selenium.WebDriverException: unknown error: Element <input onclick="return doValidateNew(this.form)" type="submit" value="Place New Order" name="Place Order" class="lbt" tabindex="26" id="placeOrderbutton"> is not clickable at point (466, 486). Other element would receive the click: <div class="ajaxResult" id="scripLocator" style="visibility: visible; display: block; overflow: scroll; top: 275px; left: 317px;">...</div>
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 81 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.GEoInZ}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 76987da4c60eb97042c4e8144f514cb8
+10:44:35.627 - Failed to click on place order button
+com.atharva.exceptions.UIOperationFailureException: Failed to click on place order button
+	at com.atharva.ui.pages.MyTradePage.placeOrder(MyTradePage.java:151) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:58) [classes/:?]
+	at com.atharva.trade.TradeHandler.enterTrade(TradeHandler.java:175) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:92) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+10:44:35.633 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to click on place order button
+10:45:54.914 - Entered trade
+10:45:58.034 - Entered login id
+10:45:58.133 - Entered membership password
+10:45:58.249 - Entered trading password
+10:46:00.246 - Clicked on login button
+10:46:00.271 - Login Successful
+10:46:00.807 - Clicked on tradeNow Link
+10:46:00.931 - Selected the Exchange: NSE
+10:46:01.049 - Entered the scrip : AXISBANK
+10:46:11.050 - Element not found for select
+10:46:11.051 - Failed to select buy/sell
+com.atharva.exceptions.UIOperationFailureException: Failed to select buy/sell
+	at com.atharva.ui.pages.MyTradePage.placeOrder(MyTradePage.java:91) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:58) [classes/:?]
+	at com.atharva.trade.TradeHandler.enterTrade(TradeHandler.java:175) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:92) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+10:46:11.058 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to select buy/sell
+10:49:00.934 - Entered trade
+10:49:03.097 - Entered login id
+10:49:03.200 - Entered membership password
+10:49:03.464 - Entered trading password
+10:49:04.325 - Clicked on login button
+10:49:04.349 - Login Successful
+10:49:04.814 - Clicked on tradeNow Link
+10:49:05.002 - Selected the Exchange: NSE
+10:49:05.321 - Entered the scrip : AXISBANK
+10:49:14.930 - Selected buy/sell: Buy
+10:49:15.057 - Entered the quantity: 72
+10:49:15.193 - Entered the limit price: 0.0
+10:49:15.295 - Selected the  DP Account: 1832188
+10:49:15.394 - Clicked on place order button
+10:49:15.810 - Clicked on order confirm button
+10:49:15.840 - Order confirmation page is displayed
+10:49:15.931 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Element is not visible
+10:52:45.366 - Entered trade
+10:53:09.129 - Entered login id
+10:53:09.249 - Entered membership password
+10:53:09.366 - Entered trading password
+10:53:09.484 - Clicked on login button
+10:53:10.583 - Login Successful
+10:53:16.068 - Clicked on tradeNow Link
+10:53:16.229 - Selected the Exchange: NSE
+10:53:16.483 - Entered the scrip : AXISBANK
+10:53:16.701 - Selected buy/sell: Buy
+10:53:16.824 - Entered the quantity: 72
+10:54:33.351 - Entered trade
+10:54:35.583 - Entered login id
+10:54:35.662 - Entered membership password
+10:54:35.821 - Entered trading password
+10:54:37.495 - Clicked on login button
+10:54:37.522 - Login Successful
+10:54:38.010 - Clicked on tradeNow Link
+10:54:38.132 - Selected the Exchange: NSE
+10:54:38.448 - Entered the scrip : AXISBANK
+10:54:48.452 - Element not found for select
+10:54:48.460 - Failed to select buy/sell
+com.atharva.exceptions.UIOperationFailureException: Failed to select buy/sell
+	at com.atharva.ui.pages.MyTradePage.placeOrder(MyTradePage.java:98) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:58) [classes/:?]
+	at com.atharva.trade.TradeHandler.enterTrade(TradeHandler.java:175) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:92) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+10:54:48.472 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to select buy/sell
+10:55:21.230 - Entered trade
+10:55:23.722 - Entered login id
+10:55:23.821 - Entered membership password
+10:55:23.940 - Entered trading password
+10:55:24.757 - Clicked on login button
+10:55:24.786 - Login Successful
+10:55:25.260 - Clicked on tradeNow Link
+10:55:25.497 - Selected the Exchange: NSE
+10:55:25.971 - Entered the scrip : AXISBANK
+10:55:26.187 - Selected buy/sell: Buy
+10:55:26.391 - Entered the quantity: 72
+10:55:37.655 - Entered trade
+10:55:39.845 - Entered login id
+10:55:39.941 - Entered membership password
+10:55:40.056 - Entered trading password
+10:55:40.141 - Clicked on login button
+10:55:42.551 - Login Successful
+10:55:44.086 - Clicked on tradeNow Link
+10:55:44.190 - Selected the Exchange: NSE
+10:55:44.464 - Entered the scrip : AXISBANK
+10:55:44.613 - Selected buy/sell: Buy
+10:55:44.786 - Entered the quantity: 72
+11:06:44.389 - Entered trade
+11:06:46.676 - Entered login id
+11:06:46.886 - Entered membership password
+11:06:47.077 - Entered trading password
+11:06:48.896 - Clicked on login button
+11:06:48.922 - Login Successful
+11:06:49.412 - Clicked on tradeNow Link
+11:06:49.537 - Selected the Exchange: NSE
+11:06:49.893 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"td0"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 26 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.sufDAT}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 91925583381d9bcde0dc7a940cbe044b
+*** Element info: {Using=id, value=td0}
+11:06:49.894 - Failed to select the scrip
+com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+	at com.atharva.ui.pages.MyTradePage.placeOrder(MyTradePage.java:89) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:58) [classes/:?]
+	at com.atharva.trade.TradeHandler.enterTrade(TradeHandler.java:175) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:92) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+11:06:49.900 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+11:09:06.272 - Entered trade
+11:09:08.512 - Entered login id
+11:09:08.688 - Entered membership password
+11:09:08.854 - Entered trading password
+11:09:10.005 - Clicked on login button
+11:09:10.058 - Login Successful
+11:09:10.674 - Clicked on tradeNow Link
+11:09:10.817 - Selected the Exchange: NSE
+11:09:11.056 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"td0"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 98 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.oAqqGt}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 7c6f97dc8e2118841683e2d63638a2a9
+*** Element info: {Using=id, value=td0}
+11:09:11.056 - Failed to select the scrip
+com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+	at com.atharva.ui.pages.MyTradePage.placeOrder(MyTradePage.java:89) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:58) [classes/:?]
+	at com.atharva.trade.TradeHandler.enterTrade(TradeHandler.java:175) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:92) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+11:09:11.068 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+11:11:09.017 - Entered trade
+11:11:12.117 - Entered login id
+11:11:12.272 - Entered membership password
+11:11:12.404 - Entered trading password
+11:11:13.656 - Clicked on login button
+11:11:13.695 - Login Successful
+11:11:14.473 - Clicked on tradeNow Link
+11:11:14.638 - Selected the Exchange: NSE
+11:11:14.900 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":".//td[@id='td0']/strong"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 33 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.0.102', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.rbh0a5}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 3914204f2dccc0daf05d29ff21032dd8
+*** Element info: {Using=xpath, value=.//td[@id='td0']/strong}
+11:11:14.901 - Failed to select the scrip
+com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+	at com.atharva.ui.pages.MyTradePage.placeOrder(MyTradePage.java:89) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:58) [classes/:?]
+	at com.atharva.trade.TradeHandler.enterTrade(TradeHandler.java:175) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:92) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+11:11:14.909 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+13:27:25.521 - Entered trade
+13:27:27.550 - Entered login id
+13:27:27.688 - Entered membership password
+13:27:27.815 - Entered trading password
+13:27:31.482 - Clicked on login button
+13:27:31.504 - Login Successful
+13:27:32.039 - Clicked on tradeNow Link
+13:27:32.146 - Selected the Exchange: NSE
+13:27:32.255 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='td0']/strong"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 21 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.13.183', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.J8rtTM}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: cf9d42ae768db0e5f8f15cfdcd2fd511
+*** Element info: {Using=xpath, value=//*[@id='td0']/strong}
+13:27:32.255 - Failed to select the scrip
+com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+	at com.atharva.ui.pages.MyTradePage.placeOrder(MyTradePage.java:86) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:58) [classes/:?]
+	at com.atharva.trade.TradeHandler.enterTrade(TradeHandler.java:175) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:92) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+13:27:32.269 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+13:28:24.346 - Entered trade
+13:28:26.118 - Entered login id
+13:28:26.233 - Entered membership password
+13:28:26.385 - Entered trading password
+13:28:28.141 - Clicked on login button
+13:28:28.166 - Login Successful
+13:28:28.711 - Clicked on tradeNow Link
+13:28:28.809 - Selected the Exchange: NSE
+13:28:29.482 - Selected the scrip from dropdown 
+13:28:29.483 - Entered the scrip : AXISBANK
+13:28:29.615 - Selected buy/sell: Buy
+13:28:29.751 - Entered the quantity: 72
+13:28:51.867 - Entered the limit price: 0.0
+13:29:29.516 - Entered trade
+13:29:31.484 - Entered login id
+13:29:31.625 - Entered membership password
+13:29:31.750 - Entered trading password
+13:29:35.676 - Clicked on login button
+13:29:35.698 - Login Successful
+13:29:36.337 - Clicked on tradeNow Link
+13:29:36.467 - Selected the Exchange: NSE
+13:29:37.144 - Selected the scrip from dropdown 
+13:29:37.144 - Entered the scrip : AXISBANK
+13:29:37.274 - Selected buy/sell: Buy
+13:29:37.446 - Entered the quantity: 72
+13:29:37.584 - Entered the limit price: 0.0
+13:29:37.717 - Selected the  DP Account: 1832188
+13:29:37.857 - Clicked on place order button
+13:29:38.297 - Clicked on order confirm button
+13:29:38.336 - Order confirmation page is displayed
+13:29:38.472 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Element is not visible
+13:39:07.006 - Entered trade
+13:39:08.407 - Entered login id
+13:39:08.557 - Entered membership password
+13:39:08.711 - Entered trading password
+13:39:10.614 - Clicked on login button
+13:39:10.640 - Login Successful
+13:39:11.141 - Clicked on tradeNow Link
+13:39:11.243 - Selected the Exchange: NSE
+13:39:11.915 - Selected the scrip from dropdown 
+13:39:11.915 - Entered the scrip : AXISBANK
+13:39:12.180 - Selected buy/sell: Buy
+13:39:12.288 - Entered the quantity: 72
+13:39:12.428 - Entered the limit price: 0.0
+13:39:12.513 - Selected the  DP Account: 1832188
+13:39:12.611 - Error encountered org.openqa.selenium.WebDriverException: unknown error: Element <input onclick="return doValidateNew(this.form)" type="submit" value="Place New Order" name="Place Order" class="lbt" tabindex="26" id="placeOrderbutton"> is not clickable at point (466, 486). Other element would receive the click: <div class="ajaxResult" id="scripLocator" style="display: block; visibility: visible; overflow: scroll; top: 275px; left: 317px;">...</div>
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 70 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.13.183', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.1ztoCS}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 076aec54a8891d3b88c3cb53866cdab0
+13:39:12.612 - Failed to click on place order button
+com.atharva.exceptions.UIOperationFailureException: Failed to click on place order button
+	at com.atharva.ui.pages.MyTradePage.placeOrder(MyTradePage.java:164) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:58) [classes/:?]
+	at com.atharva.trade.TradeHandler.enterTrade(TradeHandler.java:181) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:98) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+13:39:12.622 - Ended traded
+13:39:12.622 - Stoploss has reached
+13:39:12.622 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to click on place order button
+13:44:08.379 - Entered trade
+13:44:32.025 - Entered login id
+13:44:32.150 - Entered membership password
+13:44:32.264 - Entered trading password
+13:44:33.248 - Clicked on login button
+13:44:33.271 - Login Successful
+13:44:33.865 - Clicked on tradeNow Link
+13:44:34.010 - Selected the Exchange: NSE
+13:44:35.238 - Selected the scrip from dropdown 
+13:44:35.238 - Entered the scrip : AXISBANK
+13:44:35.464 - Selected buy/sell: Buy
+13:44:35.589 - Entered the quantity: 72
+13:44:35.731 - Entered the limit price: 0.0
+13:44:35.831 - Selected the  DP Account: 1832188
+13:44:35.955 - Clicked on place order button
+13:44:36.418 - Clicked on order confirm button
+13:44:36.450 - Order confirmation page is displayed
+13:44:38.076 - Current price: 489.65
+13:44:53.450 - Current price: 489.65
+13:44:53.452 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.65	0.0	0.0	0.0	0.0	0.0	ACTIVE	0.0	0.0
+13:45:08.918 - Current price: 489.65
+13:45:08.919 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.65	0.0	0.0	0.0	0.0	0.0	ACTIVE	0.0	0.0
+13:45:23.423 - Current price: 489.65
+13:45:23.424 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.65	0.0	0.0	0.0	0.0	0.0	ACTIVE	0.0	0.0
+13:45:38.417 - Current price: 489.75
+13:45:38.419 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	0.10000000000002274	0.10000000000002274	7.200000000001637	0.0	0.0	ACTIVE	0.10000000000002274	7.200000000001637
+13:45:53.832 - Current price: 489.75
+13:45:53.833 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	0.0	0.10000000000002274	7.200000000001637	0.0	0.0	ACTIVE	0.10000000000002274	7.200000000001637
+13:46:08.467 - Current price: 489.65
+13:46:08.468 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.65	-0.10000000000002274	0.0	0.0	-0.10000000000002274	-0.10000000000002274	ACTIVE	0.0	0.0
+13:46:23.514 - Current price: 489.65
+13:46:23.516 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.65	0.0	0.0	0.0	-0.10000000000002274	-0.10000000000002274	ACTIVE	0.0	0.0
+13:46:42.015 - Current price: 489.7
+13:46:42.016 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.7	0.05000000000001137	0.05000000000001137	3.6000000000008185	-0.05000000000001137	-0.05000000000001137	ACTIVE	0.05000000000001137	3.6000000000008185
+13:46:53.446 - Current price: 489.6
+13:46:53.447 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.6	-0.0999999999999659	-0.049999999999954525	-3.599999999996726	-0.14999999999997726	-0.14999999999997726	ACTIVE	-0.049999999999954525	-3.599999999996726
+13:47:09.035 - Current price: 489.6
+13:47:09.039 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.6	0.0	-0.049999999999954525	-3.599999999996726	-0.14999999999997726	-0.14999999999997726	ACTIVE	-0.049999999999954525	-3.599999999996726
+13:47:27.089 - Current price: 489.4
+13:47:27.090 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.4	-0.20000000000004547	-0.25	-18.0	-0.35000000000002274	-0.35000000000002274	ACTIVE	-0.25	-18.0
+13:47:39.021 - Current price: 489.55
+13:47:39.025 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.55	0.1500000000000341	-0.0999999999999659	-7.199999999997544	-0.19999999999998863	-0.19999999999998863	ACTIVE	-0.0999999999999659	-7.199999999997544
+13:48:02.434 - Current price: 489.45
+13:48:02.438 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.45	-0.10000000000002274	-0.19999999999998863	-14.399999999999181	-0.30000000000001137	-0.30000000000001137	ACTIVE	-0.19999999999998863	-14.399999999999181
+13:48:08.565 - Current price: 489.45
+13:48:08.565 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.45	0.0	-0.19999999999998863	-14.399999999999181	-0.30000000000001137	-0.30000000000001137	ACTIVE	-0.19999999999998863	-14.399999999999181
+13:48:23.596 - Current price: 489.35
+13:48:23.597 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.35	-0.0999999999999659	-0.2999999999999545	-21.599999999996726	-0.39999999999997726	-0.39999999999997726	ACTIVE	-0.2999999999999545	-21.599999999996726
+13:48:38.571 - Current price: 489.5
+13:48:38.571 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.5	0.14999999999997726	-0.14999999999997726	-10.799999999998363	-0.25	-0.25	ACTIVE	-0.14999999999997726	-10.799999999998363
+13:49:02.482 - Current price: 489.55
+13:49:02.483 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.55	0.05000000000001137	-0.0999999999999659	-7.199999999997544	-0.19999999999998863	-0.19999999999998863	ACTIVE	-0.0999999999999659	-7.199999999997544
+13:49:08.844 - Current price: 489.5
+13:49:08.846 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.5	-0.05000000000001137	-0.14999999999997726	-10.799999999998363	-0.25	-0.25	ACTIVE	-0.14999999999997726	-10.799999999998363
+13:49:23.482 - Current price: 489.6
+13:49:23.483 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.6	0.10000000000002274	-0.049999999999954525	-3.599999999996726	-0.14999999999997726	-0.14999999999997726	ACTIVE	-0.049999999999954525	-3.599999999996726
+13:49:41.891 - Current price: 489.45
+13:49:41.897 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.45	-0.1500000000000341	-0.19999999999998863	-14.399999999999181	-0.30000000000001137	-0.30000000000001137	ACTIVE	-0.19999999999998863	-14.399999999999181
+13:49:53.778 - Current price: 489.4
+13:49:53.780 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.4	-0.05000000000001137	-0.25	-18.0	-0.35000000000002274	-0.35000000000002274	ACTIVE	-0.25	-18.0
+13:50:08.967 - Current price: 489.5
+13:50:08.967 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.5	0.10000000000002274	-0.14999999999997726	-10.799999999998363	-0.25	-0.25	ACTIVE	-0.14999999999997726	-10.799999999998363
+13:50:23.945 - Current price: 490.0
+13:50:23.946 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.5	0.35000000000002274	25.200000000001637	0.0	0.0	ACTIVE	0.35000000000002274	25.200000000001637
+13:50:38.492 - Current price: 489.75
+13:50:38.492 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	-0.25	0.10000000000002274	7.200000000001637	-0.25	-0.25	ACTIVE	0.10000000000002274	7.200000000001637
+13:50:53.456 - Current price: 489.85
+13:50:53.457 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	0.10000000000002274	0.20000000000004547	14.400000000003274	-0.14999999999997726	-0.14999999999997726	ACTIVE	0.20000000000004547	14.400000000003274
+13:51:08.535 - Current price: 489.85
+13:51:08.536 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	0.0	0.20000000000004547	14.400000000003274	-0.14999999999997726	-0.14999999999997726	ACTIVE	0.20000000000004547	14.400000000003274
+13:51:23.650 - Current price: 489.9
+13:51:23.653 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	0.049999999999954525	0.25	18.0	-0.10000000000002274	-0.10000000000002274	ACTIVE	0.25	18.0
+13:51:38.868 - Current price: 489.85
+13:51:38.871 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	-0.049999999999954525	0.20000000000004547	14.400000000003274	-0.14999999999997726	-0.14999999999997726	ACTIVE	0.20000000000004547	14.400000000003274
+13:51:54.880 - Current price: 489.8
+13:51:54.882 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	-0.05000000000001137	0.1500000000000341	10.800000000002456	-0.19999999999998863	-0.19999999999998863	ACTIVE	0.1500000000000341	10.800000000002456
+13:52:09.046 - Current price: 489.55
+13:52:09.046 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.55	-0.25	-0.0999999999999659	-7.199999999997544	-0.44999999999998863	-0.44999999999998863	ACTIVE	-0.0999999999999659	-7.199999999997544
+13:52:23.480 - Current price: 489.75
+13:52:23.480 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	0.19999999999998863	0.10000000000002274	7.200000000001637	-0.25	-0.25	ACTIVE	0.10000000000002274	7.200000000001637
+13:52:38.456 - Current price: 489.75
+13:52:38.457 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	0.0	0.10000000000002274	7.200000000001637	-0.25	-0.25	ACTIVE	0.10000000000002274	7.200000000001637
+13:52:53.560 - Current price: 489.6
+13:52:53.561 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.6	-0.14999999999997726	-0.049999999999954525	-3.599999999996726	-0.39999999999997726	-0.39999999999997726	ACTIVE	-0.049999999999954525	-3.599999999996726
+13:53:12.043 - Current price: 489.6
+13:53:12.044 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.6	0.0	-0.049999999999954525	-3.599999999996726	-0.39999999999997726	-0.39999999999997726	ACTIVE	-0.049999999999954525	-3.599999999996726
+13:53:36.591 - Current price: 489.85
+13:53:36.768 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	0.25	0.20000000000004547	14.400000000003274	-0.14999999999997726	-0.14999999999997726	ACTIVE	0.20000000000004547	14.400000000003274
+13:53:38.633 - Current price: 489.8
+13:53:38.634 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	-0.05000000000001137	0.1500000000000341	10.800000000002456	-0.19999999999998863	-0.19999999999998863	ACTIVE	0.1500000000000341	10.800000000002456
+13:53:53.519 - Current price: 490.0
+13:53:53.520 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.19999999999998863	0.35000000000002274	25.200000000001637	0.0	0.0	ACTIVE	0.35000000000002274	25.200000000001637
+13:54:11.625 - Current price: 490.0
+13:54:11.626 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.0	0.35000000000002274	25.200000000001637	0.0	0.0	ACTIVE	0.35000000000002274	25.200000000001637
+13:55:02.105 - Current price: 489.75
+13:55:02.107 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	-0.25	0.10000000000002274	7.200000000001637	-0.25	-0.25	ACTIVE	0.10000000000002274	7.200000000001637
+13:55:02.905 - Current price: 489.75
+13:55:02.905 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	0.0	0.10000000000002274	7.200000000001637	-0.25	-0.25	ACTIVE	0.10000000000002274	7.200000000001637
+13:55:17.384 - Current price: 489.4
+13:55:17.387 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.4	-0.35000000000002274	-0.25	-18.0	-0.6000000000000227	-0.6000000000000227	ACTIVE	-0.25	-18.0
+13:55:32.465 - Current price: 489.7
+13:55:32.466 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.7	0.30000000000001137	0.05000000000001137	3.6000000000008185	-0.30000000000001137	-0.30000000000001137	ACTIVE	0.05000000000001137	3.6000000000008185
+13:55:47.826 - Current price: 489.7
+13:55:47.826 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.7	0.0	0.05000000000001137	3.6000000000008185	-0.30000000000001137	-0.30000000000001137	ACTIVE	0.05000000000001137	3.6000000000008185
+13:56:02.394 - Current price: 490.0
+13:56:02.394 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.30000000000001137	0.35000000000002274	25.200000000001637	0.0	0.0	ACTIVE	0.35000000000002274	25.200000000001637
+13:56:20.398 - Current price: 489.95
+13:56:20.400 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	-0.05000000000001137	0.30000000000001137	21.60000000000082	-0.05000000000001137	-0.05000000000001137	ACTIVE	0.30000000000001137	21.60000000000082
+13:56:32.399 - Current price: 490.0
+13:56:32.400 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.05000000000001137	0.35000000000002274	25.200000000001637	0.0	0.0	ACTIVE	0.35000000000002274	25.200000000001637
+13:56:47.416 - Current price: 490.0
+13:56:47.417 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.0	0.35000000000002274	25.200000000001637	0.0	0.0	ACTIVE	0.35000000000002274	25.200000000001637
+13:57:05.513 - Current price: 490.15
+13:57:05.514 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.15	0.14999999999997726	0.5	36.0	0.0	0.0	ACTIVE	0.5	36.0
+13:57:17.581 - Current price: 490.3
+13:57:17.584 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.3	0.1500000000000341	0.6500000000000341	46.800000000002456	0.0	0.0	ACTIVE	0.6500000000000341	46.800000000002456
+13:57:32.618 - Current price: 489.7
+13:57:32.621 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.7	-0.6000000000000227	0.05000000000001137	3.6000000000008185	-0.6000000000000227	-0.6000000000000227	ACTIVE	0.05000000000001137	3.6000000000008185
+13:57:47.464 - Current price: 490.05
+13:57:47.465 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.05	0.35000000000002274	0.4000000000000341	28.800000000002456	-0.25	-0.25	ACTIVE	0.4000000000000341	28.800000000002456
+13:58:02.881 - Current price: 490.0
+13:58:02.882 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	-0.05000000000001137	0.35000000000002274	25.200000000001637	-0.30000000000001137	-0.30000000000001137	ACTIVE	0.35000000000002274	25.200000000001637
+13:58:17.425 - Current price: 490.0
+13:58:17.425 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.0	0.35000000000002274	25.200000000001637	-0.30000000000001137	-0.30000000000001137	ACTIVE	0.35000000000002274	25.200000000001637
+13:58:35.649 - Current price: 489.95
+13:58:35.649 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	-0.05000000000001137	0.30000000000001137	21.60000000000082	-0.35000000000002274	-0.35000000000002274	ACTIVE	0.30000000000001137	21.60000000000082
+13:58:47.548 - Current price: 489.9
+13:58:47.549 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	-0.05000000000001137	0.25	18.0	-0.4000000000000341	-0.4000000000000341	ACTIVE	0.25	18.0
+13:59:02.593 - Current price: 489.95
+13:59:02.594 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.05000000000001137	0.30000000000001137	21.60000000000082	-0.35000000000002274	-0.35000000000002274	ACTIVE	0.30000000000001137	21.60000000000082
+13:59:17.696 - Current price: 489.9
+13:59:17.696 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	-0.05000000000001137	0.25	18.0	-0.4000000000000341	-0.4000000000000341	ACTIVE	0.25	18.0
+13:59:32.736 - Current price: 489.9
+13:59:32.744 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	0.0	0.25	18.0	-0.4000000000000341	-0.4000000000000341	ACTIVE	0.25	18.0
+13:59:48.713 - Current price: 489.85
+13:59:48.714 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	-0.049999999999954525	0.20000000000004547	14.400000000003274	-0.44999999999998863	-0.44999999999998863	ACTIVE	0.20000000000004547	14.400000000003274
+14:00:02.446 - Current price: 489.75
+14:00:02.447 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	-0.10000000000002274	0.10000000000002274	7.200000000001637	-0.5500000000000114	-0.5500000000000114	ACTIVE	0.10000000000002274	7.200000000001637
+14:00:17.635 - Current price: 489.8
+14:00:17.640 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	0.05000000000001137	0.1500000000000341	10.800000000002456	-0.5	-0.5	ACTIVE	0.1500000000000341	10.800000000002456
+14:00:32.436 - Current price: 489.8
+14:00:32.436 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	0.0	0.1500000000000341	10.800000000002456	-0.5	-0.5	ACTIVE	0.1500000000000341	10.800000000002456
+14:00:47.874 - Current price: 489.8
+14:00:47.876 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	0.0	0.1500000000000341	10.800000000002456	-0.5	-0.5	ACTIVE	0.1500000000000341	10.800000000002456
+14:01:02.563 - Current price: 489.8
+14:01:02.563 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	0.0	0.1500000000000341	10.800000000002456	-0.5	-0.5	ACTIVE	0.1500000000000341	10.800000000002456
+14:01:17.622 - Current price: 489.8
+14:01:17.624 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	0.0	0.1500000000000341	10.800000000002456	-0.5	-0.5	ACTIVE	0.1500000000000341	10.800000000002456
+14:01:32.489 - Current price: 489.8
+14:01:32.489 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	0.0	0.1500000000000341	10.800000000002456	-0.5	-0.5	ACTIVE	0.1500000000000341	10.800000000002456
+14:01:47.490 - Current price: 489.8
+14:01:47.491 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	0.0	0.1500000000000341	10.800000000002456	-0.5	-0.5	ACTIVE	0.1500000000000341	10.800000000002456
+14:02:06.364 - Current price: 489.75
+14:02:06.365 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	-0.05000000000001137	0.10000000000002274	7.200000000001637	-0.5500000000000114	-0.5500000000000114	ACTIVE	0.10000000000002274	7.200000000001637
+14:02:17.914 - Current price: 489.75
+14:02:17.914 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	0.0	0.10000000000002274	7.200000000001637	-0.5500000000000114	-0.5500000000000114	ACTIVE	0.10000000000002274	7.200000000001637
+14:02:33.478 - Current price: 489.6
+14:02:33.478 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.6	-0.14999999999997726	-0.049999999999954525	-3.599999999996726	-0.6999999999999886	-0.6999999999999886	ACTIVE	-0.049999999999954525	-3.599999999996726
+14:02:47.552 - Current price: 489.65
+14:02:47.553 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.65	0.049999999999954525	0.0	0.0	-0.6500000000000341	-0.6500000000000341	ACTIVE	0.0	0.0
+14:03:03.266 - Current price: 489.7
+14:03:03.267 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.7	0.05000000000001137	0.05000000000001137	3.6000000000008185	-0.6000000000000227	-0.6000000000000227	ACTIVE	0.05000000000001137	3.6000000000008185
+14:03:17.524 - Current price: 489.75
+14:03:17.525 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	0.05000000000001137	0.10000000000002274	7.200000000001637	-0.5500000000000114	-0.5500000000000114	ACTIVE	0.10000000000002274	7.200000000001637
+14:03:32.881 - Current price: 490.0
+14:03:32.882 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.25	0.35000000000002274	25.200000000001637	-0.30000000000001137	-0.30000000000001137	ACTIVE	0.35000000000002274	25.200000000001637
+14:03:47.884 - Current price: 489.85
+14:03:47.886 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	-0.14999999999997726	0.20000000000004547	14.400000000003274	-0.44999999999998863	-0.44999999999998863	ACTIVE	0.20000000000004547	14.400000000003274
+14:04:02.464 - Current price: 489.85
+14:04:02.466 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	0.0	0.20000000000004547	14.400000000003274	-0.44999999999998863	-0.44999999999998863	ACTIVE	0.20000000000004547	14.400000000003274
+14:04:20.595 - Current price: 489.75
+14:04:20.595 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.75	-0.10000000000002274	0.10000000000002274	7.200000000001637	-0.5500000000000114	-0.5500000000000114	ACTIVE	0.10000000000002274	7.200000000001637
+14:04:32.492 - Current price: 489.7
+14:04:32.493 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.7	-0.05000000000001137	0.05000000000001137	3.6000000000008185	-0.6000000000000227	-0.6000000000000227	ACTIVE	0.05000000000001137	3.6000000000008185
+14:04:47.676 - Current price: 490.2
+14:04:47.677 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.2	0.5	0.5500000000000114	39.60000000000082	-0.10000000000002274	-0.10000000000002274	ACTIVE	0.5500000000000114	39.60000000000082
+14:05:02.536 - Current price: 489.7
+14:05:02.538 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.7	-0.5	0.05000000000001137	3.6000000000008185	-0.6000000000000227	-0.6000000000000227	ACTIVE	0.05000000000001137	3.6000000000008185
+14:05:17.540 - Current price: 489.8
+14:05:17.540 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	0.10000000000002274	0.1500000000000341	10.800000000002456	-0.5	-0.5	ACTIVE	0.1500000000000341	10.800000000002456
+14:05:35.677 - Current price: 489.95
+14:05:35.677 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.14999999999997726	0.30000000000001137	21.60000000000082	-0.35000000000002274	-0.35000000000002274	ACTIVE	0.30000000000001137	21.60000000000082
+14:05:47.509 - Current price: 490.15
+14:05:47.510 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.15	0.19999999999998863	0.5	36.0	-0.1500000000000341	-0.1500000000000341	ACTIVE	0.5	36.0
+14:06:02.726 - Current price: 490.1
+14:06:02.726 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.1	-0.049999999999954525	0.4500000000000455	32.400000000003274	-0.19999999999998863	-0.19999999999998863	ACTIVE	0.4500000000000455	32.400000000003274
+14:06:18.339 - Current price: 489.9
+14:06:18.341 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	-0.20000000000004547	0.25	18.0	-0.4000000000000341	-0.4000000000000341	ACTIVE	0.25	18.0
+14:06:32.593 - Current price: 490.0
+14:06:32.594 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.10000000000002274	0.35000000000002274	25.200000000001637	-0.30000000000001137	-0.30000000000001137	ACTIVE	0.35000000000002274	25.200000000001637
+14:06:48.273 - Current price: 489.95
+14:06:48.274 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	-0.05000000000001137	0.30000000000001137	21.60000000000082	-0.35000000000002274	-0.35000000000002274	ACTIVE	0.30000000000001137	21.60000000000082
+14:07:02.576 - Current price: 490.1
+14:07:02.576 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.1	0.1500000000000341	0.4500000000000455	32.400000000003274	-0.19999999999998863	-0.19999999999998863	ACTIVE	0.4500000000000455	32.400000000003274
+14:07:20.545 - Current price: 490.05
+14:07:20.545 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.05	-0.05000000000001137	0.4000000000000341	28.800000000002456	-0.25	-0.25	ACTIVE	0.4000000000000341	28.800000000002456
+14:07:33.158 - Current price: 490.15
+14:07:33.159 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.15	0.0999999999999659	0.5	36.0	-0.1500000000000341	-0.1500000000000341	ACTIVE	0.5	36.0
+14:07:47.967 - Current price: 490.45
+14:07:47.967 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.45	0.30000000000001137	0.8000000000000114	57.60000000000082	0.0	0.0	ACTIVE	0.8000000000000114	57.60000000000082
+14:08:02.555 - Current price: 490.65
+14:08:02.555 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.65	0.19999999999998863	1.0	72.0	0.0	0.0	ACTIVE	1.0	72.0
+14:08:18.188 - Current price: 490.55
+14:08:18.189 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.55	-0.0999999999999659	0.9000000000000341	64.80000000000246	-0.0999999999999659	-0.0999999999999659	ACTIVE	0.9000000000000341	64.80000000000246
+14:08:32.923 - Current price: 490.45
+14:08:32.923 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.45	-0.10000000000002274	0.8000000000000114	57.60000000000082	-0.19999999999998863	-0.19999999999998863	ACTIVE	0.8000000000000114	57.60000000000082
+14:08:47.780 - Current price: 490.45
+14:08:47.780 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.45	0.0	0.8000000000000114	57.60000000000082	-0.19999999999998863	-0.19999999999998863	ACTIVE	0.8000000000000114	57.60000000000082
+14:09:02.598 - Current price: 490.2
+14:09:02.599 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.2	-0.25	0.5500000000000114	39.60000000000082	-0.44999999999998863	-0.44999999999998863	ACTIVE	0.5500000000000114	39.60000000000082
+14:09:17.563 - Current price: 489.7
+14:09:17.564 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.7	-0.5	0.05000000000001137	3.6000000000008185	-0.9499999999999886	-0.9499999999999886	ACTIVE	0.05000000000001137	3.6000000000008185
+14:09:32.983 - Current price: 489.9
+14:09:32.983 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	0.19999999999998863	0.25	18.0	-0.75	-0.75	ACTIVE	0.25	18.0
+14:09:47.611 - Current price: 489.9
+14:09:47.611 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	0.0	0.25	18.0	-0.75	-0.75	ACTIVE	0.25	18.0
+14:10:02.639 - Current price: 489.95
+14:10:02.639 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.05000000000001137	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:10:17.547 - Current price: 489.95
+14:10:17.547 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.0	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:10:33.277 - Current price: 489.95
+14:10:33.277 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.0	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:10:47.903 - Current price: 490.15
+14:10:47.903 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.15	0.19999999999998863	0.5	36.0	-0.5	-0.5	ACTIVE	0.5	36.0
+14:11:02.962 - Current price: 490.1
+14:11:02.963 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.1	-0.049999999999954525	0.4500000000000455	32.400000000003274	-0.5499999999999545	-0.5499999999999545	ACTIVE	0.4500000000000455	32.400000000003274
+14:11:19.138 - Current price: 490.05
+14:11:19.138 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.05	-0.05000000000001137	0.4000000000000341	28.800000000002456	-0.5999999999999659	-0.5999999999999659	ACTIVE	0.4000000000000341	28.800000000002456
+14:11:32.636 - Current price: 489.95
+14:11:32.636 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	-0.10000000000002274	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:11:47.605 - Current price: 489.8
+14:11:47.605 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.8	-0.14999999999997726	0.1500000000000341	10.800000000002456	-0.8499999999999659	-0.8499999999999659	ACTIVE	0.1500000000000341	10.800000000002456
+14:12:02.613 - Current price: 490.0
+14:12:02.614 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.19999999999998863	0.35000000000002274	25.200000000001637	-0.6499999999999773	-0.6499999999999773	ACTIVE	0.35000000000002274	25.200000000001637
+14:12:21.195 - Current price: 489.85
+14:12:21.196 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	-0.14999999999997726	0.20000000000004547	14.400000000003274	-0.7999999999999545	-0.7999999999999545	ACTIVE	0.20000000000004547	14.400000000003274
+14:12:32.638 - Current price: 489.85
+14:12:32.638 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	0.0	0.20000000000004547	14.400000000003274	-0.7999999999999545	-0.7999999999999545	ACTIVE	0.20000000000004547	14.400000000003274
+14:12:48.240 - Current price: 489.9
+14:12:48.241 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	0.049999999999954525	0.25	18.0	-0.75	-0.75	ACTIVE	0.25	18.0
+14:13:03.593 - Current price: 489.95
+14:13:03.593 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.05000000000001137	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:13:19.862 - Current price: 490.0
+14:13:19.863 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.05000000000001137	0.35000000000002274	25.200000000001637	-0.6499999999999773	-0.6499999999999773	ACTIVE	0.35000000000002274	25.200000000001637
+14:13:32.763 - Current price: 489.95
+14:13:32.763 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	-0.05000000000001137	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:13:56.730 - Current price: 489.85
+14:13:56.731 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	-0.0999999999999659	0.20000000000004547	14.400000000003274	-0.7999999999999545	-0.7999999999999545	ACTIVE	0.20000000000004547	14.400000000003274
+14:14:02.780 - Current price: 489.9
+14:14:02.780 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	0.049999999999954525	0.25	18.0	-0.75	-0.75	ACTIVE	0.25	18.0
+14:14:17.603 - Current price: 489.85
+14:14:17.604 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	-0.049999999999954525	0.20000000000004547	14.400000000003274	-0.7999999999999545	-0.7999999999999545	ACTIVE	0.20000000000004547	14.400000000003274
+14:14:32.791 - Current price: 489.85
+14:14:32.791 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.85	0.0	0.20000000000004547	14.400000000003274	-0.7999999999999545	-0.7999999999999545	ACTIVE	0.20000000000004547	14.400000000003274
+14:14:47.904 - Current price: 489.9
+14:14:47.905 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	0.049999999999954525	0.25	18.0	-0.75	-0.75	ACTIVE	0.25	18.0
+14:15:02.633 - Current price: 490.0
+14:15:02.634 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.10000000000002274	0.35000000000002274	25.200000000001637	-0.6499999999999773	-0.6499999999999773	ACTIVE	0.35000000000002274	25.200000000001637
+14:15:17.934 - Current price: 489.95
+14:15:17.935 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	-0.05000000000001137	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:15:32.893 - Current price: 489.95
+14:15:32.893 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.0	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:15:47.924 - Current price: 489.95
+14:15:47.925 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.0	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:16:02.786 - Current price: 489.95
+14:16:02.787 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.0	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:16:18.654 - Current price: 489.95
+14:16:18.656 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.0	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:16:33.155 - Current price: 489.9
+14:16:33.155 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	-0.05000000000001137	0.25	18.0	-0.75	-0.75	ACTIVE	0.25	18.0
+14:16:47.756 - Current price: 489.95
+14:16:47.756 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.95	0.05000000000001137	0.30000000000001137	21.60000000000082	-0.6999999999999886	-0.6999999999999886	ACTIVE	0.30000000000001137	21.60000000000082
+14:17:09.798 - Current price: 489.9
+14:17:09.798 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	-0.05000000000001137	0.25	18.0	-0.75	-0.75	ACTIVE	0.25	18.0
+14:17:17.907 - Current price: 489.9
+14:17:17.907 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	0.0	0.25	18.0	-0.75	-0.75	ACTIVE	0.25	18.0
+14:17:32.724 - Current price: 490.0
+14:17:32.725 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.10000000000002274	0.35000000000002274	25.200000000001637	-0.6499999999999773	-0.6499999999999773	ACTIVE	0.35000000000002274	25.200000000001637
+14:17:47.649 - Current price: 489.9
+14:17:47.651 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	489.9	-0.10000000000002274	0.25	18.0	-0.75	-0.75	ACTIVE	0.25	18.0
+14:18:03.127 - Current price: 490.0
+14:18:03.128 - 1832188.AXISBANK.1486973646840	BUY	AXISBANK	490.0	0.10000000000002274	0.35000000000002274	25.200000000001637	-0.6499999999999773	-0.6499999999999773	ACTIVE	0.35000000000002274	25.200000000001637
+14:18:17.752 - Current price: 489.5
+14:18:17.754 - Trade reverse
+14:18:18.067 - Ended traded
+14:18:18.067 - Stoploss has reached
+14:18:18.104 - Execution of trade interrupted due to exception org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Alert !!! Your session has expired. Click OK to login.}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 219 milliseconds: null
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.13.183', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.ZhPixQ}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 2e31631790619958d093445a7e632310
+14:50:42.392 - Entered trade
+14:50:44.711 - Entered login id
+14:50:44.859 - Entered membership password
+14:50:45.024 - Entered trading password
+14:50:48.505 - Clicked on login button
+14:50:48.528 - Login Successful
+14:50:49.062 - Clicked on tradeNow Link
+14:50:49.168 - Selected the Exchange: NSE
+14:50:50.415 - Selected the scrip from dropdown 
+14:50:50.416 - Entered the scrip : AXISBANK
+14:50:50.616 - Selected buy/sell: Buy
+14:50:50.760 - Entered the quantity: 72
+14:50:50.892 - Entered the limit price: 0.0
+14:50:51.055 - Selected the  DP Account: 1832188
+14:50:51.160 - Clicked on place order button
+14:50:51.588 - Clicked on order confirm button
+14:50:51.613 - Order confirmation page is displayed
+14:50:51.761 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Element is not visible
+14:56:18.262 - Entered trade
+14:56:20.625 - Entered login id
+14:56:20.737 - Entered membership password
+14:56:20.876 - Entered trading password
+14:56:21.755 - Clicked on login button
+14:56:21.784 - Login Successful
+14:56:24.869 - Clicked on tradeNow Link
+14:56:24.975 - Selected the Exchange: NSE
+14:56:26.194 - Selected the scrip from dropdown 
+14:56:26.194 - Entered the scrip : AXISBANK
+14:56:26.414 - Selected buy/sell: Buy
+14:56:26.534 - Entered the quantity: 72
+14:56:26.666 - Entered the limit price: 0.0
+14:56:26.766 - Selected the  DP Account: 1832188
+14:56:26.894 - Clicked on place order button
+14:56:27.318 - Clicked on order confirm button
+14:56:27.348 - Order confirmation page is displayed
+14:56:29.245 - Current price: 488.9
+14:56:44.975 - Current price: 488.85
+14:56:44.981 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.85	-0.049999999999954525	-0.049999999999954525	-3.599999999996726	-0.049999999999954525	-0.049999999999954525	ACTIVE	-0.049999999999954525	-3.599999999996726
+14:56:59.698 - Current price: 488.75
+14:56:59.699 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.75	-0.10000000000002274	-0.14999999999997726	-10.799999999998363	-0.14999999999997726	-0.14999999999997726	ACTIVE	-0.14999999999997726	-10.799999999998363
+14:57:16.325 - Current price: 488.75
+14:57:16.326 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.75	0.0	-0.14999999999997726	-10.799999999998363	-0.14999999999997726	-0.14999999999997726	ACTIVE	-0.14999999999997726	-10.799999999998363
+14:57:33.610 - Current price: 488.85
+14:57:33.610 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.85	0.10000000000002274	-0.049999999999954525	-3.599999999996726	-0.049999999999954525	-0.049999999999954525	ACTIVE	-0.049999999999954525	-3.599999999996726
+14:57:45.501 - Current price: 488.75
+14:57:45.502 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.75	-0.10000000000002274	-0.14999999999997726	-10.799999999998363	-0.14999999999997726	-0.14999999999997726	ACTIVE	-0.14999999999997726	-10.799999999998363
+14:57:59.560 - Current price: 488.6
+14:57:59.560 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.6	-0.14999999999997726	-0.2999999999999545	-21.599999999996726	-0.2999999999999545	-0.2999999999999545	ACTIVE	-0.2999999999999545	-21.599999999996726
+14:58:14.839 - Current price: 488.6
+14:58:14.840 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.6	0.0	-0.2999999999999545	-21.599999999996726	-0.2999999999999545	-0.2999999999999545	ACTIVE	-0.2999999999999545	-21.599999999996726
+14:58:29.782 - Current price: 488.65
+14:58:29.782 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.65	0.049999999999954525	-0.25	-18.0	-0.25	-0.25	ACTIVE	-0.25	-18.0
+14:58:48.893 - Current price: 488.3
+14:58:48.894 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.3	-0.3499999999999659	-0.5999999999999659	-43.199999999997544	-0.5999999999999659	-0.5999999999999659	ACTIVE	-0.5999999999999659	-43.199999999997544
+14:59:01.018 - Current price: 488.3
+14:59:01.018 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.3	0.0	-0.5999999999999659	-43.199999999997544	-0.5999999999999659	-0.5999999999999659	ACTIVE	-0.5999999999999659	-43.199999999997544
+14:59:15.348 - Current price: 488.25
+14:59:15.349 - 1832188.AXISBANK.1486977976615	BUY	AXISBANK	488.25	-0.05000000000001137	-0.6499999999999773	-46.79999999999836	-0.6499999999999773	-0.6499999999999773	ACTIVE	-0.6499999999999773	-46.79999999999836
+15:00:09.052 - Entered trade
+15:00:11.381 - Entered login id
+15:00:11.483 - Entered membership password
+15:00:11.602 - Entered trading password
+15:00:11.684 - Clicked on login button
+15:00:12.547 - Login Successful
+15:00:13.180 - Clicked on tradeNow Link
+15:00:13.293 - Selected the Exchange: NSE
+15:00:14.528 - Selected the scrip from dropdown 
+15:00:14.528 - Entered the scrip : AXISBANK
+15:00:14.789 - Selected buy/sell: SellBigTrade
+15:00:15.169 - Entered the quantity: 156
+15:00:15.301 - Entered the limit price: 0.0
+15:00:15.429 - Selected the  DP Account: 1832188
+15:00:15.516 - Clicked on place order button
+15:00:16.025 - Clicked on order confirm button
+15:00:16.049 - Order confirmation page is displayed
+15:00:17.141 - Current price: 488.25
+15:00:32.826 - Current price: 488.45
+15:00:32.830 - 1832188.AXISBANK.1486978207353	SELLBIGTRADE	AXISBANK	488.45	-0.19999999999998863	-0.19999999999998863	-31.199999999998226	-0.19999999999998863	-0.19999999999998863	ACTIVE	-0.19999999999998863	-31.199999999998226
+15:01:06.986 - Entered trade
+15:01:09.340 - Entered login id
+15:01:09.440 - Entered membership password
+15:01:09.581 - Entered trading password
+15:01:12.140 - Clicked on login button
+15:01:12.161 - Login Successful
+15:01:12.727 - Clicked on tradeNow Link
+15:01:12.846 - Selected the Exchange: NSE
+15:01:14.011 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='td0']/strong"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 35 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.13.183', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.SbFV65}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 3a4a1bb2ff049c2c0d00015f3d29cf83
+*** Element info: {Using=xpath, value=//*[@id='td0']/strong}
+15:01:14.012 - Failed to select the scrip
+com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+	at com.atharva.ui.pages.MyTradePage.placeOrder(MyTradePage.java:91) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:58) [classes/:?]
+	at com.atharva.trade.TradeHandler.enterTrade(TradeHandler.java:183) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:99) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+15:01:14.021 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to select the scrip
+15:01:47.429 - Entered trade
+15:01:50.833 - Entered login id
+15:01:50.939 - Entered membership password
+15:01:51.057 - Entered trading password
+15:01:54.899 - Clicked on login button
+15:01:54.921 - Login Successful
+15:01:55.518 - Clicked on tradeNow Link
+15:01:55.635 - Selected the Exchange: NSE
+15:01:56.844 - Selected the scrip from dropdown 
+15:01:56.844 - Entered the scrip : AXISBANK
+15:01:57.231 - Selected buy/sell: SellBigTrade
+15:01:57.421 - Entered the quantity: 78
+15:01:57.571 - Entered the limit price: 0.0
+15:01:57.656 - Selected the  DP Account: 1832188
+15:01:57.781 - Clicked on place order button
+15:01:58.265 - Clicked on order confirm button
+15:01:58.288 - Order confirmation page is displayed
+15:02:00.331 - Current price: 489.2
+15:02:15.756 - Current price: 489.4
+15:02:15.758 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.4	-0.19999999999998863	-0.19999999999998863	-15.599999999999113	-0.19999999999998863	-0.19999999999998863	ACTIVE	-0.19999999999998863	-15.599999999999113
+15:02:30.605 - Current price: 489.45
+15:02:30.606 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.45	-0.05000000000001137	-0.25	-19.5	-0.25	-0.25	ACTIVE	-0.25	-19.5
+15:02:45.648 - Current price: 489.4
+15:02:45.649 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.4	0.05000000000001137	-0.19999999999998863	-15.599999999999113	-0.19999999999998863	-0.19999999999998863	ACTIVE	-0.19999999999998863	-15.599999999999113
+15:03:01.615 - Current price: 489.3
+15:03:01.615 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.3	0.0999999999999659	-0.10000000000002274	-7.8000000000017735	-0.10000000000002274	-0.10000000000002274	ACTIVE	-0.10000000000002274	-7.8000000000017735
+15:03:15.753 - Current price: 489.4
+15:03:15.756 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.4	-0.0999999999999659	-0.19999999999998863	-15.599999999999113	-0.19999999999998863	-0.19999999999998863	ACTIVE	-0.19999999999998863	-15.599999999999113
+15:03:30.912 - Current price: 489.35
+15:03:30.912 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.35	0.049999999999954525	-0.1500000000000341	-11.70000000000266	-0.1500000000000341	-0.1500000000000341	ACTIVE	-0.1500000000000341	-11.70000000000266
+15:03:46.679 - Current price: 489.5
+15:03:46.680 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.5	-0.14999999999997726	-0.30000000000001137	-23.400000000000887	-0.30000000000001137	-0.30000000000001137	ACTIVE	-0.30000000000001137	-23.400000000000887
+15:04:00.761 - Current price: 489.5
+15:04:00.762 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.5	-0.0	-0.30000000000001137	-23.400000000000887	-0.30000000000001137	-0.30000000000001137	ACTIVE	-0.30000000000001137	-23.400000000000887
+15:04:15.764 - Current price: 489.6
+15:04:15.765 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.6	-0.10000000000002274	-0.4000000000000341	-31.20000000000266	-0.4000000000000341	-0.4000000000000341	ACTIVE	-0.4000000000000341	-31.20000000000266
+15:04:33.936 - Current price: 489.8
+15:04:33.937 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.8	-0.19999999999998863	-0.6000000000000227	-46.80000000000177	-0.6000000000000227	-0.6000000000000227	ACTIVE	-0.6000000000000227	-46.80000000000177
+15:04:46.178 - Current price: 490.05
+15:04:46.180 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.05	-0.25	-0.8500000000000227	-66.30000000000177	-0.8500000000000227	-0.8500000000000227	ACTIVE	-0.8500000000000227	-66.30000000000177
+15:05:00.802 - Current price: 490.0
+15:05:00.805 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	0.05000000000001137	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:05:15.646 - Current price: 489.85
+15:05:15.647 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.85	0.14999999999997726	-0.6500000000000341	-50.70000000000266	-0.6500000000000341	-0.6500000000000341	ACTIVE	-0.6500000000000341	-50.70000000000266
+15:05:31.281 - Current price: 489.9
+15:05:31.282 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.9	-0.049999999999954525	-0.6999999999999886	-54.59999999999911	-0.6999999999999886	-0.6999999999999886	ACTIVE	-0.6999999999999886	-54.59999999999911
+15:05:48.679 - Current price: 490.0
+15:05:48.681 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.10000000000002274	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:06:01.343 - Current price: 490.0
+15:06:01.343 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.0	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:06:16.063 - Current price: 489.8
+15:06:16.064 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.8	0.19999999999998863	-0.6000000000000227	-46.80000000000177	-0.6000000000000227	-0.6000000000000227	ACTIVE	-0.6000000000000227	-46.80000000000177
+15:06:30.931 - Current price: 489.8
+15:06:30.932 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.8	-0.0	-0.6000000000000227	-46.80000000000177	-0.6000000000000227	-0.6000000000000227	ACTIVE	-0.6000000000000227	-46.80000000000177
+15:06:45.652 - Current price: 489.8
+15:06:45.652 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.8	-0.0	-0.6000000000000227	-46.80000000000177	-0.6000000000000227	-0.6000000000000227	ACTIVE	-0.6000000000000227	-46.80000000000177
+15:07:03.748 - Current price: 489.95
+15:07:03.749 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.95	-0.14999999999997726	-0.75	-58.5	-0.75	-0.75	ACTIVE	-0.75	-58.5
+15:07:15.890 - Current price: 489.95
+15:07:15.891 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.95	-0.0	-0.75	-58.5	-0.75	-0.75	ACTIVE	-0.75	-58.5
+15:07:31.682 - Current price: 490.0
+15:07:31.683 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.05000000000001137	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:07:49.581 - Current price: 489.95
+15:07:49.582 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.95	0.05000000000001137	-0.75	-58.5	-0.75	-0.75	ACTIVE	-0.75	-58.5
+15:08:00.898 - Current price: 489.8
+15:08:00.900 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.8	0.14999999999997726	-0.6000000000000227	-46.80000000000177	-0.6000000000000227	-0.6000000000000227	ACTIVE	-0.6000000000000227	-46.80000000000177
+15:08:16.202 - Current price: 489.8
+15:08:16.202 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.8	-0.0	-0.6000000000000227	-46.80000000000177	-0.6000000000000227	-0.6000000000000227	ACTIVE	-0.6000000000000227	-46.80000000000177
+15:08:30.676 - Current price: 489.8
+15:08:30.677 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.8	-0.0	-0.6000000000000227	-46.80000000000177	-0.6000000000000227	-0.6000000000000227	ACTIVE	-0.6000000000000227	-46.80000000000177
+15:08:46.012 - Current price: 489.85
+15:08:46.012 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.85	-0.05000000000001137	-0.6500000000000341	-50.70000000000266	-0.6500000000000341	-0.6500000000000341	ACTIVE	-0.6500000000000341	-50.70000000000266
+15:09:01.168 - Current price: 490.0
+15:09:01.168 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.14999999999997726	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:09:15.866 - Current price: 490.0
+15:09:15.866 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.0	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:09:30.933 - Current price: 490.0
+15:09:30.935 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.0	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:09:47.241 - Current price: 490.0
+15:09:47.242 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.0	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:10:00.766 - Current price: 490.0
+15:10:00.768 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.0	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:10:15.703 - Current price: 489.95
+15:10:15.704 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.95	0.05000000000001137	-0.75	-58.5	-0.75	-0.75	ACTIVE	-0.75	-58.5
+15:10:30.956 - Current price: 489.95
+15:10:30.957 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.95	-0.0	-0.75	-58.5	-0.75	-0.75	ACTIVE	-0.75	-58.5
+15:10:46.025 - Current price: 489.95
+15:10:46.025 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.95	-0.0	-0.75	-58.5	-0.75	-0.75	ACTIVE	-0.75	-58.5
+15:11:00.740 - Current price: 490.05
+15:11:00.741 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.05	-0.10000000000002274	-0.8500000000000227	-66.30000000000177	-0.8500000000000227	-0.8500000000000227	ACTIVE	-0.8500000000000227	-66.30000000000177
+15:11:16.139 - Current price: 490.1
+15:11:16.141 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.1	-0.05000000000001137	-0.9000000000000341	-70.20000000000266	-0.9000000000000341	-0.9000000000000341	ACTIVE	-0.9000000000000341	-70.20000000000266
+15:11:30.700 - Current price: 490.0
+15:11:30.701 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	0.10000000000002274	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:11:46.154 - Current price: 490.0
+15:11:46.154 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.0	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:12:04.065 - Current price: 490.0
+15:12:04.066 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	-0.0	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:12:16.045 - Current price: 490.1
+15:12:16.046 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.1	-0.10000000000002274	-0.9000000000000341	-70.20000000000266	-0.9000000000000341	-0.9000000000000341	ACTIVE	-0.9000000000000341	-70.20000000000266
+15:12:30.976 - Current price: 490.0
+15:12:30.976 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	0.10000000000002274	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:12:48.681 - Current price: 489.85
+15:12:48.682 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.85	0.14999999999997726	-0.6500000000000341	-50.70000000000266	-0.6500000000000341	-0.6500000000000341	ACTIVE	-0.6500000000000341	-50.70000000000266
+15:13:00.797 - Current price: 489.75
+15:13:00.797 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.75	0.10000000000002274	-0.5500000000000114	-42.90000000000089	-0.5500000000000114	-0.5500000000000114	ACTIVE	-0.5500000000000114	-42.90000000000089
+15:13:15.954 - Current price: 489.75
+15:13:15.955 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.75	-0.0	-0.5500000000000114	-42.90000000000089	-0.5500000000000114	-0.5500000000000114	ACTIVE	-0.5500000000000114	-42.90000000000089
+15:13:31.110 - Current price: 490.05
+15:13:31.111 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.05	-0.30000000000001137	-0.8500000000000227	-66.30000000000177	-0.8500000000000227	-0.8500000000000227	ACTIVE	-0.8500000000000227	-66.30000000000177
+15:13:47.192 - Current price: 490.0
+15:13:47.193 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	0.05000000000001137	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:14:01.591 - Current price: 490.05
+15:14:01.591 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.05	-0.05000000000001137	-0.8500000000000227	-66.30000000000177	-0.8500000000000227	-0.8500000000000227	ACTIVE	-0.8500000000000227	-66.30000000000177
+15:14:18.966 - Current price: 490.05
+15:14:18.967 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.05	-0.0	-0.8500000000000227	-66.30000000000177	-0.8500000000000227	-0.8500000000000227	ACTIVE	-0.8500000000000227	-66.30000000000177
+15:14:33.972 - Current price: 490.05
+15:14:33.973 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.05	-0.0	-0.8500000000000227	-66.30000000000177	-0.8500000000000227	-0.8500000000000227	ACTIVE	-0.8500000000000227	-66.30000000000177
+15:14:47.108 - Current price: 490.0
+15:14:47.110 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	0.05000000000001137	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:15:01.087 - Current price: 489.95
+15:15:01.088 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.95	0.05000000000001137	-0.75	-58.5	-0.75	-0.75	ACTIVE	-0.75	-58.5
+15:15:15.891 - Current price: 489.95
+15:15:15.891 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.95	-0.0	-0.75	-58.5	-0.75	-0.75	ACTIVE	-0.75	-58.5
+15:15:30.778 - Current price: 489.95
+15:15:30.778 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.95	-0.0	-0.75	-58.5	-0.75	-0.75	ACTIVE	-0.75	-58.5
+15:15:45.998 - Current price: 490.1
+15:15:45.999 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.1	-0.1500000000000341	-0.9000000000000341	-70.20000000000266	-0.9000000000000341	-0.9000000000000341	ACTIVE	-0.9000000000000341	-70.20000000000266
+15:16:01.257 - Current price: 490.0
+15:16:01.257 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.0	0.10000000000002274	-0.8000000000000114	-62.40000000000089	-0.8000000000000114	-0.8000000000000114	ACTIVE	-0.8000000000000114	-62.40000000000089
+15:16:15.986 - Current price: 489.75
+15:16:15.986 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	489.75	0.25	-0.5500000000000114	-42.90000000000089	-0.5500000000000114	-0.5500000000000114	ACTIVE	-0.5500000000000114	-42.90000000000089
+15:16:30.841 - Current price: 490.1
+15:16:30.841 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.1	-0.35000000000002274	-0.9000000000000341	-70.20000000000266	-0.9000000000000341	-0.9000000000000341	ACTIVE	-0.9000000000000341	-70.20000000000266
+15:16:45.988 - Current price: 490.1
+15:16:45.989 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.1	-0.0	-0.9000000000000341	-70.20000000000266	-0.9000000000000341	-0.9000000000000341	ACTIVE	-0.9000000000000341	-70.20000000000266
+15:17:01.542 - Current price: 490.05
+15:17:01.542 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.05	0.05000000000001137	-0.8500000000000227	-66.30000000000177	-0.8500000000000227	-0.8500000000000227	ACTIVE	-0.8500000000000227	-66.30000000000177
+15:17:15.875 - Current price: 490.2
+15:17:15.876 - 1832188.AXISBANK.1486978305790	SELLBIGTRADE	AXISBANK	490.2	-0.14999999999997726	-1.0	-78.0	-1.0	-1.0	ACTIVE	-1.0	-78.0
+15:17:31.115 - Current price: 490.25
+15:17:31.115 - Trade reverse
+15:17:40.887 - Error encountered org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"loginid"}
+  (Session info: chrome=56.0.2924.87)
+  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 76 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'
+System info: host: 'EN-PraveenR', ip: '192.168.13.183', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.6', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=/var/folders/b0/md9cyp2j5m19c_5qy5j2z8fnc2jn5l/T/.org.chromium.Chromium.y0hhSM}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: cf0a68130f895d9776b6adcb0667fcbd
+*** Element info: {Using=id, value=loginid}
+15:17:40.888 - Failed to enter login id
+com.atharva.exceptions.UIOperationFailureException: Failed to enter login id
+	at com.atharva.ui.pages.LoginPage.login(LoginPage.java:55) [classes/:?]
+	at com.atharva.ui.pages.LoginPage.verifiyAndLogin(LoginPage.java:114) [classes/:?]
+	at com.atharva.ui.Sharekhan.placeOrder(Sharekhan.java:56) [classes/:?]
+	at com.atharva.trade.TradeHandler.reverseTrade(TradeHandler.java:239) [classes/:?]
+	at com.atharva.trade.TradeHandler.startTrade(TradeHandler.java:128) [classes/:?]
+	at com.atharva.trade.TradeHandler.run(TradeHandler.java:80) [classes/:?]
+15:17:40.903 - Ended traded
+15:17:40.904 - Stoploss has reached
+15:17:40.904 - Execution of trade interrupted due to exception com.atharva.exceptions.UIOperationFailureException: Failed to enter login id

@@ -2,20 +2,93 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f693232d-b2c2-424f-a174-5b981e76cd68" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/objectProperties.properties" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/objectProperties.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/ui/ObjectProperties.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/ObjectProperties.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/ui/pages/Actions.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/Actions.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/ui/pages/HomePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/HomePage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/ui/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/LoginPage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/ui/pages/MyTradePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/MyTradePage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/ui/pages/WebPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/WebPage.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_3_2_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_7.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_codeborne_phantomjsdriver_1_3_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_0_9_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_5_7_Final.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_4_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_20.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_neko_htmlunit_2_23.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_8.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_2_15_v20160210.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_2_15_v20160210.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_2_15_v20160210.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_2_15_v20160210.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_2_15_v20160210.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_0_1.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_nop_1_7_22.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/objectProperties.properties" afterPath="$PROJECT_DIR$/src/main/resources/objectProperties.properties" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/system.properties" afterPath="$PROJECT_DIR$/src/main/resources/system.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/Atharva.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/Atharva.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/SystemPropertiesConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/SystemPropertiesConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/exceptions/NetworkCallFailedException.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/exceptions/NetworkCallFailedException.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/exceptions/UIOperationFailureException.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/exceptions/UIOperationFailureException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/FeedRequest.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/FeedRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/FeedResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/FeedResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/GraphRequest.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/GraphRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/GraphResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/GraphResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/Graph_CorpActItem.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/Graph_CorpActItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/Graph_DataItem.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/Graph_DataItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/NCScripMaster.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/NCScripMaster.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/NFScripMaster.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/NFScripMaster.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterDownloader$1$1.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterDownloader$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterDownloader$1.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterDownloader$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterDownloader.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterDownloader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterRequest.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/broadcast/ScripMasterResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/CConstants$AckCode.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/CConstants$AckCode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/CConstants$TransactionCode.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/CConstants$TransactionCode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/CConstants.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/CConstants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/MessageHeader.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/MessageHeader.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI$1.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI$BroadcastSubject.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI$BroadcastSubject.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI$Listen.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI$Listen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI$parseData.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI$parseData.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/core/SharekhanAPI.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/DerivativeOrderReportItem.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/DerivativeOrderReportItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/EquityOrderReportItem.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/EquityOrderReportItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/ExchangeConfirmation.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/ExchangeConfirmation.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/LoginResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/LoginResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/OrderConfirmationItem.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/OrderConfirmationItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/OrderItem.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/OrderItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/OrderRequest.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/OrderRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/OrderResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/OrderResponse.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/ReportRequest.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/ReportRequest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/ReportResponse.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/sharekhan/interactive/ReportResponse.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/trade/AssetClass.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/trade/AssetClass.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/trade/Order.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/trade/Order.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/trade/TradeHandler.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/trade/TradeHandler.class" />
@@ -23,16 +96,36 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/trade/TradeSettings.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/trade/TradeSettings.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/trade/TradeType$1.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/trade/TradeType$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/trade/TradeType.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/trade/TradeType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/trade/User.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/trade/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/ui/ObjectProperties.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/ui/ObjectProperties.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/ui/Sharekhan.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/ui/Sharekhan.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/Actions.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/Actions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/HomePage.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/HomePage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/LoginPage.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/LoginPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/MyTradePage.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/MyTradePage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/OrderConfirmationPage.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/OrderConfirmationPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/WebPage.class" afterPath="$PROJECT_DIR$/target/classes/com/atharva/ui/pages/WebPage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/test/Selenium.class" afterPath="$PROJECT_DIR$/target/test-classes/com/test/Selenium.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/test/UiAutoThread.class" afterPath="$PROJECT_DIR$/target/test-classes/com/test/UiAutoThread.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/atharva.iml" afterPath="$PROJECT_DIR$/atharva.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/error.log" afterPath="$PROJECT_DIR$/log/error.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/output.log" afterPath="$PROJECT_DIR$/log/output.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/report.log" afterPath="$PROJECT_DIR$/log/report.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/SystemPropertiesConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/SystemPropertiesConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/Atharva.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/Atharva.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/trade/AssetClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/trade/AssetClass.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/trade/Order.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/trade/Order.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeMode.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeMode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeSettings.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeSettings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeType.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/trade/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/trade/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/ui/Sharekhan.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/Sharekhan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/Actions.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/Actions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/LoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/LoginPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/MyTradePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/MyTradePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/OrderConfirmationPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/OrderConfirmationPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/test/Selenium.java" afterPath="$PROJECT_DIR$/src/test/java/com/test/Selenium.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,11 +142,33 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TestUiCode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/TestUiCode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Selenium.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/test/Selenium.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MyTradePage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/MyTradePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="100" column="19" lean-forward="false" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
+            <state relative-caret-position="136">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,70 +177,23 @@
         </entry>
       </file>
       <file leaf-file-name="objectProperties.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/objectProperties.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/objectProperties.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="34" />
+            <state relative-caret-position="134">
+              <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TradeHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeHandler.java">
+      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="231" column="54" lean-forward="false" selection-start-line="231" selection-start-column="54" selection-end-line="231" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TradeSettings.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeSettings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="136">
+              <caret line="144" column="19" lean-forward="false" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
               <folding>
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#636#637#0" expanded="true" />
-                <element signature="e#703#704#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="71" column="51" lean-forward="true" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
-              <folding>
-                <element signature="e#2663#2664#0" expanded="true" />
-                <element signature="e#2709#2710#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Atharva.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/Atharva.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sharekhan.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/Sharekhan.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="41" column="98" lean-forward="false" selection-start-line="41" selection-start-column="98" selection-end-line="41" selection-end-column="98" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1768#1769#0" expanded="true" />
+                <element signature="e#1818#1819#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,9 +202,32 @@
       <file leaf-file-name="OrderConfirmationPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/OrderConfirmationPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+            <state relative-caret-position="140">
+              <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TradeHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="82" column="30" lean-forward="false" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/LoginPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+              <folding>
+                <element signature="e#3956#3957#0" expanded="true" />
+                <element signature="e#4003#4004#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -146,19 +237,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Trade Now</find>
-      <find>totalProfitorLoss</find>
-      <find>activeTradeProfitorLoss</find>
-      <find>trailingStopLoss</find>
-      <find>BigDecimal</find>
       <find>reEntryCriteria</find>
       <find>simp</find>
       <find>onGoingTradeType</find>
@@ -178,6 +264,17 @@
       <find>settings3</find>
       <find>isTra</find>
       <find>radio</find>
+      <find>quan</find>
+      <find>try</find>
+      <find>getid</find>
+      <find>log</find>
+      <find>dro</find>
+      <find>slf</find>
+      <find>dropwizard</find>
+      <find>id</find>
+      <find>reentry</find>
+      <find>ConfirmationHeader</find>
+      <find>sendk</find>
     </findStrings>
     <replaceStrings>
       <replace>Visit Home Page</replace>
@@ -208,18 +305,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/log/report.log" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/Atharva.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/MessageHeader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/OrderConfirmationItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/OrderItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/OrderRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/OrderResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/ScripMasterDownloader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/SharekhanAPI.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/core/CConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/EquityOrderReportItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/broadcast/NCScripMaster.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/broadcast/GraphResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/broadcast/NFScripMaster.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/ReportRequest.java" />
@@ -239,26 +324,38 @@
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/broadcast/GraphRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/broadcast/ScripMasterResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/HomePage.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="/Applications/tomcat/conf/server.xml" />
         <option value="/Applications/tomcat/conf/tomcat-users.xml" />
         <option value="$PROJECT_DIR$/README.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeMode.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/SystemPropertiesConfig.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/test/Selenium.java" />
         <option value="$PROJECT_DIR$/system.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/User.java" />
         <option value="$PROJECT_DIR$/resources/objectProperties.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/OrderType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/TradePlatform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/AssetClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/TestReflection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/TradePlatform.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/configuration/AtharvaConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/AtharvaConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/Atharva.java" />
+        <option value="$PROJECT_DIR$/config.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeSettings.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/resources/Trading.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/system.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/Sharekhan.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/Selenium.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/objectProperties.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/MyTradePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/OrderConfirmationPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/Actions.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/LoginPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/Sharekhan.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/OrderConfirmationPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeSettings.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/MyTradePage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/ui/OrderType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/Order.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeHandler.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test/TestUiCode.java" />
       </list>
     </option>
   </component>
@@ -304,6 +401,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -441,7 +564,71 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="trade" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,6 +646,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="atharva" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -473,6 +674,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/com/atharva" />
       <recent name="$PROJECT_DIR$/.idea" />
@@ -481,10 +683,11 @@
       <recent name="com.atharva.sharekhan" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/com/atharva/sharekhan" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.testSelenium">
+  <component name="RunManager" selected="Application.TestSeleniumCode">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -693,7 +896,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.atharva.Atharva" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="server config.yml" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -719,9 +922,41 @@
       <envs />
       <method />
     </configuration>
-    <list size="2">
+    <configuration default="false" name="reflectionTest" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestReflection" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="atharva" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TestSeleniumCode" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="com.test.TestUiCode" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="atharva" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Atharva" />
       <item index="1" class="java.lang.String" itemvalue="Application.testSelenium" />
+      <item index="2" class="java.lang.String" itemvalue="Application.reflectionTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TestSeleniumCode" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -751,13 +986,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3428165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3428165" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32907802" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32859176" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2639485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3101093" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31009957" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -808,19 +1043,61 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeHandler.java</url>
-          <line>105</line>
-          <properties />
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/test/Selenium.java</url>
-          <line>32</line>
+          <line>44</line>
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atharva/AtharvaConfiguration.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeSettings.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/test/Selenium.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atharva/ui/Sharekhan.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/MyTradePage.java</url>
+          <line>114</line>
+          <properties />
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/test/Selenium.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/test/Selenium.java</url>
+          <line>43</line>
+          <properties />
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeHandler.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -829,76 +1106,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/EquityOrderReportItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/ExchangeConfirmation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/LoginResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/OrderConfirmationItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/OrderItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/OrderRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/OrderResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/ReportRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/core/MessageHeader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/interactive/ReportResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/sharekhan/broadcast/FeedRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -1011,48 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/report.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="1377" column="93" lean-forward="false" selection-start-line="1377" selection-start-column="0" selection-end-line="1378" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/output.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3450">
-          <caret line="158" column="181" lean-forward="false" selection-start-line="158" selection-start-column="176" selection-end-line="158" selection-end-column="181" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-488">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1077,133 +1242,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/SystemPropertiesConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="89" lean-forward="false" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/Actions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="64" column="26" lean-forward="false" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/Selenium.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/ObjectProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="e#3877#3878#0" expanded="true" />
-            <element signature="e#3924#3925#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#449#450#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/Atharva.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="34" column="59" lean-forward="false" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/OrderConfirmationPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="42" column="9" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeSettings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/Sharekhan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="41" column="98" lean-forward="false" selection-start-line="41" selection-start-column="98" selection-end-line="41" selection-end-column="98" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/objectProperties.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="34" lean-forward="false" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/MyTradePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="100" column="19" lean-forward="false" selection-start-line="100" selection-start-column="19" selection-end-line="100" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/lang/Double.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="48" column="19" lean-forward="false" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/TestReflection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="57" lean-forward="false" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#217#218#0" expanded="false" />
+            <element signature="e#260#261#0" expanded="false" />
+            <element signature="e#279#280#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/configuration/DataSourceFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license_third-party/EPL_v1.0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1216,22 +1296,245 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="1733" column="16" lean-forward="false" selection-start-line="1733" selection-start-column="16" selection-end-line="1733" selection-end-column="16" />
+          <folding>
+            <element signature="e#67537#67538#0" expanded="false" />
+            <element signature="e#67563#67564#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding>
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/AtharvaConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#764#765#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/Atharva.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/AssetClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeSettings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="26" column="32" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="16" column="46" lean-forward="true" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/Order.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="71" column="51" lean-forward="true" selection-start-line="71" selection-start-column="51" selection-end-line="71" selection-end-column="51" />
+        <state relative-caret-position="360">
+          <caret line="31" column="21" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/ObjectProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="20" lean-forward="false" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/SystemPropertiesConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="89" lean-forward="false" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/system.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="50" lean-forward="true" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/resources/Trading.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="30" />
           <folding>
-            <element signature="e#2663#2664#0" expanded="true" />
-            <element signature="e#2709#2710#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/TradePlatform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/Sharekhan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="43" column="54" lean-forward="false" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/Selenium.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/report.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75676">
+          <caret line="1419" column="112" lean-forward="true" selection-start-line="1419" selection-start-column="112" selection-end-line="1419" selection-end-column="112" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/output.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="20944" column="68" lean-forward="false" selection-start-line="20944" selection-start-column="63" selection-end-line="20944" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/objectProperties.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/OrderConfirmationPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="34" column="35" lean-forward="false" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/trade/TradeHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="231" column="54" lean-forward="false" selection-start-line="231" selection-start-column="54" selection-end-line="231" selection-end-column="54" />
+        <state relative-caret-position="61">
+          <caret line="82" column="30" lean-forward="false" selection-start-line="82" selection-start-column="19" selection-end-line="82" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/MyTradePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/Actions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="144" column="19" lean-forward="false" selection-start-line="144" selection-start-column="19" selection-end-line="144" selection-end-column="19" />
+          <folding>
+            <element signature="e#1768#1769#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test/TestUiCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/atharva/ui/pages/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="e#3956#3957#0" expanded="true" />
+            <element signature="e#4003#4004#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

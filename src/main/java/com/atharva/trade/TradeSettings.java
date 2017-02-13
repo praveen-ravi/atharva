@@ -1,5 +1,9 @@
 package com.atharva.trade;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.validation.constraints.NotNull;
+
 /**
  * Created by 16733 on 29/01/17.
  */
@@ -8,14 +12,37 @@ public class TradeSettings {
     private Double trendReversal;
     private Double reEntry;
     private Double reEntryLimit;
-    private Double flagAverage;
+    private Double flagAverage=0.0;
+    @NotNull
     private Double trendReversalStrategy=1.0;
+    @NotNull
     private Double stopLossStrategy=1.6;
-    private Double reEntryStrategy;
-    private Double reEntryCriteria;
+    @NotNull
+    private Double reEntryStrategy=0.03;
+    @NotNull
+    private Double reEntryCriteria=0.05;
+    @NotNull
     private long timeInterval=15000;
+    @NotNull
     private Double riskOnCapital=0.05;
     private TradeMode postStoplossMode = TradeMode.MARKETWATCH;
+
+    public TradeSettings clone(){
+        TradeSettings tradeSettingsClone = new TradeSettings();
+        tradeSettingsClone.setStopLossStrategy(this.stopLossStrategy);
+        tradeSettingsClone.setTrendReversalStrategy(this.trendReversalStrategy);
+        tradeSettingsClone.setRiskOnCapital(this.riskOnCapital);
+        tradeSettingsClone.setTimeInterval(this.timeInterval);
+        tradeSettingsClone.setReEntryCriteria(this.reEntryCriteria);
+        tradeSettingsClone.setReEntryStrategy(this.reEntryStrategy);
+        tradeSettingsClone.flagAverage=this.flagAverage;
+        return(tradeSettingsClone);
+    }
+
+    @Override
+    public String toString(){
+        return(trendReversalStrategy+"\t"+stopLossStrategy+"\t"+timeInterval+"\t"+riskOnCapital+"\t"+postStoplossMode);
+    }
 
     public TradeMode getPostStoplossMode() {
         return postStoplossMode;
@@ -29,6 +56,7 @@ public class TradeSettings {
         return stoploss;
     }
 
+    @JsonProperty("tradeSettings.riskOnCapital")
     public Double getRiskOnCapital() {
         return riskOnCapital;
     }
@@ -48,6 +76,10 @@ public class TradeSettings {
 
     public Double getReEntryLimit() {
         return reEntryLimit;
+    }
+
+    public TradeSettings(){
+
     }
 
     public TradeSettings(Double flagAverage){

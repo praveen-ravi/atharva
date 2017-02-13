@@ -3,6 +3,7 @@ package com.atharva.ui.pages;
 import com.atharva.exceptions.UIOperationFailureException;
 import com.atharva.trade.Order;
 import com.atharva.ui.ObjectProperties;
+import com.atharva.ui.OrderType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -30,15 +31,16 @@ public class MyTradePage extends Actions implements WebPage {
     public By dPAccountDropDown;
     public By placeOrderButton;
     public By confirmOrderButton;
+    public By firstOptionInDropdown;
 
-    public OrderConfirmationPage orderConfirmationPage=new OrderConfirmationPage(driver,objectProperties);
+    public OrderConfirmationPage orderConfirmationPage;
 
 
     public MyTradePage(WebDriver driver, ObjectProperties objectProperties) {
         super(driver);
         this.driver = driver;
         this.objectProperties = objectProperties;
-
+        orderConfirmationPage=new OrderConfirmationPage(driver,objectProperties);
         tradeNowLink = By.xpath(objectProperties.getProperty("myTradePage.TradeNowLink.xpath"));
         exchangeDropDown = By.id(objectProperties.getProperty("myTradePage.ExchangeDropDown.id"));
         scripTextBox = By.id(objectProperties.getProperty("myTradePage.ScripTextBox.id"));
@@ -54,11 +56,22 @@ public class MyTradePage extends Actions implements WebPage {
         dPAccountDropDown = By.xpath(objectProperties.getProperty("myTradePage.DPAccountDropDown.xpath"));
         placeOrderButton = By.id(objectProperties.getProperty("myTradePage.PlaceOrderButton.id"));
         confirmOrderButton = By.id(objectProperties.getProperty("myTradePage.ConfirmOrderButton.id"));
+        firstOptionInDropdown = By.xpath(objectProperties.getProperty("myTradePage.firstOptionInDropdown.xpath"));
     }
 
 
     public WebPage placeOrder(Order order) throws UIOperationFailureException {
-        if(this.syncForObject(exchangeDropDown)){
+
+        if(this.syncForObject(tradeNowLink)){
+            if(click(tradeNowLink)){
+                logger.info("Clicked on tradeNow Link");
+                syncForObject(exchangeDropDown);
+            }else{
+                logger.error("Failed to click on trade now link");
+                throw new UIOperationFailureException("Failed to click on trade now link");
+
+            }
+
             if(selectByVisibleText(exchangeDropDown,order.getAssetClass().getExchange())){
                 logger.info("Selected the Exchange: "+order.getAssetClass().getExchange());
             }else{
@@ -67,6 +80,17 @@ public class MyTradePage extends Actions implements WebPage {
             }
 
             if(sendKeys(scripTextBox,order.getScrip())){
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                if(click(firstOptionInDropdown)){
+                        logger.info("Selected the scrip from dropdown ");
+                    }else{
+                        logger.error("Failed to select the scrip", new UIOperationFailureException("Failed to select the scrip"));
+                        throw new UIOperationFailureException("Failed to select the scrip");
+                    }
                 logger.info("Entered the scrip : "+order.getScrip());
             }else{
                 logger.error("Failed to enter scrip", new UIOperationFailureException("Failed to enter scrip"));
@@ -82,14 +106,14 @@ public class MyTradePage extends Actions implements WebPage {
 
             handleAlert(true);
 
-            if(sendKeys(orderQtyTextBox,order.getOrderQty().toString())){
+            if(clearAndSendKeys(orderQtyTextBox,order.getOrderQty().toString())){
                 logger.info("Entered the quantity: "+order.getOrderQty());
             }else{
                 logger.error("Failed to enter order quantit", new UIOperationFailureException("Failed to enter order quantit"));
                 throw new UIOperationFailureException("Failed to enter order quantity");
             }
             if(order.getStoplossTrigger()!=null){
-                if(sendKeys(stopLossTriggerTextBox,order.getStoplossTrigger().toString())){
+                if(clearAndSendKeys(stopLossTriggerTextBox,order.getStoplossTrigger().toString())){
                     logger.info("Entered the stoploss trigger: "+order.getStoplossTrigger());
                 }else{
                     logger.error("Failed to enter Stoploss trigger", new UIOperationFailureException("Failed to enter Stoploss trigger"));
@@ -97,15 +121,29 @@ public class MyTradePage extends Actions implements WebPage {
                 }
             }
 
-            if(order.getOrderType()!=null && !order.getOrderType().isEmpty()){
-                if()
+            if(order.getOrderType()!=null){
+                if(order.getOrderType().equals(OrderType.LIMIT_ORDER)){
+                    if(click(limitOrderRadioButton)){
+                        logger.info("Selected limit order radio button");
+                    }else{
+                        logger.error("Failed to select limit order radio button",new UIOperationFailureException("Failed to select limit order radio button"));
+                        throw new UIOperationFailureException("Failed to select limit order radio button");
+                    }
+                }else{
+                    if(click(marketOrderRadioButton)){
+                        logger.info("Selected market order radio button");
+                    }else{
+                        logger.error("Failed to select market order radio button",new UIOperationFailureException("Failed to select market order radio button"));
+                        throw new UIOperationFailureException("Failed to select market order radio button");
+                    }
+                }
             }
             String limitPrice="0.0";
             if(order.getLimitPrice()!=null) {
                 limitPrice=order.getLimitPrice().toString();
             }
 
-            if(sendKeys(limitPriceTextBox,limitPrice)){
+            if(clearAndSendKeys(limitPriceTextBox,limitPrice)){
                 logger.info("Entered the limit price: "+limitPrice);
             }else{
                 logger.error("Failed to enter limit price", new UIOperationFailureException("Failed to enter limit price"));
@@ -113,8 +151,8 @@ public class MyTradePage extends Actions implements WebPage {
             }
 
 
-            if(selectByVisibleText(dPAccountDropDown,order.getUser().getAccountNo())){
-                    logger.info("Selected the  DP Account: "+order.getUser().getAccountNo());
+            if(selectByVisibleText(dPAccountDropDown,order.getUser().getSkDpAccountNo())){
+                    logger.info("Selected the  DP Account: "+order.getUser().getSkAccountNo());
             }else{
                 logger.error("Failed to select account no.", new UIOperationFailureException("Failed to select account no."));
                 throw new UIOperationFailureException("Failed to select account no.");

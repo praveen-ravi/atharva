@@ -22,18 +22,19 @@ public class OrderConfirmationPage extends Actions implements WebPage{
         super(driver);
         this.driver = driver;
         this.objectProperties = objectProperties;
-        confirmationHeader=By.xpath("orderConfirmationPage.ConfirmationHeader.xpath");
-        orderStatusTableCell=By.xpath("orderConfirmationPage.OrderStatusTableCell.xpath");
-        orderQtyTableCell=By.xpath("orderConfirmationPage.OrderQtyTableCell.xpath");
+        confirmationHeader=By.xpath(objectProperties.getProperty("orderConfirmationPage.ConfirmationHeader.xpath"));
+        orderStatusTableCell=By.xpath(objectProperties.getProperty("orderConfirmationPage.OrderStatusTableCell.xpath"));
+        orderQtyTableCell=By.xpath(objectProperties.getProperty("orderConfirmationPage.OrderQtyTableCell.xpath"));
 
     }
 
     public boolean confirmOrder(Order order) throws UIOperationFailureException {
-        if(isVisible(confirmationHeader)){
+
+        if(syncForVisible(confirmationHeader)){
             String status = getText(orderStatusTableCell);
             String orderQty = getText(orderQtyTableCell);
 
-            if(status.equals("Fully Executed") && orderQty.equals(order.getOrderQty())){
+            if(orderQty.equals(order.getOrderQty())){
                 return(true);
             }else {
                 return (false);

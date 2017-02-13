@@ -4,10 +4,7 @@ package com.atharva.ui.pages;
 import com.atharva.exceptions.UIOperationFailureException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 
 /**
@@ -43,6 +40,33 @@ public class Actions {
         }
     }
 
+    public boolean clearAndSendKeys(By by,String value){
+        try{
+            WebElement element = driver.findElement(by);
+            element.clear();
+            element.sendKeys(value);
+            return(true);
+        }catch (Exception e){
+            logger.error("Error encountered "+e);
+            return false;
+        }
+    }
+
+    public boolean switchToFrame(By by){
+        try{
+            WebElement element=driver.findElement(by);
+            driver.switchTo().frame(element);
+            return(true);
+        }catch (Exception e){
+            logger.error("Error encountered "+e);
+            return false;
+        }
+    }
+
+    public void switchToDefault(){
+        driver.switchTo().defaultContent();
+    }
+
     public boolean exists(By by){
         try{
             WebElement element = driver.findElement(by);
@@ -62,7 +86,7 @@ public class Actions {
     }
 
     public String getText(By by) throws UIOperationFailureException {
-        if(isVisible(by)){
+        if(syncForVisible(by)){
             WebElement element = driver.findElement(by);
             return(element.getText());
         }else{
@@ -86,6 +110,24 @@ public class Actions {
             exists=this.exists(by);
         }while(!exists && System.currentTimeMillis()<miliSeconds+systemTime);
         return(exists);
+    }
+
+    public boolean syncForVisible(By by, int miliSeconds){
+        boolean visible=false;
+        long systemTime = System.currentTimeMillis();
+        do{
+            visible=this.isVisible(by);
+        }while(!visible && System.currentTimeMillis()<miliSeconds+systemTime);
+        return(visible);
+    }
+
+    public boolean syncForVisible(By by){
+        boolean visible=false;
+        long systemTime = System.currentTimeMillis();
+        do{
+            visible=this.isVisible(by);
+        }while(!visible && System.currentTimeMillis()<this.defaultWaitTime+systemTime);
+        return(visible);
     }
 
     public boolean selectByVisibleText(By by, String value){

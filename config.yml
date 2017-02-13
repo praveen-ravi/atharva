@@ -1,0 +1,33 @@
+# Database settings.
+#database:
+
+    # the name of your JDBC driver
+    #driverClass: com.mysql.jdbc.Driver
+
+    # the username
+    #user: root
+
+    # the password
+    #password: Tiger@1234
+
+    # the JDBC URL
+   # url: jdbc:mysql://localhost:3306/atharvaDB
+
+# Enable HTTPS
+server:
+    applicationConnectors:
+        - type: https
+          port: 9090
+          keyStorePath: example.keystore
+          keyStorePassword: example
+    adminConnectors:
+      - type: http
+        port: 9091
+
+
+#TradeSettings
+#tradeSettings:
+stopLossStrategy: 1.7
+timeInterval: 15000
+riskOnCapital: 0.05
+trendReversalStrategy: 1.0

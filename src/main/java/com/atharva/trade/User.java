@@ -1,22 +1,40 @@
 package com.atharva.trade;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * Created by 16733 on 07/02/17.
  */
 public class User {
+    @NotNull
+    private String iduser;
+    @NotNull
     private String name;
-    private String accountNo;
-    private String dpAccountNo;
-    private String loginId;
-    private String membershipPassword;
-    private String tradingPassword;
+    @NotNull
+    private String skAccountNo;
+    @NotNull
+    private String skDpAccountNo;
+    @NotNull
+    private String skLoginId;
+    @NotNull
+    private String ckMembershipPassword;
+    @NotNull
+    private String skTradingPassword;
 
-    public String getDpAccountNo() {
-        return dpAccountNo;
+    public String getIduser() {
+        return iduser;
     }
 
-    public void setDpAccountNo(String dpAccountNo) {
-        this.dpAccountNo = dpAccountNo;
+    public void setIduser(String iduser) {
+        this.iduser = iduser;
+    }
+
+    public String getSkDpAccountNo() {
+        return skDpAccountNo;
+    }
+
+    public void setSkDpAccountNo(String skDpAccountNo) {
+        this.skDpAccountNo = skDpAccountNo;
     }
 
     public String getName() {
@@ -27,35 +45,35 @@ public class User {
         this.name = name;
     }
 
-    public String getAccountNo() {
-        return accountNo;
+    public String getSkAccountNo() {
+        return skAccountNo;
     }
 
-    public void setAccountNo(String accountNo) {
-        this.accountNo = accountNo;
+    public void setSkAccountNo(String skAccountNo) {
+        this.skAccountNo = skAccountNo;
     }
 
-    public String getLoginId() {
-        return loginId;
+    public String getSkLoginId() {
+        return skLoginId;
     }
 
-    public void setLoginId(String loginId) {
-        this.loginId = loginId;
+    public void setSkLoginId(String skLoginId) {
+        this.skLoginId = skLoginId;
     }
 
-    public String getMembershipPassword() {
-        return membershipPassword;
+    public String getCkMembershipPassword() {
+        return ckMembershipPassword;
     }
 
-    public void setMembershipPassword(String membershipPassword) {
-        this.membershipPassword = membershipPassword;
+    public void setCkMembershipPassword(String ckMembershipPassword) {
+        this.ckMembershipPassword = ckMembershipPassword;
     }
 
-    public String getTradingPassword() {
-        return tradingPassword;
+    public String getSkTradingPassword() {
+        return skTradingPassword;
     }
 
-    public void setTradingPassword(String tradingPassword) {
-        this.tradingPassword = tradingPassword;
+    public void setSkTradingPassword(String skTradingPassword) {
+        this.skTradingPassword = skTradingPassword;
     }
 }

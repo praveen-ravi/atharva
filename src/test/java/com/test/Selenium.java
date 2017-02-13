@@ -3,16 +3,18 @@ package com.test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * Created by 16733 on 04/02/17.
  */
 public class Selenium {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver","src/main/resources/chromedriver");
         System.setProperty("webdriver.gecko.driver","src/main/resources/geckodriver");
@@ -29,10 +31,23 @@ public class Selenium {
         WebDriver driver1 =new ChromeDriver(chromeCapabilities);
 
 
-        driver1.get("http://demo.guru99.com/V4/index.php");
-        driver1.findElement(By.xpath("//input[@name='uid']")).sendKeys("sdafw");
-        driver1.findElement(By.xpath("//input[@name='password']")).sendKeys("sdafw");
-        driver1.findElement(By.xpath("//input[@name='btnLogin']")).click();
+        driver1.get("https://strade.sharekhan.com/rmmweb/");
+        //driver1.findElement(By.xpath("//td[contains(text(),'MARKET TODAY')]")).click();
+
+        WebElement element = driver1.findElement(By.id("scrip"));
+        element.sendKeys("AXISBANK");
+//        Point pint =element.getLocation();
+//        Actions actions=new Actions(driver1);
+//        actions.keyDown(Keys.ARROW_DOWN).keyDown(Keys.RETURN).build().perform();
+        Thread.sleep(1000);
+        driver1.findElement(By.xpath("//*[@id='td0']/strong")).click();
+        new Select(driver1.findElement(By.id("exchangecode"))).selectByVisibleText("BSE");
+        driver1.findElement(By.id("loginid")).sendKeys("pravi86");
+        driver1.findElement(By.id("loginid")).clear();
+        //driver1.findElement(By.id("loginid")).sendKeys(Keys.DELETE);
+        driver1.findElement(By.id("loginid")).sendKeys("pravi86");
+        driver1.findElement(By.xpath("//input[@name='brpwd']")).sendKeys("Tiger@5683");
+        driver1.findElement(By.xpath("//input[@name='trpwd']")).sendKeys("Cinde@6283");
 
         Alert alert=driver1.switchTo().alert();
         alert.accept();
