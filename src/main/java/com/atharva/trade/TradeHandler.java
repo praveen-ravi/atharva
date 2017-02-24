@@ -1,7 +1,7 @@
 package com.atharva.trade;
 
 import com.atharva.TradePlatform;
-import com.atharva.exceptions.UIOperationFailureException;
+import com.atharva.exceptions.OrderPlacementExecption;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -39,12 +39,12 @@ public class TradeHandler extends Thread{
     private ArrayList<Order> closedOrders;
     private Order activeOrder;
     private TradeSettings tradeSettings;
-    private boolean endTrade;
+    private TradeSettingValues tradeSettingValues;
     private TradeMode tradeMode;
     private TradeType onGoingTradeType;
     private Double currentMarketPrice=0.0;
     private Double lastSeenMarketPrice=0.0;
-    private ArrayList<Double> cummulativePriceDiffList=new ArrayList<Double>();
+    private Double currentTrendProfit = 0.0;
 
     private TradePlatform tradePlatform;
 
@@ -64,6 +64,7 @@ public class TradeHandler extends Thread{
 
     private void instanciateTradePlatform() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         String interfaceInstanciationString = activeOrder.getAssetClass().getTradeingInterface();
+        log.debug("Instanciating platform with "+interfaceInstanciationString);
         int lastIndexOfDot=interfaceInstanciationString.lastIndexOf(".");
         String className = interfaceInstanciationString.substring(0,lastIndexOfDot);
         String methodName = interfaceInstanciationString.substring(lastIndexOfDot+1);
@@ -75,30 +76,31 @@ public class TradeHandler extends Thread{
     public void run(){
         try {
             uniqueID =activeOrder.getUser().getSkAccountNo()+"."+activeOrder.getScrip()+"."+System.currentTimeMillis();
-            tradeSettings.setFlagAverage(activeOrder.getFlagAverage());
-            activeOrder.setOrderQty((long) ((activeOrder.getCapital().longValue()*tradeSettings.getRiskOnCapital())/tradeSettings.getStoploss()));
-            startTrade();
+            tradeSettingValues=new TradeSettingValues(activeOrder.getFlagAverage(),tradeSettings);
+            activeOrder.setOrderQty((long) ((activeOrder.getCapital().longValue()*tradeSettings.getRiskOnCapital())/tradeSettingValues.getStoploss()));
+            if(activeOrder.getOrderQty()>=1) {
+                startTrade();
+            }else{
+                log.error("Insufficient capital for starting the trade");
+            }
         } catch (Exception e) {
             try {
-                if(orderPlaced)
+                if(tradeMode!=null && tradeMode.equals(TradeMode.ACTIVE))
                     endTrade();
-            } catch (UIOperationFailureException e1) {
-                log.fatal("Exception occurred during endTrade"+e1);
-                e1.printStackTrace();
+            } catch (OrderPlacementExecption orderPlacementExecption) {
+                log.fatal("CRITICAL EXCEPTION DURING END TRADE",orderPlacementExecption);
             }
-            log.fatal("Execution of trade interrupted due to exception "+e);
-            e.printStackTrace();
+            log.fatal("EXECUTION OF TRADE INTURRUPTED",e);
         }
     }
     private boolean orderPlaced=false;
     public void startTrade() throws Exception {
+
             onGoingTradeType=activeOrder.getTradeType();
             instanciateTradePlatform();
             lastSeenMarketPrice=0.0;
             //Place the order and enter trade
             enterTrade(activeOrder);
-            orderPlaced=true;
-            updateCurrentPrice();
             Long processStartTime = System.currentTimeMillis();
             do {
                 //Cancelling the processing time of the logic
@@ -115,22 +117,24 @@ public class TradeHandler extends Thread{
                 updateCurrentPrice();
 
                 updateProfitLossCounters();
+
                 //Check if StoplossCondition has reached
                 if (isStopLossContitionReached()) {
 
-                    if(activeTradePriceDiff>=tradeSettings.getReEntryLimit()){
+                    if(activeTradePriceDiff>=tradeSettingValues.getReEntryLimit()){
                         stopLoss();
                     }else{
                         endTrade();
                     }
                 }
-                if(Math.abs(trailingTrendReversalOnPrice) > Math.abs(tradeSettings.getTrendReversal())) {
+
+                if(isTradeReversalReached()) {
                     reverseTrade();
                 }
 
 
                     //Check of the trade is active in case of profit
-                if (activeTradePriceDiff > tradeSettings.getReEntry()) {
+                if (activeTradePriceDiff > tradeSettingValues.getReEntry()) {
                     if (tradeMode.equals(TradeMode.INACTIVE)) {
                         //Check if the proftiablity has reached the re-entry criteria
                         if (isMarketEndTime()) {
@@ -144,20 +148,32 @@ public class TradeHandler extends Thread{
                         log.info("Report profitiablity");
                         }
                     }
-
+                log.log(REPORT, this.toString()+"\n\n");
 
                 //Check if the market close time has reached.
                 if (isMarketEndTime()) {
                     endTrade();
                 }
-                log.log(REPORT, this.toString());
-            } while (!endTrade);
+
+            } while (!this.tradeMode.equals(TradeMode.ENDTRADE));
 
     }
 
+    private boolean isTradeReversalReached(){
+        log.info("Comparing trend reversal : {}>{} && {}>{}",currentTrendProfit,tradeSettingValues.getTrendReversalLimit(),Math.abs(trailingTrendReversalOnPrice), Math.abs(tradeSettingValues.getTrendReversal()));
+        if((currentTrendProfit>tradeSettingValues.getTrendReversalLimit()) && (Math.abs(trailingTrendReversalOnPrice) > Math.abs(tradeSettingValues.getTrendReversal()))) {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     private boolean isStopLossContitionReached(){
+
         if(this.trailingStoplossOnPrice<0){
-            if((trailingStoplossOnPrice*-1)>tradeSettings.getStoploss()){
+            log.info("Comparing Trailing stoploss: "+trailingStoplossOnPrice*-1+" StoplossSetting: "+tradeSettingValues.getStoploss()+" for order "+activeOrder+"\n"
+                    +(trailingStoplossOnPrice*-1)+" > "+tradeSettingValues.getStoploss()+"-->"+((trailingStoplossOnPrice*-1)>=tradeSettingValues.getStoploss()));
+            if((trailingStoplossOnPrice*-1)>=tradeSettingValues.getStoploss()){
                 return (true);
             }else {
                 return (false);
@@ -173,25 +189,52 @@ public class TradeHandler extends Thread{
         return(trade);
     }
 
-    public void enterTrade(Order order) throws UIOperationFailureException {
-        log.info("Entered trade");
-        tradeMode=TradeMode.ACTIVE;
-        this.activeTradeProfitorLoss=BigDecimal.ZERO;
-        this.activeTradePriceDiff=0.0;
+    public void enterTrade(Order order) throws OrderPlacementExecption {
+        log.info("Entered trade for order "+order);
+        log.info("With trade settings"+tradeSettings);
         activeOrder=order;
-        activeOrder.setOpenPrice(currentMarketPrice);
-        tradePlatform.placeOrder(activeOrder);
+        try {
+            this.placeOrder(activeOrder);
+        } catch (OrderPlacementExecption orderPlacementExecption) {
+            log.fatal("FAILED TO ENTER THE TRADE");
+            throw orderPlacementExecption;
+        }
+
+        tradeMode = TradeMode.ACTIVE;
+        this.activeTradeProfitorLoss = BigDecimal.ZERO;
+        this.activeTradePriceDiff = 0.0;
+
+
+
     }
 
-    public void endTrade() throws UIOperationFailureException {
-        log.info("Ended traded");
+    private void placeOrder(Order order) throws OrderPlacementExecption {
+        OrderConfirmation orderConfirmation = tradePlatform.placeOrder(order);
+        orderPlaced=orderConfirmation.isOrderStatus();
+        if(orderConfirmation.getExecutedPrice()!=null) {
+            this.lastSeenMarketPrice=currentMarketPrice;
+            currentMarketPrice = orderConfirmation.getExecutedPrice();
+
+        }
+        if(orderPlaced) {
+            activeOrder.setOrderId(orderConfirmation.getOrderId());
+            activeOrder.setExecutedPrice(orderConfirmation.getExecutedPrice());
+        }else{
+            throw new OrderPlacementExecption("Failed to place order "+order);
+        }
+        log.info("Order placed : "+order);
+    }
+
+    public void endTrade() throws OrderPlacementExecption {
+        log.info("Ended traded for order "+activeOrder);
         stopLoss();
-        endTrade=true;
+        this.tradeMode=TradeMode.ENDTRADE;
     }
 
     private void updateProfitLossCounters(){
         //Update the profit loss
         activeTradePriceDiff = activeTradePriceDiff + cummulativePriceDiff;
+        currentTrendProfit= currentTrendProfit+cummulativePriceDiff;
         activeTradeProfitorLoss = BigDecimal.valueOf(activeTradePriceDiff * activeOrder.getOrderQty().doubleValue());
         if (tradeMode.equals(TradeMode.ACTIVE)) {
             //Update the profit
@@ -212,11 +255,28 @@ public class TradeHandler extends Thread{
         }
             trailingStopLoss=BigDecimal.valueOf(trailingStoplossOnPrice.doubleValue()*activeOrder.getOrderQty().doubleValue());
             trailingTrendReversal=BigDecimal.valueOf(trailingTrendReversalOnPrice.doubleValue()*activeOrder.getOrderQty().doubleValue());
+            log.info("Order :"+activeOrder+", TrailingTrendReversal:"+trailingTrendReversalOnPrice+", TrailingStoploss:"+trailingStoplossOnPrice);
 
     }
 
-    private void stopLoss() throws UIOperationFailureException {
-        log.info("Stoploss has reached");
+    private void stopLoss() throws OrderPlacementExecption {
+        log.info("Stoploss has reached for order "+activeOrder);
+
+        if(tradeMode.equals(TradeMode.ACTIVE)){
+            Order stoplossOrder=this.activeOrder.getStoplossOrder();
+            try {
+                this.placeOrder(stoplossOrder);
+                updateCummulativePriceDiff();
+                updateProfitLossCounters();
+            } catch (OrderPlacementExecption orderPlacementExecption) {
+                log.fatal("FAILED TO PLACE THE STOPLOSS ORDER!!!");
+                throw orderPlacementExecption;
+            }
+
+
+        }
+        log.debug("Updating the porfit loss counters after placing order");
+        updateProfitLossCounters();
         tradeMode=tradeSettings.getPostStoplossMode();
         this.trailingStopLoss=BigDecimal.ZERO;
         this.trailingStoplossOnPrice=0.0;
@@ -224,29 +284,42 @@ public class TradeHandler extends Thread{
         this.activeTradeProfitorLoss=BigDecimal.ZERO;
         this.trailingTrendReversalOnPrice=0.0;
         this.trailingTrendReversal=BigDecimal.ZERO;
-        if(tradeMode.equals(TradeMode.ACTIVE)){
-
-            tradePlatform.placeOrder(this.activeOrder.getStoplossOrder());
-        }
-
     }
 
-    private void reverseTrade() throws UIOperationFailureException {
-        log.info("Trade reverse");
+    private void reverseTrade() throws OrderPlacementExecption {
+        log.info("Trade reverse for order "+this.activeOrder);
         this.trailingTrendReversalOnPrice=0.0;
         this.trailingTrendReversal=BigDecimal.ZERO;
+        this.currentTrendProfit = 0.0;
+
         if(tradeMode.equals(TradeMode.ACTIVE)){
-            tradePlatform.placeOrder(this.activeOrder.getReversalOrder());
+
+            try {
+                this.placeOrder(this.activeOrder.getReversalOrder());
+            } catch (OrderPlacementExecption orderPlacementExecption) {
+                log.fatal("FAILED TO REVERSE THE TRADE!!!");
+                throw orderPlacementExecption;
+            }
         }
+        log.debug("Updating the porfit loss counters after placing order");
+        this.updateCummulativePriceDiff();
+        updateProfitLossCounters();
+
+        activeOrder.setTradeType(onGoingTradeType.getOppositeDirection());
         onGoingTradeType=onGoingTradeType.getOppositeDirection();
+        log.debug("Order :"+activeOrder+", TrailingTrendReversal:"+trailingTrendReversalOnPrice+", TrailingStoploss:"+trailingStoplossOnPrice);
     }
 
     private void updateCurrentPrice() throws Exception {
         this.lastSeenMarketPrice=this.currentMarketPrice;
         this.currentMarketPrice=getMarketPrice();
-        log.info("Current price: "+currentMarketPrice);
+        log.info("Current price for order "+activeOrder+": "+currentMarketPrice);
+        updateCummulativePriceDiff();
+    }
+
+    private void updateCummulativePriceDiff(){
         this.cummulativePriceDiff=(currentMarketPrice-lastSeenMarketPrice)*this.onGoingTradeType.getTradeDirection();
-        cummulativePriceDiffList.add(cummulativePriceDiff);
+        log.info("Cummulative price difference for order "+activeOrder+": "+cummulativePriceDiff);
     }
 
     private Double getMarketPrice() throws Exception {

@@ -6,57 +6,54 @@ import com.atharva.ui.ObjectProperties;
 import com.atharva.ui.OrderType;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
  * Created by 16733 on 26/01/17.
  */
 public class MyTradePage extends Actions implements WebPage {
-    private ObjectProperties objectProperties;
+
     Logger logger = LogManager.getLogger(LoginPage.class);
 
-    public By tradeNowLink;
-    public By exchangeDropDown;
-    public By scripTextBox;
-    public By buySellDropDown;
-    public By orderQtyTextBox;
-    public By gFDDropDown;
-    public By disclosedQtyTextBox;
-    public By stopLossTriggerTextBox;
-    public By limitPriceTextBox;
-    public By marketOrderRadioButton;
-    public By limitOrderRadioButton;
-    public By advancedOrderDropDown;
-    public By dPAccountDropDown;
-    public By placeOrderButton;
-    public By confirmOrderButton;
-    public By firstOptionInDropdown;
+    public String tradeNowLink;
+    public String exchangeDropDown;
+    public String scripTextBox;
+    public String buySellDropDown;
+    public String orderQtyTextBox;
+    public String gFDDropDown;
+    public String disclosedQtyTextBox;
+    public String stopLossTriggerTextBox;
+    public String limitPriceTextBox;
+    public String marketOrderRadioButton;
+    public String limitOrderRadioButton;
+    public String advancedOrderDropDown;
+    public String dPAccountDropDown;
+    public String placeOrderButton;
+    public String confirmOrderButton;
+    public String firstOptionInDropdown;
 
     public OrderConfirmationPage orderConfirmationPage;
 
 
     public MyTradePage(WebDriver driver, ObjectProperties objectProperties) {
-        super(driver);
-        this.driver = driver;
-        this.objectProperties = objectProperties;
+        super(driver,objectProperties);
         orderConfirmationPage=new OrderConfirmationPage(driver,objectProperties);
-        tradeNowLink = By.xpath(objectProperties.getProperty("myTradePage.TradeNowLink.xpath"));
-        exchangeDropDown = By.id(objectProperties.getProperty("myTradePage.ExchangeDropDown.id"));
-        scripTextBox = By.id(objectProperties.getProperty("myTradePage.ScripTextBox.id"));
-        buySellDropDown = By.id(objectProperties.getProperty("myTradePage.BuySellDropDown.id"));
-        orderQtyTextBox = By.id(objectProperties.getProperty("myTradePage.OrderQtyTextBox.id"));
-        gFDDropDown = By.id(objectProperties.getProperty("myTradePage.GFDDropDown.id"));
-        disclosedQtyTextBox = By.cssSelector(objectProperties.getProperty("myTradePage.DisclosedQtyTextBox.cssPath"));
-        stopLossTriggerTextBox = By.id(objectProperties.getProperty("myTradePage.StopLossTriggerTextBox.id"));
-        limitPriceTextBox = By.id(objectProperties.getProperty("myTradePage.LimitPriceTextBox.id"));
-        marketOrderRadioButton = By.id(objectProperties.getProperty("myTradePage.MarketOrderRadioButton.id"));
-        limitOrderRadioButton = By.id(objectProperties.getProperty("myTradePage.LimitOrderRadioButton.id"));
-        advancedOrderDropDown = By.id(objectProperties.getProperty("myTradePage.AdvancedOrderDropDown.id"));
-        dPAccountDropDown = By.xpath(objectProperties.getProperty("myTradePage.DPAccountDropDown.xpath"));
-        placeOrderButton = By.id(objectProperties.getProperty("myTradePage.PlaceOrderButton.id"));
-        confirmOrderButton = By.id(objectProperties.getProperty("myTradePage.ConfirmOrderButton.id"));
-        firstOptionInDropdown = By.xpath(objectProperties.getProperty("myTradePage.firstOptionInDropdown.xpath"));
+        tradeNowLink = "myTradePage.TradeNowLink.xpath";
+        exchangeDropDown = "myTradePage.ExchangeDropDown.id";
+        scripTextBox = "myTradePage.ScripTextBox.id";
+        buySellDropDown = "myTradePage.BuySellDropDown.id";
+        orderQtyTextBox = "myTradePage.OrderQtyTextBox.id";
+        gFDDropDown = "myTradePage.GFDDropDown.id";
+        disclosedQtyTextBox = "myTradePage.DisclosedQtyTextBox.cssPath";
+        stopLossTriggerTextBox = "myTradePage.StopLossTriggerTextBox.id";
+        limitPriceTextBox = "myTradePage.LimitPriceTextBox.id";
+        marketOrderRadioButton = "myTradePage.MarketOrderRadioButton.id";
+        limitOrderRadioButton = "myTradePage.LimitOrderRadioButton.id";
+        advancedOrderDropDown = "myTradePage.AdvancedOrderDropDown.id";
+        dPAccountDropDown = "myTradePage.DPAccountDropDown.xpath";
+        placeOrderButton = "myTradePage.PlaceOrderButton.id";
+        confirmOrderButton = "myTradePage.ConfirmOrderButton.id";
+        firstOptionInDropdown = "myTradePage.firstOptionInDropdown.xpath";
     }
 
 
@@ -80,16 +77,11 @@ public class MyTradePage extends Actions implements WebPage {
             }
 
             if(sendKeys(scripTextBox,order.getScrip())){
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                //syncForVisible(firstOptionInDropdown);
                 if(click(firstOptionInDropdown)){
                         logger.info("Selected the scrip from dropdown ");
                     }else{
-                        logger.error("Failed to select the scrip", new UIOperationFailureException("Failed to select the scrip"));
-                        throw new UIOperationFailureException("Failed to select the scrip");
+                        logger.error("Failed to select the scrip");
                     }
                 logger.info("Entered the scrip : "+order.getScrip());
             }else{

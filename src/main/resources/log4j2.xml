@@ -5,23 +5,23 @@
     </CustomLevels>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
         <File name="activityLog" fileName="log/output.log" bufferedIO="true">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
         <File name="reportLog" fileName="log/report.log" bufferedIO="true">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
         <File name="errorLog" fileName="log/error.log" bufferedIO="true">
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} - %msg%n"/>
+            <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} -  %msg%n"/>
         </File>
     </Appenders>
     <Loggers>
-        <Root level="INFO">
+        <Root level="DEBUG">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="activityLog"/>
-            <AppenderRef ref="errorLog"/>
+            <AppenderRef ref="errorLog" level="error"/>
             <AppenderRef ref="reportLog" level="report"/>
         </Root>
 

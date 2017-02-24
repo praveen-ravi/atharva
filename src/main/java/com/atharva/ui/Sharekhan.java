@@ -2,8 +2,8 @@ package com.atharva.ui;
 
 import com.atharva.TradePlatform;
 import com.atharva.exceptions.NetworkCallFailedException;
-import com.atharva.exceptions.UIOperationFailureException;
 import com.atharva.trade.Order;
+import com.atharva.trade.OrderConfirmation;
 import com.atharva.ui.pages.LoginPage;
 import com.atharva.ui.pages.MyTradePage;
 import com.atharva.ui.pages.OrderConfirmationPage;
@@ -30,35 +30,45 @@ public class Sharekhan implements TradePlatform {
     WebDriver driver;
     ObjectProperties objectProperties;
 
-     private static Sharekhan sharekhan;
 
     private Client client = ClientBuilder.newClient();
 
 
 
     private Sharekhan() throws IOException {
-        driver=new ChromeDriver();
         objectProperties=new ObjectProperties("objectProperties.properties");
     }
 
     public static Sharekhan getInstance() throws IOException {
-        if(sharekhan==null){
-            sharekhan=new Sharekhan();
-        }
+        Sharekhan sharekhan=new Sharekhan();
         return (sharekhan);
     }
 
     @Override
-    public boolean placeOrder(Order order) throws UIOperationFailureException {
-        synchronized (sharekhan) {
+    public OrderConfirmation placeOrder(Order order) {
+        OrderConfirmation orderConfirmation=null;
+        try {
+            log.info("Placing order : " + order);
+            driver = new ChromeDriver();
             LoginPage loginPage = new LoginPage(driver, objectProperties);
 
             MyTradePage myTradePage = (MyTradePage) loginPage.verifiyAndLogin(order.getUser());
 
             OrderConfirmationPage orderConfirmationPage = (OrderConfirmationPage) myTradePage.placeOrder(order);
+            orderConfirmation = orderConfirmationPage.confirmOrder(order);
 
-            return (orderConfirmationPage.confirmOrder(order));
+
+            return (orderConfirmation);
+        }catch (Exception e){
+            orderConfirmation=new OrderConfirmation();
+            orderConfirmation.setOrderStatus(false);
+            log.fatal("Failed to place order due to exception",e);
+            return (orderConfirmation);
+        }finally {
+            driver.close();
+            driver.quit();
         }
+
     }
 
     @Override

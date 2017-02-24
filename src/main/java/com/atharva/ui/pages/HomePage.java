@@ -4,7 +4,6 @@ import com.atharva.exceptions.UIOperationFailureException;
 import com.atharva.ui.ObjectProperties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Set;
@@ -14,15 +13,12 @@ import java.util.Set;
  * Created by 16733 on 26/01/17.
  */
 public class HomePage extends Actions implements WebPage  {
-    private ObjectProperties objectProperties;
-    public By tradeNowLink;
+    public String tradeNowLink;
     public LoginPage loginPage;
     Logger logger= LogManager.getLogger(HomePage.class);
     public HomePage(WebDriver driver,ObjectProperties objectProperties) {
-        super(driver);
-        this.driver=driver;
-        this.objectProperties=objectProperties;
-        tradeNowLink=By.linkText(objectProperties.getProperty("homePage.visitHomePageLink.Text"));
+        super(driver,objectProperties);
+        tradeNowLink="homePage.visitHomePageLink.Text";
 
         loginPage=new LoginPage(driver,objectProperties);
     }

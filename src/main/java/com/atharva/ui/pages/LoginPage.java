@@ -5,39 +5,34 @@ import com.atharva.trade.User;
 import com.atharva.ui.ObjectProperties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
  * Created by 16733 on 26/01/17.
  */
 public class LoginPage extends Actions implements WebPage {
-    private ObjectProperties objectProperties;
     Logger logger= LogManager.getLogger(LoginPage.class);
 
-    public By loginLink;
-    public By loginIdTextBox;
-    public By memberShipPasswordTextbox;
-    public By tradingPasswordTextbox;
-    public By loginButton;
-    public By logoutButton;
-    public By accountId;
+    public String loginLink;
+    public String loginIdTextBox;
+    public String memberShipPasswordTextbox;
+    public String tradingPasswordTextbox;
+    public String loginButton;
+    public String logoutButton;
+    public String accountId;
     public MyTradePage myTradePage;
 
 
     public LoginPage(WebDriver driver,ObjectProperties objectProperties) {
-        super(driver);
+        super(driver,objectProperties);
         myTradePage =new MyTradePage(driver,objectProperties);
-
-        this.driver=driver;
-        this.objectProperties=objectProperties;
-        loginIdTextBox = By.id(objectProperties.getProperty("loginPage.loginIDTextBox.id"));
-        memberShipPasswordTextbox=By.id(objectProperties.getProperty("loginPage.memberShipPasswordTextBox.id"));
-        tradingPasswordTextbox=By.id(objectProperties.getProperty("loginPage.tradingPasswordTextBox.id"));
-        loginButton=By.xpath(objectProperties.getProperty("loginPage.loginButton.xpath"));
-        loginLink=By.xpath(objectProperties.getProperty("loginPage.loginLink.xpath"));
-        logoutButton=By.xpath(objectProperties.getProperty("loginPage.logoutButton.xpath"));
-        accountId=By.xpath(objectProperties.getProperty("loginPage.accountId.xpath"));
+        loginIdTextBox = "loginPage.loginIDTextBox.id";
+        memberShipPasswordTextbox="loginPage.memberShipPasswordTextBox.id";
+        tradingPasswordTextbox="loginPage.tradingPasswordTextBox.id";
+        loginButton="loginPage.loginButton.xpath";
+        loginLink="loginPage.loginLink.xpath";
+        logoutButton="loginPage.logoutButton.xpath";
+        accountId="loginPage.accountId.xpath";
 
     }
 
@@ -102,9 +97,7 @@ public class LoginPage extends Actions implements WebPage {
     public WebPage verifiyAndLogin(User user) throws UIOperationFailureException {
 
         driver.get(System.getProperty("sharekhansite"));
-        if(handleAlert(true)){
-            driver.get(System.getProperty("sharekhansite"));
-        }
+
         if(isLoggedIn()){
             if(getAccountId().equals(user.getSkAccountNo())){
                 return (this.myTradePage);

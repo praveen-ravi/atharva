@@ -15,7 +15,12 @@ public class Atharva extends Application<AtharvaConfiguration> {
     static final Level REPORT=Level.forName("REPORT",50);
 
     public static void main( String[] args) throws Exception {
+        SystemPropertiesConfig sysprop=new SystemPropertiesConfig();
+        System.setProperty("sharekhansite",sysprop.getProperty("sharekhansite"));
+        System.setProperty("webdriver.chrome.driver",sysprop.getProperty("webdriver.chrome.driver"));
+        System.setProperty("webdriver.gecko.driver",sysprop.getProperty("webdriver.gecko.driver"));
         new Atharva().run(args);
+
     }
 
     @Override

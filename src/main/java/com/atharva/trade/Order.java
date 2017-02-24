@@ -9,7 +9,7 @@ import java.math.BigInteger;
 /**
  * Created by 16733 on 26/01/17.
  */
-public class Order {
+public class Order implements OrderInterface{
     @NotNull
     private String scrip;
     @NotNull
@@ -24,10 +24,13 @@ public class Order {
     private OrderType orderType;
     private Double openPrice;
     private Double closedPrice;
+    private String orderId;
     @NotNull
     private AssetClass assetClass;
     private Double stoplossTrigger;
     private Double limitPrice;
+    private Double executedPrice;
+    private boolean reversalOrder;
     @NotNull
     private User user;
 
@@ -65,6 +68,26 @@ public class Order {
         return (stoplossOrder);
     }
 
+    public boolean isReversalOrder() {
+        return reversalOrder;
+    }
+
+    public void setReversalOrder(boolean reversalOrder) {
+        this.reversalOrder = reversalOrder;
+    }
+
+    public String getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(String orderId) {
+        this.orderId = orderId;
+    }
+
+    @Override
+    public String toString(){
+        return(this.tradeType+"."+this.scrip+"."+this.orderQty+"."+orderId+"."+executedPrice);
+    }
     public Order getReversalOrder(){
         Order reversalOrder = this.clone();
         reversalOrder.setTradeType(this.getTradeType().getOppositeDirection());
@@ -78,7 +101,16 @@ public class Order {
         reversalOrder.setStoplossTrigger(0.0);
         reversalOrder.setLimitPrice(0.0);
         reversalOrder.setOrderQty(this.orderQty*2);
+        reversalOrder.setReversalOrder(true);
         return (reversalOrder);
+    }
+
+    public Double getExecutedPrice() {
+        return executedPrice;
+    }
+
+    public void setExecutedPrice(Double executedPrice) {
+        this.executedPrice = executedPrice;
     }
 
     public Double getFlagAverage() {

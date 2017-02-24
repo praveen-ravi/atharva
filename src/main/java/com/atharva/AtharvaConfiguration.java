@@ -18,6 +18,8 @@ public class AtharvaConfiguration extends Configuration {
     Double riskOnCapital;
     @NotNull
     long timeInterval;
+    @NotNull
+    Double trendReversalCriteria;
 
     @JsonProperty
     public Double getTrendReversalStrategy() {
@@ -39,7 +41,13 @@ public class AtharvaConfiguration extends Configuration {
         return timeInterval;
     }
 
+    @JsonProperty
+    public Double getTrendReversalCriteria() {
+        return trendReversalCriteria;
+    }
+
     private TradeSettings tradeSettings=new TradeSettings();
+
 
 
     public TradeSettings getTradeSettings() {
@@ -47,6 +55,7 @@ public class AtharvaConfiguration extends Configuration {
         tradeSettings.setRiskOnCapital(this.riskOnCapital);
         tradeSettings.setTimeInterval(this.timeInterval);
         tradeSettings.setTrendReversalStrategy(this.trendReversalStrategy);
+        tradeSettings.setTrendReversalCriteria(this.trendReversalCriteria);
         return tradeSettings;
     }
 

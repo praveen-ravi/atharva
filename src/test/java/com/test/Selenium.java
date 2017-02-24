@@ -1,6 +1,5 @@
 package com.test;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -34,32 +33,20 @@ public class Selenium {
         driver1.get("https://strade.sharekhan.com/rmmweb/");
         //driver1.findElement(By.xpath("//td[contains(text(),'MARKET TODAY')]")).click();
 
-        WebElement element = driver1.findElement(By.id("scrip"));
-        element.sendKeys("AXISBANK");
-//        Point pint =element.getLocation();
-//        Actions actions=new Actions(driver1);
-//        actions.keyDown(Keys.ARROW_DOWN).keyDown(Keys.RETURN).build().perform();
-        Thread.sleep(1000);
-        driver1.findElement(By.xpath("//*[@id='td0']/strong")).click();
-        new Select(driver1.findElement(By.id("exchangecode"))).selectByVisibleText("BSE");
         driver1.findElement(By.id("loginid")).sendKeys("pravi86");
-        driver1.findElement(By.id("loginid")).clear();
-        //driver1.findElement(By.id("loginid")).sendKeys(Keys.DELETE);
-        driver1.findElement(By.id("loginid")).sendKeys("pravi86");
-        driver1.findElement(By.xpath("//input[@name='brpwd']")).sendKeys("Tiger@5683");
-        driver1.findElement(By.xpath("//input[@name='trpwd']")).sendKeys("Cinde@6283");
+        driver1.findElement(By.id("pwSignup")).sendKeys("Tiger@5683");
+        driver1.findElement(By.id("pwSignup1")).sendKeys("Cinde@6283");
+        driver1.findElement(By.xpath("//input[@name='Login']")).click();
+        driver1.findElement(By.xpath("//span[@id='teqmtm']")).click();
+        Thread.sleep(2000);
+        WebElement element=driver1.findElement(By.xpath("//select[@name='requeststatus']"));
+        System.out.println(element.isDisplayed());
+        Select select=new Select(element);
+        select.selectByVisibleText("Order");
 
-        Alert alert=driver1.switchTo().alert();
-        alert.accept();
-        driver1.findElement(By.xpath("//input[@name='uid']")).sendKeys("sdafw");
+        WebElement element1=driver1.findElement(By.xpath("//a[contains(text(), '651372836')]/parent::td/following-sibling::td[12]"));
+        System.out.println(element1.isDisplayed());
 
-        //WebDriver driver2= new FirefoxDriver(firefoxCapabilities);
-       //UiAutoThread thread1=new UiAutoThread(driver1,"http://www.sharekhan.com/stock-market/HomePage.aspx");
-        //UiAutoThread thread2=new UiAutoThread(driver2,"https://www.sharekhan.com/stock-market/HomePage.aspx");
-        //thread1.setName("yahooThread");
-        //thread2.setName("youtubeThread");
-        //thread1.start();
-        //thread2.start();
     }
 
 }
