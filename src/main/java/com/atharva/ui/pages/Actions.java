@@ -55,9 +55,18 @@ public class Actions {
 
     public boolean click(String objectPropertyKey,String... parameters) throws UIOperationFailureException {
         if(syncForObject(objectPropertyKey,parameters)){
-            WebElement element = getElement(objectPropertyKey,parameters);
-            element.click();
-            return(true);
+            int retryCount=5;
+
+            do {
+                try {
+                    WebElement element = getElement(objectPropertyKey, parameters);
+                    element.click();
+                    return (true);
+                }catch (StaleElementReferenceException e){
+
+                }
+            }while (retryCount-->0);
+            return false;
         }else{
             logger.error("Failed to click on element :"+objectPropertyKey);
             return false;
@@ -209,7 +218,7 @@ public class Actions {
         return (false);
     }
 
-    public boolean sycnForText(String objectPropertyKey,String value,String... parameters) throws UIOperationFailureException {
+    public boolean sycnForTextIgnoreCase(String objectPropertyKey, String value, String... parameters) throws UIOperationFailureException {
         long systemTime = System.currentTimeMillis();
         do{
             String elementValue = getText(objectPropertyKey,parameters);
@@ -220,7 +229,7 @@ public class Actions {
         return (false);
     }
 
-    public boolean sycnForText(String objectPropertyKey,String value ,long waitTime,String... parameters) throws UIOperationFailureException {
+    public boolean sycnForTextIgnoreCase(String objectPropertyKey, String value , long waitTime, String... parameters) throws UIOperationFailureException {
         long systemTime = System.currentTimeMillis();
         do{
             String elementValue = getText(objectPropertyKey,parameters);

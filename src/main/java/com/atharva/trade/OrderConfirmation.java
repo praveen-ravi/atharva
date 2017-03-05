@@ -6,13 +6,13 @@ package com.atharva.trade;
 public class OrderConfirmation {
     private String orderId;
     private Double executedPrice;
-    private boolean orderStatus;
+    private String orderStatus;
 
-    public boolean isOrderStatus() {
+    public String getOrderStatus() {
         return orderStatus;
     }
 
-    public void setOrderStatus(boolean orderStatus) {
+    public void setOrderStatus(String orderStatus) {
         this.orderStatus = orderStatus;
     }
 

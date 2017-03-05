@@ -5,19 +5,44 @@ package com.atharva.trade;
  */
 public class TradeSettingValues {
     private Double stoploss;
-    private Double trendReversal;
+    private Double trendFlagAverageValue;
     private Double reEntry;
     private Double reEntryLimit;
     private Double trendReversalLimit;
     private Double flagAverage=0.0;
+    private int maxConsecutiveLossEntries=2;
+    private Double riskOnCapital=0.05;
+    private long timeInterval=15000;
+    private TradeMode postStoplossMode = TradeMode.MARKETWATCH;
+    private Double brokerage = 0.0005;
+
+    public Double getBrokerage() {
+        return brokerage;
+    }
+
+    public void setBrokerage(Double brokerage) {
+        this.brokerage = brokerage;
+    }
+
+    public Double getRiskOnCapital() {
+        return riskOnCapital;
+    }
+
+    public int getMaxConsecutiveLossEntries() {
+        return maxConsecutiveLossEntries;
+    }
+
+    public void setMaxConsecutiveLossEntries(int maxConsecutiveLossEntries) {
+        this.maxConsecutiveLossEntries = maxConsecutiveLossEntries;
+    }
 
     public Double getStoploss() {
         return stoploss;
     }
 
-    public Double getTrendReversal() {
+    public Double getTrendFlagAverageValue() {
 
-        return trendReversal;
+        return trendFlagAverageValue;
     }
 
     public Double getTrendReversalLimit() {
@@ -36,15 +61,35 @@ public class TradeSettingValues {
         return flagAverage;
     }
 
-    public TradeSettingValues(Double flagAverage,TradeSettings tradeSettings){
+    public long getTimeInterval() {
+        return timeInterval;
+    }
+
+    public void setTimeInterval(long timeInterval) {
+        this.timeInterval = timeInterval;
+    }
+
+    public TradeMode getPostStoplossMode() {
+        return postStoplossMode;
+    }
+
+    public void setPostStoplossMode(TradeMode postStoplossMode) {
+        this.postStoplossMode = postStoplossMode;
+    }
+
+    public TradeSettingValues(Double flagAverage, TradeSettings tradeSettings){
         this.flagAverage=flagAverage;
 
         //Calculate the stoploss limit
         this.stoploss=this.flagAverage*tradeSettings.getStopLossStrategy();
-        this.trendReversal=this.flagAverage*tradeSettings.getTrendReversalStrategy();
+        this.trendFlagAverageValue =this.flagAverage*tradeSettings.getTrendReversalStrategy();
         this.reEntry=this.flagAverage*tradeSettings.getReEntryStrategy();
         reEntryLimit=tradeSettings.getReEntryCriteria()*this.flagAverage;
         trendReversalLimit=tradeSettings.getTrendReversalCriteria()*this.flagAverage;
+        this.riskOnCapital=tradeSettings.getRiskOnCapital();
+        this.timeInterval=tradeSettings.getTimeInterval();
+        this.postStoplossMode=tradeSettings.getPostStoplossMode();
+        this.brokerage=tradeSettings.getBrokerage();
 
     }
 

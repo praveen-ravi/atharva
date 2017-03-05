@@ -32,24 +32,22 @@ public class OrderConfirmationPage extends Actions implements WebPage{
 
     }
 
-    public OrderConfirmation confirmOrder(Order order) throws UIOperationFailureException {
+    public OrderConfirmation confirmOrder(Order order) throws UIOperationFailureException{
         OrderConfirmation orderConfirmation=new OrderConfirmation();
         if(syncForVisible(confirmationHeader)){
-            String status = getText(orderStatusTableCell);
-            String orderQty = getText(orderQtyTableCell);
             String skOrderId = getText(skOrderIDCell);
             Double execPrice = null;
-
+            String status;
             orderConfirmation.setOrderId(skOrderId);
 
-            if(!status.equalsIgnoreCase("rejected")){
+            if(!sycnForTextIgnoreCase(orderStatusTableCell,"rejected")){
 
-                if(sycnForText(orderStatusTableCell,"FullyExecuted",20000)){
+                if(sycnForTextIgnoreCase(orderStatusTableCell,"FullyExecuted",20000)){
                     status = getText(orderStatusTableCell);
                     logger.info("Order status : "+status);
-                    orderConfirmation.setOrderStatus(true);
+                    orderConfirmation.setOrderStatus("success");
                 }else{
-                    orderConfirmation.setOrderStatus(false);
+                    orderConfirmation.setOrderStatus("failed");
                 }
                 try {
                     execPrice = reportsPage.getExecPrice(order,skOrderId);
@@ -58,10 +56,12 @@ public class OrderConfirmationPage extends Actions implements WebPage{
                 }
                 orderConfirmation.setExecutedPrice(execPrice);
             }else {
-                orderConfirmation.setOrderStatus(false);
+                logger.info("Order status : rejected");
+                orderConfirmation.setOrderStatus("rejected");
             }
         }else{
-            orderConfirmation.setOrderStatus(false);
+            logger.info("Order status : failed");
+            orderConfirmation.setOrderStatus("failed");
 
         }
         return(orderConfirmation);

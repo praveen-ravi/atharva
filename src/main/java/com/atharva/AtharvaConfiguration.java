@@ -11,51 +11,14 @@ import javax.validation.constraints.NotNull;
  */
 public class AtharvaConfiguration extends Configuration {
     @NotNull
-    Double trendReversalStrategy;
-    @NotNull
-    Double stopLossStrategy;
-    @NotNull
-    Double riskOnCapital;
-    @NotNull
-    long timeInterval;
-    @NotNull
-    Double trendReversalCriteria;
+    @JsonProperty("tradeSettings")
+    TradeSettings tradeSettings=new TradeSettings();
 
-    @JsonProperty
-    public Double getTrendReversalStrategy() {
-        return trendReversalStrategy;
-    }
 
-    @JsonProperty
-    public Double getStopLossStrategy() {
-        return stopLossStrategy;
-    }
-
-    @JsonProperty
-    public Double getRiskOnCapital() {
-        return riskOnCapital;
-    }
-
-    @JsonProperty
-    public long getTimeInterval() {
-        return timeInterval;
-    }
-
-    @JsonProperty
-    public Double getTrendReversalCriteria() {
-        return trendReversalCriteria;
-    }
-
-    private TradeSettings tradeSettings=new TradeSettings();
 
 
 
     public TradeSettings getTradeSettings() {
-        tradeSettings.setStopLossStrategy(this.stopLossStrategy);
-        tradeSettings.setRiskOnCapital(this.riskOnCapital);
-        tradeSettings.setTimeInterval(this.timeInterval);
-        tradeSettings.setTrendReversalStrategy(this.trendReversalStrategy);
-        tradeSettings.setTrendReversalCriteria(this.trendReversalCriteria);
         return tradeSettings;
     }
 

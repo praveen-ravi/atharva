@@ -2,6 +2,7 @@ package com.atharva.ui;
 
 import com.atharva.TradePlatform;
 import com.atharva.exceptions.NetworkCallFailedException;
+import com.atharva.exceptions.TradeAssetNotFoundException;
 import com.atharva.trade.Order;
 import com.atharva.trade.OrderConfirmation;
 import com.atharva.ui.pages.LoginPage;
@@ -56,12 +57,20 @@ public class Sharekhan implements TradePlatform {
 
             OrderConfirmationPage orderConfirmationPage = (OrderConfirmationPage) myTradePage.placeOrder(order);
             orderConfirmation = orderConfirmationPage.confirmOrder(order);
-
+            order.setExecutedPrice(orderConfirmation.getExecutedPrice());
+            order.setOrderId(orderConfirmation.getOrderId());
+            tpLog.log(ORDER,"Order :"+order);
 
             return (orderConfirmation);
-        }catch (Exception e){
+        }catch (TradeAssetNotFoundException e){
             orderConfirmation=new OrderConfirmation();
-            orderConfirmation.setOrderStatus(false);
+            orderConfirmation.setOrderStatus("notfound");
+            log.fatal("Failed to place order due to exception",e);
+            return (orderConfirmation);
+        }
+        catch (Exception e){
+            orderConfirmation=new OrderConfirmation();
+            orderConfirmation.setOrderStatus("failed");
             log.fatal("Failed to place order due to exception",e);
             return (orderConfirmation);
         }finally {

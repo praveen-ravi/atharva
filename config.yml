@@ -24,9 +24,9 @@ server:
 
 
 #TradeSettings
-#tradeSettings:
-stopLossStrategy: 2
-timeInterval: 15000
-riskOnCapital: 0.025
-trendReversalStrategy: 1.0
-trendReversalCriteria: 3
+tradeSettings:
+  stopLossStrategy: 2
+  timeInterval: 15000
+  riskOnCapital: 0.025
+  trendReversalStrategy: 1.0
+  trendReversalCriteria: 3

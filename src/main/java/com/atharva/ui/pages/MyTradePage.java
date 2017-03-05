@@ -1,5 +1,6 @@
 package com.atharva.ui.pages;
 
+import com.atharva.exceptions.TradeAssetNotFoundException;
 import com.atharva.exceptions.UIOperationFailureException;
 import com.atharva.trade.Order;
 import com.atharva.ui.ObjectProperties;
@@ -30,6 +31,7 @@ public class MyTradePage extends Actions implements WebPage {
     public String dPAccountDropDown;
     public String placeOrderButton;
     public String confirmOrderButton;
+    public String firstOptionInDropdownStrong;
     public String firstOptionInDropdown;
 
     public OrderConfirmationPage orderConfirmationPage;
@@ -53,11 +55,12 @@ public class MyTradePage extends Actions implements WebPage {
         dPAccountDropDown = "myTradePage.DPAccountDropDown.xpath";
         placeOrderButton = "myTradePage.PlaceOrderButton.id";
         confirmOrderButton = "myTradePage.ConfirmOrderButton.id";
+        firstOptionInDropdownStrong = "myTradePage.firstOptionInDropdownStrong.xpath";
         firstOptionInDropdown = "myTradePage.firstOptionInDropdown.xpath";
     }
 
 
-    public WebPage placeOrder(Order order) throws UIOperationFailureException {
+    public WebPage placeOrder(Order order) throws UIOperationFailureException, TradeAssetNotFoundException {
 
         if(this.syncForObject(tradeNowLink)){
             if(click(tradeNowLink)){
@@ -75,18 +78,35 @@ public class MyTradePage extends Actions implements WebPage {
                 logger.error("Failed to select Exchange", new UIOperationFailureException("Failed to select Exchange"));
                 throw new UIOperationFailureException("Failed to select Exchange");
             }
-
-            if(sendKeys(scripTextBox,order.getScrip())){
-                //syncForVisible(firstOptionInDropdown);
-                if(click(firstOptionInDropdown)){
-                        logger.info("Selected the scrip from dropdown ");
-                    }else{
-                        logger.error("Failed to select the scrip");
+            int retryCount=5;
+            boolean enteredScrip=false;
+            do {
+                if (clearAndSendKeys(scripTextBox, order.getScrip())) {
+                    if (syncForObject(firstOptionInDropdownStrong)) {
+                        logger.info("Entered the scrip : " + order.getScrip());
+                        enteredScrip=true;
+                        break;
                     }
-                logger.info("Entered the scrip : "+order.getScrip());
-            }else{
-                logger.error("Failed to enter scrip", new UIOperationFailureException("Failed to enter scrip"));
-                throw new UIOperationFailureException("Failed to enter scrip");
+                }
+            }while (retryCount-->0);
+
+            if(!enteredScrip){
+                TradeAssetNotFoundException e = new TradeAssetNotFoundException("Not able to find "+order.getScrip());
+                logger.error("Not able to find "+order.getScrip(),e);
+                throw e;
+            }
+
+            String dropdownOption=getText(firstOptionInDropdown);
+            if(!(dropdownOption).equalsIgnoreCase(order.getScrip())){
+                logger.debug("Dropdown Option :"+dropdownOption);
+                TradeAssetNotFoundException e = new TradeAssetNotFoundException("No matching scrip found "+order.getScrip());
+                logger.error("No matching scrip found "+order.getScrip(),e);
+                throw e;
+            }
+            if (click(firstOptionInDropdownStrong)) {
+                logger.info("Selected the scrip from dropdown ");
+            } else {
+                logger.error("Failed to select the scrip");
             }
 
             if(selectByVisibleText(buySellDropDown,order.getTradeType().getUiText())){
@@ -119,14 +139,12 @@ public class MyTradePage extends Actions implements WebPage {
                         logger.info("Selected limit order radio button");
                     }else{
                         logger.error("Failed to select limit order radio button",new UIOperationFailureException("Failed to select limit order radio button"));
-                        throw new UIOperationFailureException("Failed to select limit order radio button");
                     }
                 }else{
                     if(click(marketOrderRadioButton)){
                         logger.info("Selected market order radio button");
                     }else{
                         logger.error("Failed to select market order radio button",new UIOperationFailureException("Failed to select market order radio button"));
-                        throw new UIOperationFailureException("Failed to select market order radio button");
                     }
                 }
             }

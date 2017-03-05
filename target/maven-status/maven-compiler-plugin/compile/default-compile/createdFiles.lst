@@ -1,4 +1,5 @@
 com/atharva/exceptions/UIOperationFailureException.class
+com/atharva/trade/OrderConfirmation.class
 com/atharva/AtharvaConfiguration.class
 com/atharva/ui/pages/MyTradePage.class
 com/atharva/trade/AssetClass.class
@@ -10,6 +11,7 @@ com/atharva/sharekhan/broadcast/ScripMasterResponse.class
 com/atharva/trade/TradeType$1.class
 com/atharva/sharekhan/broadcast/FeedResponse.class
 com/atharva/sharekhan/broadcast/ScripMasterDownloader$1.class
+com/atharva/simulator/TradeSimulator.class
 com/atharva/ui/Sharekhan.class
 com/atharva/sharekhan/core/SharekhanAPI.class
 com/atharva/sharekhan/core/CConstants$AckCode.class
@@ -25,7 +27,9 @@ com/atharva/exceptions/NetworkCallFailedException.class
 com/atharva/sharekhan/interactive/ExchangeConfirmation.class
 com/atharva/sharekhan/interactive/OrderRequest.class
 com/atharva/trade/TradeType.class
+com/atharva/trade/TradeSettingValues.class
 com/atharva/ui/OrderType.class
+com/atharva/ui/pages/ReportsPage.class
 com/atharva/trade/TradeMode.class
 com/atharva/trade/TradeSettings.class
 com/atharva/sharekhan/interactive/ReportRequest.class
@@ -38,7 +42,9 @@ com/atharva/ui/pages/WebPage.class
 com/atharva/sharekhan/broadcast/Graph_DataItem.class
 com/atharva/SystemPropertiesConfig.class
 com/atharva/Atharva.class
+com/atharva/exceptions/OrderPlacementExecption.class
 com/atharva/sharekhan/interactive/LoginResponse.class
+com/atharva/trade/OrderInterface.class
 com/atharva/sharekhan/core/MessageHeader.class
 com/atharva/ui/pages/LoginPage.class
 com/atharva/sharekhan/core/SharekhanAPI$Listen.class

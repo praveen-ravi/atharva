@@ -23,8 +23,27 @@ public class TradeSettings {
     private Double riskOnCapital=0.05;
     @NotNull
     private Double trendReversalCriteria=1.6;
+    @NotNull
+    private Double brokerage=0.0005;
+    @NotNull
+    private int movingAvgSmall=10;
+    @NotNull
+    private int movingAvgLarge=20;
+    @NotNull
+    private long movingAvgInterval=60000;
+    @NotNull
+    private Double movingAvgCrossOverDifferenceForStoploss=0.00005;
+    @NotNull
+    private Double movingAvgCrossOverDifferenceForReversal=0.0001;
     private TradeMode postStoplossMode = TradeMode.MARKETWATCH;
 
+    public Double getBrokerage() {
+        return brokerage;
+    }
+
+    public void setBrokerage(Double brokerage) {
+        this.brokerage = brokerage;
+    }
 
     @Override
     public String toString(){
@@ -42,7 +61,7 @@ public class TradeSettings {
 
 
 
-    @JsonProperty("tradeSettings.riskOnCapital")
+    @JsonProperty
     public Double getRiskOnCapital() {
         return riskOnCapital;
     }
@@ -60,7 +79,7 @@ public class TradeSettings {
     }
 
 
-
+    @JsonProperty
     public long getTimeInterval() {
         return timeInterval;
     }
@@ -71,7 +90,7 @@ public class TradeSettings {
 
 
 
-
+    @JsonProperty
     public Double getTrendReversalStrategy() {
         return trendReversalStrategy;
     }
@@ -80,6 +99,7 @@ public class TradeSettings {
         this.trendReversalStrategy = trendReversalStrategy;
     }
 
+    @JsonProperty
     public Double getStopLossStrategy() {
         return stopLossStrategy;
     }
@@ -103,7 +123,7 @@ public class TradeSettings {
     public void setReEntryCriteria(Double reEntryCriteria) {
         this.reEntryCriteria = reEntryCriteria;
     }
-
+    @JsonProperty
     public Double getTrendReversalCriteria() {
         return trendReversalCriteria;
     }

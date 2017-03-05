@@ -2,6 +2,7 @@
 <Configuration status="WARN">
     <CustomLevels>
         <CustomLevel name="REPORT" intLevel="50" />
+        <CustomLevel name="ORDER" intLevel="25" />
     </CustomLevels>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
@@ -16,6 +17,9 @@
         <File name="errorLog" fileName="log/error.log" bufferedIO="true">
             <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} -  %msg%n"/>
         </File>
+        <File name="orderLog" fileName="log/order.log" bufferedIO="true">
+            <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} -  %msg%n"/>
+        </File>
     </Appenders>
     <Loggers>
         <Root level="DEBUG">
@@ -24,6 +28,11 @@
             <AppenderRef ref="errorLog" level="error"/>
             <AppenderRef ref="reportLog" level="report"/>
         </Root>
+
+        <Logger name="com.atharva.TradePlatform" level="ORDER" additivity="false">
+            <AppenderRef ref="orderLog"/>
+        </Logger>
+
 
     </Loggers>
 </Configuration>

@@ -22,8 +22,6 @@ public class Order implements OrderInterface{
     private String validity;
     private BigInteger disclosedQty;
     private OrderType orderType;
-    private Double openPrice;
-    private Double closedPrice;
     private String orderId;
     @NotNull
     private AssetClass assetClass;
@@ -43,8 +41,6 @@ public class Order implements OrderInterface{
         cloneOrder.validity=this.validity;
         cloneOrder.disclosedQty=this.disclosedQty;
         cloneOrder.orderQty=this.orderQty;
-        cloneOrder.openPrice=this.openPrice;
-        cloneOrder.closedPrice=this.closedPrice;
         cloneOrder.assetClass=this.assetClass;
         cloneOrder.stoplossTrigger=this.stoplossTrigger;
         cloneOrder.limitPrice=this.limitPrice;
@@ -56,13 +52,10 @@ public class Order implements OrderInterface{
     public Order getStoplossOrder(){
         Order stoplossOrder = this.clone();
         stoplossOrder.setTradeType(this.getTradeType().getOppositeDirection());
-        stoplossOrder.setOpenPrice(0.0);
         //TODO:Make it configurable
         stoplossOrder.setValidity("GFD");
         stoplossOrder.setDisclosedQty(BigInteger.ZERO);
         stoplossOrder.setOrderType(OrderType.MARKET_ORDER);
-        stoplossOrder.setOpenPrice(0.0);
-        stoplossOrder.setClosedPrice(0.0);
         stoplossOrder.setStoplossTrigger(0.0);
         stoplossOrder.setLimitPrice(0.0);
         return (stoplossOrder);
@@ -91,13 +84,10 @@ public class Order implements OrderInterface{
     public Order getReversalOrder(){
         Order reversalOrder = this.clone();
         reversalOrder.setTradeType(this.getTradeType().getOppositeDirection());
-        reversalOrder.setOpenPrice(0.0);
         //TODO:Make it configurable
         reversalOrder.setValidity("GFD");
         reversalOrder.setDisclosedQty(BigInteger.ZERO);
         reversalOrder.setOrderType(OrderType.MARKET_ORDER);
-        reversalOrder.setOpenPrice(0.0);
-        reversalOrder.setClosedPrice(0.0);
         reversalOrder.setStoplossTrigger(0.0);
         reversalOrder.setLimitPrice(0.0);
         reversalOrder.setOrderQty(this.orderQty*2);
@@ -152,9 +142,6 @@ public class Order implements OrderInterface{
 
     public void setCapital(BigDecimal capital) {
         this.capital = capital;
-    }
-    public void setClosedPrice(Double closedPrice) {
-        this.closedPrice = closedPrice;
     }
 
     public AssetClass getAssetClass() {
@@ -213,22 +200,6 @@ public class Order implements OrderInterface{
         this.orderType = orderType;
     }
 
-
-    public Double getOpenPrice() {
-        return openPrice;
-    }
-
-    public void setOpenPrice(Double openPrice) {
-        this.openPrice = openPrice;
-    }
-
-    public Double getClosedPrice() {
-        return closedPrice;
-    }
-
-    public void setClosedtPrice(Double currentPrice) {
-        this.closedPrice = currentPrice;
-    }
 
 
 

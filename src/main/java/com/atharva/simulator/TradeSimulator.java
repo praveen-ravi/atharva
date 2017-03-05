@@ -19,6 +19,7 @@ import javax.ws.rs.core.Response;
  * Created by 16733 on 22/02/17.
  */
 public class TradeSimulator implements TradePlatform {
+
     Logger log = LogManager.getFormatterLogger(TradeSimulator.class);
 
     public static TradeSimulator getInstance(){
@@ -29,8 +30,11 @@ public class TradeSimulator implements TradePlatform {
         OrderConfirmation orderConfirmation = new OrderConfirmation();
         try {
             orderConfirmation.setExecutedPrice(getMarketPrice(order));
-            orderConfirmation.setOrderStatus(true);
+            orderConfirmation.setOrderStatus("success");
             orderConfirmation.setOrderId("Dummy_"+System.currentTimeMillis());
+            order.setExecutedPrice(orderConfirmation.getExecutedPrice());
+            order.setOrderId(orderConfirmation.getOrderId());
+            tpLog.log(ORDER,"Order :"+order);
         } catch (NetworkCallFailedException e) {
             log.error("Error while getting the price ",e);
         }
