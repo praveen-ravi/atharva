@@ -43,6 +43,9 @@ public class TradeHandler extends Thread{
     private TradePlatform tradePlatform;
     private Double currentEntryProfitLoss=0.0;
     private long currentPositions=0;
+    private ArrayList<Double> prices=new ArrayList();
+    private Double smallMovingAvg;
+    private Double largeMovingAvg;
 
 
     public TradeHandler() {
@@ -151,40 +154,40 @@ public class TradeHandler extends Thread{
             this.trailingStoplossOnPrice = 0.0;
             this.activeTradePriceDiff = 0.0;
             this.trailingFlagAverageOnPrice = 0.0;
-        } else if (tradeMode.equals(TradeMode.ACTIVE) && isFlagAverageReached()) {
-            if (currentTrendProfit > tradeSettingValues.getTrendReversalLimit()) {
-                log.info("Trade reversal condition has reached for order " + activeOrder);
-                reverseTrade();
-                log.debug("Updating the porfit loss counters after placing order :" + activeOrder);
-                this.updateCummulativePriceDiff();
-                updateProfitLossCounters();
-                this.trailingFlagAverageOnPrice = 0.0;
-                this.currentTrendProfit = 0.0;
-                profitLossEntries.add(true);
-                currentEntryProfitLoss = 0.0;
-                activeOrder.setTradeType(onGoingTradeType.getOppositeDirection());
-                onGoingTradeType = onGoingTradeType.getOppositeDirection();
-                log.debug("Order :" + activeOrder + ", TrailingTrendReversal:" + trailingFlagAverageOnPrice + ", TrailingStoploss:" + trailingStoplossOnPrice);
-            } else {
-                log.info("Flag average has reached for order :" + activeOrder);
-                stopLoss();
-                log.debug("Updating the porfit loss counters after placing order :" + activeOrder);
-                updateCummulativePriceDiff();
-                updateProfitLossCounters();
-                Double brokeragePrice=0.0;
-                if(lastBuyOrder!=null && lastBuyOrder.getExecutedPrice()!=null) {
-                    brokeragePrice=lastBuyOrder.getExecutedPrice() * tradeSettingValues.getBrokerage();
-                }
-                if (currentEntryProfitLoss > brokeragePrice) {
-                    profitLossEntries.add(true);
-                } else {
-                    profitLossEntries.add(false);
-                }
-                this.trailingFlagAverageOnPrice = 0.0;
-                currentEntryProfitLoss = 0.0;
-
-                tradeMode = TradeMode.INACTIVE;
+        } else if (isMovingAvgCrossOver()) {
+            log.info("Trade reversal condition has reached for order " + activeOrder);
+            reverseTrade();
+            tradeMode=tradeMode.ACTIVE;
+            log.debug("Updating the porfit loss counters after placing order :" + activeOrder);
+            this.updateCummulativePriceDiff();
+            updateProfitLossCounters();
+            this.trailingFlagAverageOnPrice = 0.0;
+            this.currentTrendProfit = 0.0;
+            profitLossEntries.add(true);
+            currentEntryProfitLoss = 0.0;
+            activeOrder.setTradeType(onGoingTradeType.getOppositeDirection());
+            onGoingTradeType = onGoingTradeType.getOppositeDirection();
+            log.debug("Order :" + activeOrder + ", TrailingTrendReversal:" + trailingFlagAverageOnPrice + ", TrailingStoploss:" + trailingStoplossOnPrice);
+        } else if (tradeMode.equals(TradeMode.ACTIVE) && isFlagAverageReached()){
+            log.info("Flag average has reached for order :" + activeOrder);
+            stopLoss();
+            log.debug("Updating the porfit loss counters after placing order :" + activeOrder);
+            updateCummulativePriceDiff();
+            updateProfitLossCounters();
+            Double brokeragePrice=0.0;
+            if(lastBuyOrder!=null && lastBuyOrder.getExecutedPrice()!=null) {
+                brokeragePrice=lastBuyOrder.getExecutedPrice() * tradeSettingValues.getBrokerage();
             }
+            if (currentEntryProfitLoss > brokeragePrice) {
+                profitLossEntries.add(true);
+            } else {
+                profitLossEntries.add(false);
+            }
+            this.trailingFlagAverageOnPrice = 0.0;
+            currentEntryProfitLoss = 0.0;
+
+            tradeMode = TradeMode.INACTIVE;
+
         }
 
 
@@ -223,6 +226,20 @@ public class TradeHandler extends Thread{
         if(Math.abs(trailingFlagAverageOnPrice) > Math.abs(tradeSettingValues.getTrendFlagAverageValue())){
             return true;
         }else{
+            return false;
+        }
+    }
+
+    private boolean isMovingAvgCrossOver(){
+        //Small Moving avg is greater than Large moving avg and current trend is short
+        log.debug("Comparing moving avg {},{}",smallMovingAvg,largeMovingAvg);
+        if(smallMovingAvg>(largeMovingAvg+(tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal()*smallMovingAvg)) && onGoingTradeType.getTradeDirection()==-1){
+            log.debug("Moving avg crossed over ({}>{} AND {}==BUY)-->true",largeMovingAvg,(largeMovingAvg+(tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal()*smallMovingAvg)),onGoingTradeType);
+            return (true);
+        }else if(smallMovingAvg<(largeMovingAvg-(tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal()*smallMovingAvg)) && onGoingTradeType.getTradeDirection()==1){
+            log.debug("Moving avg crossed over ({}<{} AND {}==SELL)-->true",largeMovingAvg,(largeMovingAvg-(tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal()*smallMovingAvg)),onGoingTradeType);
+            return (true);
+        }else {
             return false;
         }
     }
@@ -278,9 +295,7 @@ public class TradeHandler extends Thread{
             orderConfirmation= tradePlatform.placeOrder(order);
             orderStatus = orderConfirmation.getOrderStatus();
             if (orderConfirmation.getExecutedPrice() != null) {
-                this.lastSeenMarketPrice = currentMarketPrice;
-                currentMarketPrice = orderConfirmation.getExecutedPrice();
-
+                updatePrice(orderConfirmation.getExecutedPrice());
             }
         }while(orderStatus.equalsIgnoreCase("failed") && orderPlacementRetryCount-->0);
         if(orderStatus.equalsIgnoreCase("success")) {
@@ -314,14 +329,12 @@ public class TradeHandler extends Thread{
             totalProfitorLoss = BigDecimal.valueOf(totalPriceDiff * activeOrder.getOrderQty().doubleValue());
             trailingStoplossOnPrice=trailingStoplossOnPrice+this.cummulativePriceDiff;
             trailingFlagAverageOnPrice = trailingFlagAverageOnPrice +this.cummulativePriceDiff;
-        }else if(tradeMode.equals(TradeMode.INACTIVE)){
-            reEntryCounter=reEntryCounter+cummulativePriceDiff;
-            if(reEntryCounter<0){
-                reEntryCounter=0.0;
+        }else if(tradeMode.equals(TradeMode.INACTIVE)) {
+            reEntryCounter = reEntryCounter + cummulativePriceDiff;
+            if (reEntryCounter < 0) {
+                reEntryCounter = 0.0;
             }
         }
-
-
 
         if(trailingStoplossOnPrice.doubleValue()>0){
             this.trailingStoplossOnPrice=0.0;
@@ -330,6 +343,29 @@ public class TradeHandler extends Thread{
         if(trailingFlagAverageOnPrice.doubleValue()>0){
             this.trailingFlagAverageOnPrice =0.0;
         }
+
+        //Calculate moving averages
+        int indexIntervals= (int) (tradeSettingValues.getMovingAvgInterval()/tradeSettingValues.getTimeInterval());
+        indexIntervals=(indexIntervals==0)? 1:indexIntervals;
+        if(prices.size()>=indexIntervals*tradeSettingValues.getMovingAvgLargePeriod()){
+            int j=0;
+            Double priceSummation=0.0;
+            for(int i=prices.size()-1;i>=0;i=i-indexIntervals){
+                priceSummation=priceSummation+prices.get(i);
+                j++;
+                if(j==tradeSettingValues.getMovingAvgSmallPeriod()){
+                    smallMovingAvg=priceSummation/tradeSettingValues.getMovingAvgSmallPeriod();
+                }
+                if(j==tradeSettingValues.getMovingAvgLargePeriod()){
+                    largeMovingAvg=priceSummation/tradeSettingValues.getMovingAvgLargePeriod();
+                    break;
+                }
+
+            }
+        }
+
+
+
         log.debug("Order :"+activeOrder+", " +
                         "\ncummulativePriceDiff: "+cummulativePriceDiff+
                         "\ntrailingFlagAverageOnPrice:"+ trailingFlagAverageOnPrice +
@@ -338,7 +374,9 @@ public class TradeHandler extends Thread{
                         "\ncurrentTrendProfit: "+currentTrendProfit+
                         "\ncurrentEntryProfitLoss: "+currentEntryProfitLoss+
                         "\ntotalPriceDiff: "+totalPriceDiff+
-                        "\nreEntryCounter:"+reEntryCounter);
+                        "\nreEntryCounter:"+reEntryCounter+
+                        "\nsmallMovingAvg:"+smallMovingAvg+
+                        "\nlargeMovingAvg:"+largeMovingAvg);
 
     }
 
@@ -362,23 +400,28 @@ public class TradeHandler extends Thread{
 
     private void reverseTrade() throws OrderPlacementExecption {
         log.info("Trade reverse for order "+this.activeOrder);
-
-
-        if(tradeMode.equals(TradeMode.ACTIVE)){
-
-            try {
-                this.placeOrder(this.activeOrder.getReversalOrder());
-            } catch (OrderPlacementExecption orderPlacementExecption) {
-                log.fatal("FAILED TO REVERSE THE TRADE!!!");
-                throw orderPlacementExecption;
+        try {
+            Order reversalOrder = this.activeOrder.getReversalOrder();
+            if(tradeMode.equals(TradeMode.ACTIVE)){
+                reversalOrder.setOrderQty(reversalOrder.getOrderQty()*2);
             }
+            this.placeOrder(reversalOrder);
+        } catch (OrderPlacementExecption orderPlacementExecption) {
+            log.fatal("FAILED TO REVERSE THE TRADE!!!");
+            throw orderPlacementExecption;
         }
+
 
     }
 
-    private void updateCurrentPrice() throws Exception {
+    private void updatePrice(Double price){
         this.lastSeenMarketPrice=this.currentMarketPrice;
-        this.currentMarketPrice=getMarketPrice();
+        this.currentMarketPrice=price;
+        prices.add(price);
+    }
+
+    private void updateCurrentPrice() throws Exception {
+        updatePrice(getMarketPrice());
         log.info("Current price for order "+activeOrder+": "+currentMarketPrice);
         updateCummulativePriceDiff();
     }

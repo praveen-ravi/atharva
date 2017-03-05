@@ -25,8 +25,15 @@ server:
 
 #TradeSettings
 tradeSettings:
-  stopLossStrategy: 2
+  stopLossStrategy: 3
   timeInterval: 15000
   riskOnCapital: 0.025
-  trendReversalStrategy: 1.0
+  trendFlagAvgStrategy: 1.0
   trendReversalCriteria: 3
+  movingAvgSmallPeriod: 20
+  movingAvgLargePeriod: 40
+  movingAvgInterval: 6000000
+  movingAvgCrossOverDifferenceForStoploss: 0.00005
+  movingAvgCrossOverDifferenceForReversal: 0.0001
+  trendReversalCriteria: 3
+  brokerage: 0.0005

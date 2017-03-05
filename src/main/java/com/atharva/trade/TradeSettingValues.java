@@ -15,6 +15,11 @@ public class TradeSettingValues {
     private long timeInterval=15000;
     private TradeMode postStoplossMode = TradeMode.MARKETWATCH;
     private Double brokerage = 0.0005;
+    private int movingAvgSmallPeriod =20;
+    private int movingAvgLargePeriod =40;
+    private long movingAvgInterval=60000;
+    private Double movingAvgCrossOverDifferenceForStoploss=0.00005;
+    private Double movingAvgCrossOverDifferenceForReversal=0.0001;
 
     public Double getBrokerage() {
         return brokerage;
@@ -77,12 +82,32 @@ public class TradeSettingValues {
         this.postStoplossMode = postStoplossMode;
     }
 
+    public int getMovingAvgSmallPeriod() {
+        return movingAvgSmallPeriod;
+    }
+
+    public int getMovingAvgLargePeriod() {
+        return movingAvgLargePeriod;
+    }
+
+    public long getMovingAvgInterval() {
+        return movingAvgInterval;
+    }
+
+    public Double getMovingAvgCrossOverDifferenceForStoploss() {
+        return movingAvgCrossOverDifferenceForStoploss;
+    }
+
+    public Double getMovingAvgCrossOverDifferenceForReversal() {
+        return movingAvgCrossOverDifferenceForReversal;
+    }
+
     public TradeSettingValues(Double flagAverage, TradeSettings tradeSettings){
         this.flagAverage=flagAverage;
 
         //Calculate the stoploss limit
         this.stoploss=this.flagAverage*tradeSettings.getStopLossStrategy();
-        this.trendFlagAverageValue =this.flagAverage*tradeSettings.getTrendReversalStrategy();
+        this.trendFlagAverageValue =this.flagAverage*tradeSettings.getTrendFlagAvgStrategy();
         this.reEntry=this.flagAverage*tradeSettings.getReEntryStrategy();
         reEntryLimit=tradeSettings.getReEntryCriteria()*this.flagAverage;
         trendReversalLimit=tradeSettings.getTrendReversalCriteria()*this.flagAverage;
@@ -90,6 +115,11 @@ public class TradeSettingValues {
         this.timeInterval=tradeSettings.getTimeInterval();
         this.postStoplossMode=tradeSettings.getPostStoplossMode();
         this.brokerage=tradeSettings.getBrokerage();
+        this.movingAvgLargePeriod =tradeSettings.getMovingAvgLargePeriod();
+        this.movingAvgSmallPeriod =tradeSettings.getMovingAvgSmallPeriod();
+        this.movingAvgCrossOverDifferenceForReversal=tradeSettings.getMovingAvgCrossOverDifferenceForReversal();
+        this.movingAvgCrossOverDifferenceForStoploss=tradeSettings.getMovingAvgCrossOverDifferenceForStoploss();
+        this.movingAvgInterval=tradeSettings.getMovingAvgInterval();
 
     }
 

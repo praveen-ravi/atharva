@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 public class TradeSettings {
 
     @NotNull
-    private Double trendReversalStrategy=1.0;
+    private Double trendFlagAvgStrategy =1.0;
     @NotNull
     private Double stopLossStrategy=1.6;
     @NotNull
@@ -26,9 +26,9 @@ public class TradeSettings {
     @NotNull
     private Double brokerage=0.0005;
     @NotNull
-    private int movingAvgSmall=10;
+    private int movingAvgSmallPeriod =20;
     @NotNull
-    private int movingAvgLarge=20;
+    private int movingAvgLargePeriod =40;
     @NotNull
     private long movingAvgInterval=60000;
     @NotNull
@@ -47,7 +47,7 @@ public class TradeSettings {
 
     @Override
     public String toString(){
-        String tradeSettingsString="trendReversalStrategy:"+trendReversalStrategy+"\tstopLossStrategy:"+stopLossStrategy+"\ttimeInterval:"+timeInterval+"\triskOnCapital:"+riskOnCapital+"\tpostStoplossMode:"+postStoplossMode;
+        String tradeSettingsString="trendFlagAvgStrategy:"+ trendFlagAvgStrategy +"\tstopLossStrategy:"+stopLossStrategy+"\ttimeInterval:"+timeInterval+"\triskOnCapital:"+riskOnCapital+"\tpostStoplossMode:"+postStoplossMode;
         return(tradeSettingsString);
     }
 
@@ -91,12 +91,12 @@ public class TradeSettings {
 
 
     @JsonProperty
-    public Double getTrendReversalStrategy() {
-        return trendReversalStrategy;
+    public Double getTrendFlagAvgStrategy() {
+        return trendFlagAvgStrategy;
     }
 
-    public void setTrendReversalStrategy(Double trendReversalStrategy) {
-        this.trendReversalStrategy = trendReversalStrategy;
+    public void setTrendFlagAvgStrategy(Double trendFlagAvgStrategy) {
+        this.trendFlagAvgStrategy = trendFlagAvgStrategy;
     }
 
     @JsonProperty
@@ -130,5 +130,25 @@ public class TradeSettings {
 
     public void setTrendReversalCriteria(Double trendReversalCriteria) {
         this.trendReversalCriteria = trendReversalCriteria;
+    }
+    @JsonProperty
+    public int getMovingAvgSmallPeriod() {
+        return movingAvgSmallPeriod;
+    }
+    @JsonProperty
+    public int getMovingAvgLargePeriod() {
+        return movingAvgLargePeriod;
+    }
+    @JsonProperty
+    public long getMovingAvgInterval() {
+        return movingAvgInterval;
+    }
+    @JsonProperty
+    public Double getMovingAvgCrossOverDifferenceForStoploss() {
+        return movingAvgCrossOverDifferenceForStoploss;
+    }
+    @JsonProperty
+    public Double getMovingAvgCrossOverDifferenceForReversal() {
+        return movingAvgCrossOverDifferenceForReversal;
     }
 }

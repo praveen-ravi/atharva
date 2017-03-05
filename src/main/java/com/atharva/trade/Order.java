@@ -28,7 +28,6 @@ public class Order implements OrderInterface{
     private Double stoplossTrigger;
     private Double limitPrice;
     private Double executedPrice;
-    private boolean reversalOrder;
     @NotNull
     private User user;
 
@@ -61,14 +60,6 @@ public class Order implements OrderInterface{
         return (stoplossOrder);
     }
 
-    public boolean isReversalOrder() {
-        return reversalOrder;
-    }
-
-    public void setReversalOrder(boolean reversalOrder) {
-        this.reversalOrder = reversalOrder;
-    }
-
     public String getOrderId() {
         return orderId;
     }
@@ -90,8 +81,6 @@ public class Order implements OrderInterface{
         reversalOrder.setOrderType(OrderType.MARKET_ORDER);
         reversalOrder.setStoplossTrigger(0.0);
         reversalOrder.setLimitPrice(0.0);
-        reversalOrder.setOrderQty(this.orderQty*2);
-        reversalOrder.setReversalOrder(true);
         return (reversalOrder);
     }
 
