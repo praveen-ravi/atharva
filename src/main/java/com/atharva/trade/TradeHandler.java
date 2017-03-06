@@ -157,13 +157,26 @@ public class TradeHandler extends Thread{
         } else if (isMovingAvgCrossOver()) {
             log.info("Trade reversal condition has reached for order " + activeOrder);
             reverseTrade();
-            tradeMode=tradeMode.ACTIVE;
-            log.debug("Updating the porfit loss counters after placing order :" + activeOrder);
-            this.updateCummulativePriceDiff();
+            if(tradeMode.equals(tradeMode.INACTIVE)){
+                log.debug("Updating current price");
+                tradeMode=tradeMode.ACTIVE;
+                updateCurrentPrice();
+            }else {
+                log.debug("Updating the porfit loss counters after placing order :" + activeOrder);
+                this.updateCummulativePriceDiff();
+            }
             updateProfitLossCounters();
             this.trailingFlagAverageOnPrice = 0.0;
             this.currentTrendProfit = 0.0;
-            profitLossEntries.add(true);
+            Double brokeragePrice=0.0;
+            if(lastBuyOrder!=null && lastBuyOrder.getExecutedPrice()!=null) {
+                brokeragePrice=lastBuyOrder.getExecutedPrice() * tradeSettingValues.getBrokerage();
+            }
+            if (currentEntryProfitLoss > brokeragePrice) {
+                profitLossEntries.add(true);
+            } else {
+                profitLossEntries.add(false);
+            }
             currentEntryProfitLoss = 0.0;
             activeOrder.setTradeType(onGoingTradeType.getOppositeDirection());
             onGoingTradeType = onGoingTradeType.getOppositeDirection();
@@ -232,15 +245,20 @@ public class TradeHandler extends Thread{
 
     private boolean isMovingAvgCrossOver(){
         //Small Moving avg is greater than Large moving avg and current trend is short
-        log.debug("Comparing moving avg {},{}",smallMovingAvg,largeMovingAvg);
-        if(smallMovingAvg>(largeMovingAvg+(tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal()*smallMovingAvg)) && onGoingTradeType.getTradeDirection()==-1){
-            log.debug("Moving avg crossed over ({}>{} AND {}==BUY)-->true",largeMovingAvg,(largeMovingAvg+(tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal()*smallMovingAvg)),onGoingTradeType);
-            return (true);
-        }else if(smallMovingAvg<(largeMovingAvg-(tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal()*smallMovingAvg)) && onGoingTradeType.getTradeDirection()==1){
-            log.debug("Moving avg crossed over ({}<{} AND {}==SELL)-->true",largeMovingAvg,(largeMovingAvg-(tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal()*smallMovingAvg)),onGoingTradeType);
-            return (true);
-        }else {
-            return false;
+
+        if(largeMovingAvg>0) {
+            log.debug("Comparing moving avg {},{}",smallMovingAvg,largeMovingAvg);
+            if (smallMovingAvg > (largeMovingAvg + (tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal() * smallMovingAvg)) && onGoingTradeType.getTradeDirection() == -1) {
+                log.debug("Moving avg crossed over ({}>{} AND {}==BUY)-->true", largeMovingAvg, (largeMovingAvg + (tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal() * smallMovingAvg)), onGoingTradeType);
+                return (true);
+            } else if (smallMovingAvg < (largeMovingAvg - (tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal() * smallMovingAvg)) && onGoingTradeType.getTradeDirection() == 1) {
+                log.debug("Moving avg crossed over ({}<{} AND {}==SELL)-->true", largeMovingAvg, (largeMovingAvg - (tradeSettingValues.getMovingAvgCrossOverDifferenceForReversal() * smallMovingAvg)), onGoingTradeType);
+                return (true);
+            } else {
+                return false;
+            }
+        }else{
+            return(false);
         }
     }
 
