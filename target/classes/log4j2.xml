@@ -4,22 +4,49 @@
         <CustomLevel name="REPORT" intLevel="50" />
         <CustomLevel name="ORDER" intLevel="25" />
     </CustomLevels>
+    <Properties>
+        <Property name="log-path">/atharva/logs</Property>
+    </Properties>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <File name="activityLog" fileName="log/output.log" bufferedIO="true">
-            <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </File>
-        <File name="reportLog" fileName="log/report.log" bufferedIO="true">
-            <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-        </File>
-        <File name="errorLog" fileName="log/error.log" bufferedIO="true">
-            <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} -  %msg%n"/>
-        </File>
-        <File name="orderLog" fileName="log/order.log" bufferedIO="true">
-            <PatternLayout pattern="%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} -  %msg%n"/>
-        </File>
+        <RollingFile name="activityLog" fileName="log/output.log" bufferedIO="true" filePattern="${log-path}/output-$${date:MM-dd-yyyy}.%i.log.gz">
+            <PatternLayout >
+                    <Pattern>%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5"/>
+        </RollingFile>
+        <RollingFile name="reportLog" fileName="log/report.log" bufferedIO="true" filePattern="${log-path}/report-$${date:MM-dd-yyyy}.%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+        <RollingFile name="errorLog" fileName="log/error.log" bufferedIO="true" filePattern="${log-path}/error-$${date:MM-dd-yyyy}.%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="2"/>
+        </RollingFile>
+        <RollingFile name="orderLog" fileName="log/order.log" bufferedIO="true" filePattern="${log-path}/order-$${date:MM-dd-yyyy}.%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d{dd-MM-YYYY HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="250"/>
+        </RollingFile>
     </Appenders>
     <Loggers>
         <Root level="DEBUG">

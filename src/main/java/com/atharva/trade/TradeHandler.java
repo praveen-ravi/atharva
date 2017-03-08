@@ -44,8 +44,8 @@ public class TradeHandler extends Thread{
     private Double currentEntryProfitLoss=0.0;
     private long currentPositions=0;
     private ArrayList<Double> prices=new ArrayList();
-    private Double smallMovingAvg;
-    private Double largeMovingAvg;
+    private Double smallMovingAvg=0.0;
+    private Double largeMovingAvg=0.0;
 
 
     public TradeHandler() {
@@ -154,7 +154,7 @@ public class TradeHandler extends Thread{
             this.trailingStoplossOnPrice = 0.0;
             this.activeTradePriceDiff = 0.0;
             this.trailingFlagAverageOnPrice = 0.0;
-        } else if (isMovingAvgCrossOver()) {
+        } else if (isTradeReveralReached()) {
             log.info("Trade reversal condition has reached for order " + activeOrder);
             reverseTrade();
             if(tradeMode.equals(tradeMode.INACTIVE)){
@@ -203,7 +203,6 @@ public class TradeHandler extends Thread{
 
         }
 
-
         if (tradeMode.equals(TradeMode.INACTIVE)) {
             log.debug("Looking for reentry");
             //check for reEntry
@@ -231,6 +230,17 @@ public class TradeHandler extends Thread{
             }
         }
 
+    }
+
+    private boolean isTradeReveralReached(){
+        boolean movingAvgCrossOver=isMovingAvgCrossOver();
+        boolean flagAvgReached=isFlagAverageReached();
+        log.debug("({} AND ({} OR {}>{} OR {})) AND {}--->{}",movingAvgCrossOver,tradeMode.equals(tradeMode.INACTIVE),currentTrendProfit,tradeSettingValues.getTrendReversalLimit(),flagAvgReached,tradeSettingValues.isFollowOppositeTrend(),(movingAvgCrossOver && (tradeMode.equals(tradeMode.INACTIVE)||currentTrendProfit>tradeSettingValues.getTrendReversalLimit() || flagAvgReached))&& tradeSettingValues.isFollowOppositeTrend());
+        if((movingAvgCrossOver && (tradeMode.equals(tradeMode.INACTIVE)||currentTrendProfit>tradeSettingValues.getTrendReversalLimit() || flagAvgReached))&& tradeSettingValues.isFollowOppositeTrend()){
+            return(true);
+        }else{
+            return(false);
+        }
     }
 
     private boolean isFlagAverageReached(){
@@ -290,7 +300,7 @@ public class TradeHandler extends Thread{
 
     @Override
     public String toString(){
-        String trade=this.uniqueID +"\t"+this.onGoingTradeType+"\t"+this.activeOrder.getScrip()+"\t"+this.currentMarketPrice+"\t"+this.cummulativePriceDiff+"\t"+this.activeTradePriceDiff+"\t"+this.trailingFlagAverageOnPrice +"\t"+this.trailingStoplossOnPrice+"\t"+this.tradeMode+"\t"+totalPriceDiff+"\t"+totalProfitorLoss;
+        String trade=this.uniqueID +"\t"+this.onGoingTradeType+"\t"+this.activeOrder.getScrip()+"\t"+this.currentMarketPrice+"\t"+this.cummulativePriceDiff+"\t"+this.activeTradePriceDiff+"\t"+this.trailingFlagAverageOnPrice +"\t"+this.trailingStoplossOnPrice+"\t"+this.smallMovingAvg+"\t"+this.largeMovingAvg+"\t"+this.tradeMode+"\t"+totalPriceDiff+"\t"+totalProfitorLoss;
         return(trade);
     }
 
@@ -365,17 +375,23 @@ public class TradeHandler extends Thread{
         //Calculate moving averages
         int indexIntervals= (int) (tradeSettingValues.getMovingAvgInterval()/tradeSettingValues.getTimeInterval());
         indexIntervals=(indexIntervals==0)? 1:indexIntervals;
-        if(prices.size()>=indexIntervals*tradeSettingValues.getMovingAvgLargePeriod()){
+        if(prices.size()>=indexIntervals*tradeSettingValues.getMovingAvgLargePeriod() || (tradeMode.equals(TradeMode.INACTIVE) && prices.size()>=(indexIntervals*tradeSettingValues.getMovingAvgLargePeriod())/2)){
             int j=0;
+            int smallPeriod=tradeSettingValues.getMovingAvgSmallPeriod();
+            int largePeriod=tradeSettingValues.getMovingAvgLargePeriod();
+            if(prices.size()<indexIntervals*tradeSettingValues.getMovingAvgLargePeriod()){
+                largePeriod=prices.size();
+                smallPeriod=largePeriod/2;
+            }
             Double priceSummation=0.0;
             for(int i=prices.size()-1;i>=0;i=i-indexIntervals){
                 priceSummation=priceSummation+prices.get(i);
                 j++;
-                if(j==tradeSettingValues.getMovingAvgSmallPeriod()){
-                    smallMovingAvg=priceSummation/tradeSettingValues.getMovingAvgSmallPeriod();
+                if(j==smallPeriod){
+                    smallMovingAvg=priceSummation/smallPeriod;
                 }
-                if(j==tradeSettingValues.getMovingAvgLargePeriod()){
-                    largeMovingAvg=priceSummation/tradeSettingValues.getMovingAvgLargePeriod();
+                if(j==largePeriod){
+                    largeMovingAvg=priceSummation/largePeriod;
                     break;
                 }
 

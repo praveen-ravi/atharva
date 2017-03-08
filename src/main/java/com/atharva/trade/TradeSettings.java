@@ -36,6 +36,13 @@ public class TradeSettings {
     @NotNull
     private Double movingAvgCrossOverDifferenceForReversal=0.0001;
     private TradeMode postStoplossMode = TradeMode.MARKETWATCH;
+    @NotNull
+    private boolean followOppositeTrend =true;
+
+    @JsonProperty
+    public boolean isFollowOppositeTrend() {
+        return followOppositeTrend;
+    }
 
     public Double getBrokerage() {
         return brokerage;

@@ -20,6 +20,11 @@ public class TradeSettingValues {
     private long movingAvgInterval=60000;
     private Double movingAvgCrossOverDifferenceForStoploss=0.00005;
     private Double movingAvgCrossOverDifferenceForReversal=0.0001;
+    private boolean followOppositeTrend;
+
+    public boolean isFollowOppositeTrend() {
+        return followOppositeTrend;
+    }
 
     public Double getBrokerage() {
         return brokerage;
@@ -120,6 +125,7 @@ public class TradeSettingValues {
         this.movingAvgCrossOverDifferenceForReversal=tradeSettings.getMovingAvgCrossOverDifferenceForReversal();
         this.movingAvgCrossOverDifferenceForStoploss=tradeSettings.getMovingAvgCrossOverDifferenceForStoploss();
         this.movingAvgInterval=tradeSettings.getMovingAvgInterval();
+        this.followOppositeTrend=tradeSettings.isFollowOppositeTrend();
 
     }
 
