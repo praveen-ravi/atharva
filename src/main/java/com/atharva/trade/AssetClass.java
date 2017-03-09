@@ -4,6 +4,7 @@ import javax.validation.constraints.NotNull;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * Created by 16733 on 28/01/17.
@@ -19,6 +20,7 @@ public class AssetClass {
     private String tradeingInterface;
     @NotNull
     private String marketClose;
+    private TimeZone timeZone;
 
     public String getMarketClose() {
         return marketClose;
@@ -35,6 +37,14 @@ public class AssetClass {
         }
         this.setMarketCloseTime(marketCloseTime);
 
+    }
+
+    public void setTimeZone(String timeZone) {
+        this.timeZone = TimeZone.getTimeZone(timeZone);
+    }
+
+    public TimeZone getTimeZone() {
+        return timeZone;
     }
 
     public String getAssetClass() {

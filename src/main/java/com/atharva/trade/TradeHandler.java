@@ -472,10 +472,15 @@ public class TradeHandler extends Thread{
     private boolean isMarketEndTime() throws ParseException {
         Date marketEndTime=activeOrder.getAssetClass().getMarketCloseTime();
         Calendar now = Calendar.getInstance();
+//        if(activeOrder.getAssetClass().getTimeZone()!=null){
+//            long timeOffset = activeOrder.getAssetClass().getTimeZone().getRawOffset()-now.getTimeZone().getRawOffset();
+//            now.setTimeInMillis(now.getTime().getTime()-timeOffset);
+//        }
         SimpleDateFormat timeTormat = new SimpleDateFormat("HH:mm", Locale.UK);
         Date currentTime=null;
         try {
             currentTime=timeTormat.parse(now.get(Calendar.HOUR_OF_DAY)+":"+now.get(Calendar.MINUTE));
+            log.debug("{}>={}",currentTime,marketEndTime);
             if(currentTime.compareTo(marketEndTime)==1){
                 return(true);
             }else{
